@@ -7,20 +7,41 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-Tab:AddButton({
-  Name = "Fling others",
-  Callback = function()
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))()
-    end    
+Tab:AddToggle({
+	Name = "Fling others (Loop)",
+	Default = false,
+	Callback = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))()
+	end    
 })
 
 Tab:AddButton({
-  Name = "Fling other v2 (invisible)",
+  Name = "Fling others",
+  Callback = function()   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))()
+    end    
+})
+
+
+Tab:AddButton({
+  Name = "Fling others v2 (invisible)",
   Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/Fling-v1/main/script"))() loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
     end    
 })
+
 Tab:AddButton({
   Name = "Fly GUI V3 (Recommended for fling v2)",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     end    
 })
+
+local Tab2 = Window:MakeTab({
+  Name = "Slap Battles",
+  Icon = "rbxassetid://15744740190",
+  PremiumOnly = false
+})
+
+Tab:AddButton({
+  Name = "Slap Aura (Use 1 time or your game will crash)",
+  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+    end    
+})
+
