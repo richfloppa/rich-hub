@@ -20,7 +20,7 @@ Tab:AddButton({
     end    
 })
 Tab:AddButton({
-  Name = "Fly GUI V3 (Recomended for fling v2)",
+  Name = "Fly GUI V3 (Recommended for fling v2)",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     end    
 })
