@@ -24,3 +24,9 @@ Tab:AddButton({
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     end    
 })
+
+local Tab = Window:MakeTab({
+  Name = "Slap Battles",
+  Icon = "rbxassetid://15744740190",
+  PremiumOnly = false
+})
