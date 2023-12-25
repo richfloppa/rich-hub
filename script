@@ -1,13 +1,12 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
-local Tab2 = Window:MakeTab({
+local Tab = Window:MakeTab({
   Name = "Slap Battles",
   Icon = "rbxassetid://15747018569",
   PremiumOnly = false
-})
 
-Tab2:AddButton({
+Tab:AddButton({
   Name = "hub that exist",
   Callback = function()       loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
     end    
@@ -19,6 +18,14 @@ local Tab = Window:MakeTab({
   Name = "Fling",
   Icon = "rbxassetid://15744740190",
   PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Fling others (loop)",
+	Default = false,
+	Callback = function(Value)
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))() 
+	end    
 })
 
 Tab:AddButton({
