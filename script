@@ -24,9 +24,3 @@ Tab:AddButton({
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     end    
 })
-
-Tab:AddButton({
-  Name = "hub that exist",
-  Callback = function()       loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
-    end    
-})
