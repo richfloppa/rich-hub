@@ -7,6 +7,14 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
+Tab:AddButton({
+  Name = "hub that exist",
+  Callback = function()       loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
+    end    
+})
+
+
+
 local Tab = Window:MakeTab({
   Name = "Fling",
   Icon = "rbxassetid://15744740190",
