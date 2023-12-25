@@ -2,17 +2,9 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
 local Tab = Window:MakeTab({
-  Name = "scripts",
+  Name = "Scripts",
   Icon = "rbxassetid://15744740190",
   PremiumOnly = false
-})
-
-Tab:AddToggle({
-	Name = "Fling others (loop)",
-	Default = false,
-	Callback = function(Value)
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))() 
-	end    
 })
 
 Tab:AddButton({
