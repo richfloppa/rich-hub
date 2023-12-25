@@ -33,7 +33,7 @@ Tab:AddButton({
     end    
 })
 
-local Tab2 = Window:MakeTab({
+local Tab = Window:MakeTab({
   Name = "Slap Battles",
   Icon = "rbxassetid://15744740190",
   PremiumOnly = false
