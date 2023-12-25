@@ -7,13 +7,6 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-Tab:AddToggle({
-	Name = "Fling others (Loop)",
-	Default = false,
-	Callback = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))()
-	end    
-})
-
 Tab:AddButton({
   Name = "Fling others",
   Callback = function()   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))()
