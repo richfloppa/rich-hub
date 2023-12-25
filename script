@@ -2,6 +2,12 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
 local Tab = Window:MakeTab({
+  Name = "Slap Battles",
+  Icon = "rbxassetid://15744740190",
+  PremiumOnly = false
+})
+
+local Tab = Window:MakeTab({
   Name = "Fling",
   Icon = "rbxassetid://15744740190",
   PremiumOnly = false
@@ -23,10 +29,4 @@ Tab:AddButton({
   Name = "Fly GUI V3 (Recommended for fling v2)",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     end    
-})
-
-local Tab = Window:MakeTab({
-  Name = "Slap Battles",
-  Icon = "rbxassetid://15744740190",
-  PremiumOnly = false
 })
