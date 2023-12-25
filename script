@@ -16,6 +16,11 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Cevi
 
 Tab:AddButton({
   Name = "Fling other v2 (invisible)",
-  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/Fling-v1/main/script"))() loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))() loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/Fling-v1/main/script"))() loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+    end    
+})
+Tab:AddButton({
+  Name = "Fly GUI V3 (Recomended for fling v2)",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
     end    
 })
