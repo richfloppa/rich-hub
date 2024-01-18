@@ -1,0 +1,10 @@
+The Gui Maker
+Fling.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))()
+end)
+
+Draggable Gui Maker
+frame = script.Parent.{Fling GUI V1}
+frame.Draggable = true
+frame.Active = true
+frame.Selectable = true
