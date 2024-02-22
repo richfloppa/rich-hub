@@ -1,0 +1,505 @@
+--Alchemist
+game.StarterGui:SetCore("SendNotification", {Title = "Notification",Duration = 5,Text = "Script successfully started. Enjoy!"})
+--Add item
+local items = {
+    "Dire Flower",
+    "Mushroom",
+    "Red Crystal",
+    "Wild Vine",
+    "Dark Root",
+    "Blue Crystal",
+    "Blood Rose",
+    "Autumn Sprout",
+    "Dire Flower",
+    "Fire Flower",
+    "Elder Wood",
+    "Glowing Mushroom",
+    "Jade Stone",
+    "Hazel Lily",
+    "Plane Flower",
+    "Winter Rose",
+    "Cake Mix"
+}
+
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local alchemistEvent = replicatedStorage.AlchemistEvent
+
+--MixItem
+local function mixItem(item)
+    game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("MixItem", item)
+end
+
+--Notification
+game.StarterGui:SetCore("SendNotification", {Title = "Notification",Duration = 5,Text = "You are enjoying it, don't you? 🗿"})
+
+--Instance
+local ScreenGui = Instance.new("ScreenGui")
+local FrameAlchemist = Instance.new("Frame")
+local AUI = Instance.new("UICorner")
+local AUI2 = Instance.new("UICorner")
+local Alche = Instance.new("TextButton")
+local AL = Instance.new("UICorner")
+local CloseButton = Instance.new("TextButton")
+local HideButton = Instance.new("TextButton")
+local ButtonAdd = Instance.new("TextButton")
+local BuAdd = Instance.new("UICorner")
+local BubbleP = Instance.new("TextButton")
+local Bup = Instance.new("UICorner")
+local HideB = Instance.new("UICorner")
+
+local Haste = Instance.new("TextButton")
+local Speed = Instance.new("TextButton")
+local Feather = Instance.new("TextButton")
+local Power = Instance.new("TextButton")
+local Invis = Instance.new("TextButton")
+local Invinci = Instance.new("TextButton")
+local NoToxin = Instance.new("TextButton")
+local Corrupted = Instance.new("TextButton")
+local Idiot = Instance.new("TextButton")
+
+local Drug = Instance.new("TextButton")
+local Toxic = Instance.new("TextButton")
+local Confusion = Instance.new("TextButton")
+local Slow = Instance.new("TextButton")
+local Nightmare = Instance.new("TextButton")
+local Freeze = Instance.new("TextButton")
+local Paralyzing = Instance.new("TextButton")
+local Explosion = Instance.new("TextButton")
+local Lethal = Instance.new("TextButton")
+
+--ScreenGui
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+--Frame
+FrameAlchemist.Parent = ScreenGui
+FrameAlchemist.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+FrameAlchemist.Position = UDim2.new(0.1, 0.5, 0.5, -25)
+FrameAlchemist.Size = UDim2.new(0, 560, 0, 110)
+FrameAlchemist.Active = true
+FrameAlchemist.Draggable = true
+
+Alche.Parent = FrameAlchemist
+Alche.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
+Alche.Position = UDim2.new(0, 0, 1.1, 0)
+Alche.Size = UDim2.new(1, 0, 0.4, 0)
+Alche.Text = "Alchemist"
+Alche.TextColor3 = Color3.new(1, 1, 1)
+Alche.TextSize = 20
+
+CloseButton.Parent = FrameAlchemist
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+CloseButton.Position = UDim2.new(-0.09, 0, 0.8, 0)
+CloseButton.Size = UDim2.new(0, 40, 0 , 80.25)
+CloseButton.Text = "X"
+CloseButton.TextSize = 15
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+HideButton.Parent = FrameAlchemist
+HideButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HideButton.Position = UDim2.new(-0.09, 0, 0, 0)
+HideButton.Size = UDim2.new(0, 40, 0, 80.25)
+HideButton.Text = "-"
+HideButton.TextSize = 15
+HideButton.MouseButton1Click:Connect(function()
+    FrameAlchemist.Visible = false
+    BubbleP.Visible = true
+end)
+
+BubbleP.Parent = ScreenGui
+BubbleP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BubbleP.Position = UDim2.new(0, 0, 0, 3)
+BubbleP.Size = UDim2.new(0, 60, 0, 60)
+BubbleP.Text = "ğŸ—¿"
+BubbleP.TextSize = 30
+BubbleP.BorderSizePixel = 2
+BubbleP.BorderColor3 = Color3.fromRGB(255, 255, 255)
+BubbleP.Draggable = true
+BubbleP.Visible = false
+BubbleP.MouseButton1Click:Connect(function()
+    FrameAlchemist.Visible = true
+    BubbleP.Visible = false
+end)
+-- Button Poison
+Haste.Parent = FrameAlchemist
+Haste.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Haste.Position = UDim2.new(0, 10, 0, 5)
+Haste.Size = UDim2.new(0, 45, 0, 40)
+Haste.Text = "Haste"
+Haste.TextSize = 10
+Haste.BorderSizePixel = 2
+Haste.BorderColor3 = Color3.new(1, 1, 1)
+
+Speed.Parent = FrameAlchemist
+Speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Speed.Position = UDim2.new(0, 65, 0, 5)
+Speed.Size = UDim2.new(0, 45, 0, 40)
+Speed.Text = "Speed"
+Speed.TextSize = 10
+Speed.BorderSizePixel = 2
+Speed.BorderColor3 = Color3.new(1, 1, 1)
+
+Feather.Parent = FrameAlchemist
+Feather.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Feather.Position = UDim2.new(0, 120, 0, 5)
+Feather.Size = UDim2.new(0, 45, 0, 40)
+Feather.Text = "Feather"
+Feather.TextSize = 10
+Feather.BorderSizePixel = 2
+Feather.BorderColor3 = Color3.new(1, 1, 1)
+
+Power.Parent = FrameAlchemist
+Power.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Power.Position = UDim2.new(0, 175, 0, 5)
+Power.Size = UDim2.new(0, 45, 0, 40)
+Power.Text = "Power"
+Power.TextSize = 8
+Power.BorderSizePixel = 2
+Power.BorderColor3 = Color3.new(1, 1, 1)
+
+Invis.Parent = FrameAlchemist
+Invis.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Invis.Position = UDim2.new(0, 230, 0, 5)
+Invis.Size = UDim2.new(0, 45, 0, 40)
+Invis.Text = "Invis"
+Invis.TextSize = 8
+Invis.BorderSizePixel = 2
+Invis.BorderColor3 = Color3.new(1, 1, 1)
+
+Invinci.Parent = FrameAlchemist
+Invinci.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Invinci.Position = UDim2.new(0, 285, 0, 5)
+Invinci.Size = UDim2.new(0, 45, 0, 40)
+Invinci.Text = "Invinci"
+Invinci.TextSize = 8
+Invinci.BorderSizePixel = 2
+Invinci.BorderColor3 = Color3.new(1, 1, 1)
+
+NoToxin.Parent = FrameAlchemist
+NoToxin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoToxin.Position = UDim2.new(0, 340, 0, 5)
+NoToxin.Size = UDim2.new(0, 45, 0, 40)
+NoToxin.Text = "NoToxin"
+NoToxin.TextSize = 8
+NoToxin.BorderSizePixel = 2
+NoToxin.BorderColor3 = Color3.new(1, 1, 1)
+
+Corrupted.Parent = FrameAlchemist
+Corrupted.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Corrupted.Position = UDim2.new(0, 450, 0, 5)
+Corrupted.Size = UDim2.new(0, 45, 0, 40)
+Corrupted.Text = "Corrupted"
+Corrupted.TextSize = 8
+Corrupted.BorderSizePixel = 2
+Corrupted.BorderColor3 = Color3.new(1, 1, 1)
+
+Idiot.Parent = FrameAlchemist
+Idiot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Idiot.Position = UDim2.new(0, 395, 0, 5)
+Idiot.Size = UDim2.new(0, 45, 0, 40)
+Idiot.Text = "Idiot"
+Idiot.TextSize = 8
+Idiot.BorderSizePixel = 2
+Idiot.BorderColor3 = Color3.new(1, 1, 1)
+
+-- Button Poison2
+Drug.Parent = FrameAlchemist
+Drug.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Drug.Position = UDim2.new(0, 10, 0, 60)
+Drug.Size = UDim2.new(0, 45, 0, 40)
+Drug.Text = "Drug"
+Drug.TextSize = 10
+Drug.BorderSizePixel = 2
+Drug.BorderColor3 = Color3.new(1, 1, 1)
+
+Toxic.Parent = FrameAlchemist
+Toxic.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toxic.Position = UDim2.new(0, 65, 0, 60)
+Toxic.Size = UDim2.new(0, 45, 0, 40)
+Toxic.Text = "Toxic"
+Toxic.TextSize = 10
+Toxic.BorderSizePixel = 2
+Toxic.BorderColor3 = Color3.new(1, 1, 1)
+
+Confusion.Parent = FrameAlchemist
+Confusion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Confusion.Position = UDim2.new(0, 120, 0, 60)
+Confusion.Size = UDim2.new(0, 45, 0, 40)
+Confusion.Text = "Confusion"
+Confusion.TextSize = 8
+Confusion.BorderSizePixel = 2
+Confusion.BorderColor3 = Color3.new(1, 1, 1)
+
+Slow.Parent = FrameAlchemist
+Slow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Slow.Position = UDim2.new(0, 175, 0, 60)
+Slow.Size = UDim2.new(0, 45, 0, 40)
+Slow.Text = "Slow"
+Slow.TextSize = 10
+Slow.BorderSizePixel = 2
+Slow.BorderColor3 = Color3.new(1, 1, 1)
+
+Nightmare.Parent = FrameAlchemist
+Nightmare.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Nightmare.Position = UDim2.new(0, 230, 0, 60)
+Nightmare.Size = UDim2.new(0, 45, 0, 40)
+Nightmare.Text = "Nightmare"
+Nightmare.TextSize = 8
+Nightmare.BorderSizePixel = 2
+Nightmare.BorderColor3 = Color3.new(1, 1, 1)
+
+Freeze.Parent = FrameAlchemist
+Freeze.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Freeze.Position = UDim2.new(0, 285, 0, 60)
+Freeze.Size = UDim2.new(0, 45, 0, 40)
+Freeze.Text = "Freeze"
+Freeze.TextSize = 8
+Freeze.BorderSizePixel = 2
+Freeze.BorderColor3 = Color3.new(1, 1, 1)
+
+Paralyzing.Parent = FrameAlchemist
+Paralyzing.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Paralyzing.Position = UDim2.new(0, 340, 0, 60)
+Paralyzing.Size = UDim2.new(0, 45, 0, 40)
+Paralyzing.Text = "Paralyzing"
+Paralyzing.TextSize = 8
+Paralyzing.BorderSizePixel = 2
+Paralyzing.BorderColor3 = Color3.new(1, 1, 1)
+
+Explosion.Parent = FrameAlchemist
+Explosion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Explosion.Position = UDim2.new(0, 395, 0, 60)
+Explosion.Size = UDim2.new(0, 45, 0, 40)
+Explosion.Text = "Explosion"
+Explosion.TextSize = 8
+Explosion.BorderSizePixel = 2
+Explosion.BorderColor3 = Color3.new(1, 1, 1)
+
+Lethal.Parent = FrameAlchemist
+Lethal.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lethal.Position = UDim2.new(0, 450, 0, 60)
+Lethal.Size = UDim2.new(0, 45, 0, 40)
+Lethal.Text = "Lethal"
+Lethal.TextSize = 10
+Lethal.BorderSizePixel = 2
+Lethal.BorderColor3 = Color3.new(1, 1, 1)
+
+ButtonAdd.Parent = FrameAlchemist
+ButtonAdd.BackgroundColor3 = Color3.fromRGB(255, 1, 255)
+ButtonAdd.Position = UDim2.new(0, 505, 0, 3)
+ButtonAdd.Size = UDim2.new(0, 45, 0, 99)
+ButtonAdd.Text = "+"
+ButtonAdd.TextSize = 10
+ButtonAdd.BorderSizePixel = 2
+ButtonAdd.BorderColor3 = Color3.fromRGB(255, 255, 255)
+
+--Local
+local lobby = game.Workspace.Lobby
+
+--Corner
+AUI.CornerRadius = UDim.new(0, 10)
+AUI.Parent = FrameAlchemist
+
+AUI2.CornerRadius = UDim.new(0, 5)
+AUI2.Parent = CloseButton
+
+AL.CornerRadius = UDim.new(0, 5)
+AL.Parent = Alche
+
+BuAdd.CornerRadius = UDim.new(0, 5)
+BuAdd.Parent = ButtonAdd
+
+Bup.CornerRadius = UDim.new(0,100)
+Bup.Parent = BubbleP
+
+HideB.CornerRadius = UDim.new(0,5)
+HideB.Parent = HideButton
+
+--Local
+local function LethalAnd()
+    game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("MixItem", "Blood Rose")
+    game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("MixItem", "Dark Root")
+end
+
+--Functions
+local function AlcheGlove()
+fireclickdetector(workspace.Lobby.Alchemist.ClickDetector)
+wait(0.5)
+game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+end
+
+local function MoreMore()
+for _, item in ipairs(items) do
+    for _ = 1, 200 do
+        alchemistEvent:FireServer("AddItem", item)
+    end
+end
+end
+
+
+local function HastePotion()
+mixItem("Autumn Sprout")
+mixItem("Jade Stone")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function SpeedPotion()
+mixItem("Mushroom")
+mixItem("Mushroom")
+mixItem("Blue Crystal")
+mixItem("Hazel Lily")
+mixItem("Plane Flower")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function FeatherPotion()
+mixItem("Mushroom")
+mixItem("Hazel Lily")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function PowerPotion()
+mixItem("Dire Flower")
+mixItem("Red Crystal")
+mixItem("Wild Vine")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function InvisPotion()
+mixItem("Hazel Lily")
+mixItem("Hazel Lily")
+mixItem("Blue Crystal")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function InvinciPotion()
+mixItem("Mushroom")
+mixItem("Mushroom")
+mixItem("Elder Wood")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function NoToxinPotion()
+mixItem("Plane Flower")
+mixItem("Plane Flower")
+mixItem("Elder Wood")
+mixItem("Blue Crystal")
+mixItem("Glowing Mushroom")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function CorruptedPotion()
+mixItem("Wild Vine")
+mixItem("Wild Vine")
+mixItem("Wild Vine")
+mixItem("Blood Rose")
+mixItem("Elder Wood")
+mixItem("Dark Root")
+mixItem("Jade Stone")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+mixItem("Plane Flower")
+mixItem("Plane Flower")
+mixItem("Hazel Lily")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+
+
+local function DrugPotion()
+mixItem("Mushroom")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function ToxicPotion()
+mixItem("Red Crystal")
+mixItem("Dark Root")
+mixItem("Dark Root")
+mixItem("Blood Rose")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function ConfusionPotion()
+mixItem("Blue Crystal")
+mixItem("Red Crystal")
+mixItem("Glowing Mushroom")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function SlowPotion()
+mixItem("Mushroom")
+mixItem("Mushroom")
+mixItem("Blue Crystal")
+mixItem("Blue Crystal")
+mixItem("Jade Stone")
+mixItem("Plane Flower")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function NightmarePotion()
+mixItem("Dark Root")
+mixItem("Dark Root")
+mixItem("Dark Root")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function FreezePotion()
+mixItem("Blue Crystal")
+mixItem("Wild Vine")
+mixItem("Glowing Mushroom")
+mixItem("Winter Rose")
+mixItem("Winter Rose")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function ParalyzingPotion()
+mixItem("Plane Flower")
+mixItem("Plane Flower")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function ExplosionPotion()
+mixItem("Fire Flower")
+mixItem("Fire Flower")
+mixItem("Red Crystal")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function LethalPotion()
+for i = 1, 10 do
+    LethalAnd()
+end
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+local function IdiotPotion()
+mixItem("Cake Mix")
+game:GetService("ReplicatedStorage").AlchemistEvent:FireServer("BrewPotion")
+end
+
+--Button
+Alche.MouseButton1Click:Connect(AlcheGlove)
+ButtonAdd.MouseButton1Click:Connect(MoreMore)
+
+Haste.MouseButton1Click:Connect(HastePotion)
+Speed.MouseButton1Click:Connect(SpeedPotion)
+Feather.MouseButton1Click:Connect(FeatherPotion)
+Power.MouseButton1Click:Connect(PowerPotion)
+Invis.MouseButton1Click:Connect(InvisPotion)
+Invinci.MouseButton1Click:Connect(InvinciPotion)
+NoToxin.MouseButton1Click:Connect(NoToxinPotion)
+Idiot.MouseButton1Click:Connect(IdiotPotion)
+Corrupted.MouseButton1Click:Connect(CorruptedPotion)
+
+Drug.MouseButton1Click:Connect(DrugPotion)
+Toxic.MouseButton1Click:Connect(ToxicPotion)
+Confusion.MouseButton1Click:Connect(ConfusionPotion)
+Slow.MouseButton1Click:Connect(SlowPotion)
+Nightmare.MouseButton1Click:Connect(NightmarePotion)
+Freeze.MouseButton1Click:Connect(FreezePotion)
+Paralyzing.MouseButton1Click:Connect(ParalyzingPotion)
+Explosion.MouseButton1Click:Connect(ExplosionPotion)
+Lethal.MouseButton1Click:Connect(LethalPotion)
+
+
+
