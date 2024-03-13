@@ -55,7 +55,7 @@ Tab:AddButton({
 
 Tab:AddButton({
   Name = "Stop spamming in chat 🔴",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/stop%20spam",true))();
+  Callback = function()  https://raw.githubusercontent.com/richfloppa/rich-hub/main/stop%20spam",true))();
     end    
 })
 
