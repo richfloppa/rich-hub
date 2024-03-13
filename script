@@ -26,11 +26,6 @@ Tab2:AddButton({
 ]]
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
     end    
-OrionLib:MakeNotification({
-	Name = "Success!",
-	Content = "Slap Battles Hub That Exist has been executed.",
-	Image = "rbxassetid://4483345998",
-	Time = 5
 })
 
 Tab:AddButton({
