@@ -21,7 +21,7 @@ Tab:AddButton({
 
 Tab2:AddButton({
   Name = "Slap Battles Hub That Exist",
-  Callback = function()   --[[
+  Callback = function()  --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
