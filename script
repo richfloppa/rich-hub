@@ -8,7 +8,7 @@ local Tab = Window:MakeTab({
 })
 
 local Tab2 = Window:MakeTab({
-  Name = "Slap battles",
+  Name = "Slap Battles",
   Icon = "rbxassetid://7733955740",
   PremiumOnly = false
 })
@@ -170,5 +170,11 @@ local function UCEC_fake_script() -- Close.CloseScript
 	end)
 end
 coroutine.wrap(UCEC_fake_script)()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Infinite Yield",
+  Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end    
 })
