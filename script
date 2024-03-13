@@ -25,7 +25,7 @@ Tab2:AddButton({
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
-end
+    end    
 OrionLib:MakeNotification({
 	Name = "Success!",
 	Content = "Slap Battles Hub That Exist has been executed.",
