@@ -77,12 +77,6 @@ Tab:AddToggle({
     end    
 })
 
---[[
-Name = <string> - The name of the toggle.
-Default = <bool> - The default value of the toggle.
-Callback = <function> - The function of the toggle.
-]]
-
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))();
