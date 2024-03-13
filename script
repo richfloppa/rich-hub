@@ -7,7 +7,7 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-local Tab = Window:MakeTab({
+local Tab2 = Window:MakeTab({
   Name = "Slap battles",
   Icon = "rbxassetid://7733955740",
   PremiumOnly = false
