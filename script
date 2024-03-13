@@ -47,7 +47,7 @@ Tab2:AddButton({
     end    
 })
 
-Tab:AddButton({
+Tab:AddToggle({
   Name = "Spam in chat",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/spam%20in%20chat",true))();
     end    
