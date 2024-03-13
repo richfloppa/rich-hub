@@ -192,7 +192,7 @@ Tab:AddButton({
     end    
 })
 
-Tab3:AddLabel("If you read this, you are probably got this script from owner of it. Well, you can do whatever you want...")
+Tab3:AddLabel("Kerr")
 
 Tab3:AddButton({
   Name = "Destroy the GUI",
