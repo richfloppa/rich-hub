@@ -47,14 +47,20 @@ Tab2:AddButton({
     end    
 })
 
+Tab:AddTextbox({
+    Name = "Textbox",
+    Default = "Enter message here",
+    TextDisappear = true,
+    Callback = function(Value)
+        Message = Value
+    end	  
+})
+
 Tab:AddToggle({
     Name = "Spam in chat",
     Default = false,
     Callback = function(Value)
-        local A_1 = "_____________________________________________________________________________________________________________________"
-        local A_2 = "All"
         local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-
         local spamSignal = game:GetService("Workspace"):FindFirstChild("SpamSignal")
 
         if not spamSignal then
@@ -67,12 +73,22 @@ Tab:AddToggle({
         spamSignal.Value = Value  -- Update the value based on the toggle
 
         if Value then
-            print("Spamming started.")
+            OrionLib:MakeNotification({
+                Name = "Spamming Started",
+                Content = "Sending messages in chat",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
             while spamSignal.Value do
-                Event:FireServer(A_1, A_2)
+                Event:FireServer(Message, "All")
                 wait(0.3)
             end
-            print("Spamming stopped.")
+            OrionLib:MakeNotification({
+                Name = "Spamming Stopped",
+                Content = "Stopped sending messages",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
         end
     end    
 })
