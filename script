@@ -48,10 +48,40 @@ Tab2:AddButton({
 })
 
 Tab:AddToggle({
-  Name = "Spam in chat",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/spam%20in%20chat",true))();
+    Name = "Spam in chat",
+    Default = false,
+    Callback = function(Value)
+        local A_1 = "_____________________________________________________________________________________________________________________"
+        local A_2 = "All"
+        local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+
+        local spamSignal = game:GetService("Workspace"):FindFirstChild("SpamSignal")
+
+        if not spamSignal then
+            spamSignal = Instance.new("BoolValue")
+            spamSignal.Name = "SpamSignal"
+            spamSignal.Value = false  -- Initially set to false
+            spamSignal.Parent = game:GetService("Workspace")
+        end
+
+        spamSignal.Value = Value  -- Update the value based on the toggle
+
+        if Value then
+            print("Spamming started.")
+            while spamSignal.Value do
+                Event:FireServer(A_1, A_2)
+                wait(0.3)
+            end
+            print("Spamming stopped.")
+        end
     end    
 })
+
+--[[
+Name = <string> - The name of the toggle.
+Default = <bool> - The default value of the toggle.
+Callback = <function> - The function of the toggle.
+]]
 
 Tab:AddButton({
   Name = "Find a small server",
