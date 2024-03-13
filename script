@@ -237,6 +237,9 @@ Tab3:AddLabel("Kerr")
 local Targets = {} -- Stores usernames to fling
 local AutoFling = false -- Toggle for auto flinging
 
+local Targets = {} -- Stores usernames to fling
+local AutoFling = false -- Toggle for auto flinging
+
 Tab:AddTextbox({
     Name = "Target Username",
     Default = "Enter username here",
@@ -307,7 +310,7 @@ while true do
                 if IsPlayerWhitelisted(TargetPlayer) then
                     SkidFling(TargetPlayer)
                 else
-                    Message("Error Occurred", "This user is not whitelisted", 5)
+                    Message("Error Occurred", "This user is not whitelisted. Skipping fling.", 5)
                 end
             else
                 Message("Error Occurred", target .. " not found in the server. Script will not work.", 5)
