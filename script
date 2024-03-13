@@ -263,8 +263,9 @@ local Player = Players.LocalPlayer
 local function GetPlayer(Name)
     Name = Name:lower()
     if Name == "all" or Name == "others" then
-        return "all"
-    elseif Name == "random" then
+    AllBool = true
+    return nil
+elseif Name == "random" then
         local GetPlayers = Players:GetPlayers()
         if table.find(GetPlayers, Player) then table.remove(GetPlayers, table.find(GetPlayers, Player)) end
         return GetPlayers[math.random(#GetPlayers)]
