@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
 local Tab = Window:MakeTab({
-  Name = "Home",
+  Name = "Scripts",
   Icon = "rbxassetid://4370318685",
   PremiumOnly = false
 })
