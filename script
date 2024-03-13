@@ -2,8 +2,14 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
 local Tab = Window:MakeTab({
-  Name = "Scripts",
+  Name = "Universal Scripts",
   Icon = "rbxassetid://4370318685",
+  PremiumOnly = false
+})
+
+local Tab = Window:MakeTab({
+  Name = "Slap battles",
+  Icon = "rbxassetid://7733955740",
   PremiumOnly = false
 })
 
@@ -13,7 +19,7 @@ Tab:AddButton({
     end    
 })
 
-Tab:AddButton({
+Tab2:AddButton({
   Name = "Slap Battles Hub That Exist",
   Callback = function()   --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
@@ -28,7 +34,7 @@ Tab:AddButton({
     end    
 })
 
-Tab:AddButton({
+Tab2:AddButton({
   Name = "Slap Battles OP Script",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
     end    
@@ -52,7 +58,7 @@ Tab:AddButton({
     end    
 })
 
-Tab:AddButton({
+Tab2:AddButton({
   Name = "Baller Slap Farm | Slap Battles",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))()
     end    
