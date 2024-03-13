@@ -45,3 +45,21 @@ Tab:AddButton({
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))();
     end    
 })
+
+Tab:AddButton({
+  Name = "Fling GUI",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Baller Slap Farm | Slap Battles",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Loading...",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/StreamSniper.lua"))()
+    end    
+})
