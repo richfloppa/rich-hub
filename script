@@ -48,7 +48,7 @@ Tab2:AddButton({
 })
 
 Tab:AddTextbox({
-    Name = "Textbox",
+    Name = "Textbox of spam in chat",
     Default = "Enter message here",
     TextDisappear = true,
     Callback = function(Value)
