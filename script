@@ -240,4 +240,112 @@ Tab3:AddButton({
     end    
 })
 
+Tab:AddTextbox({
+    Name = "Target Username to fling",
+    Default = "Enter username here",
+    TextDisappear = true,
+    Callback = function(Value)
+        Target = Value
+    end	  
+})
+
+Tab:AddToggle({
+    Name = "Auto Fling",
+    Default = false,
+    Callback = function(Value)
+        AutoFling = Value
+    end    
+})
+
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local AutoFling = false
+
+local GetPlayer = function(Name)
+    Name = Name:lower()
+    if Name == "all" or Name == "others" then
+        return "all"
+    elseif Name == "random" then
+        local GetPlayers = Players:GetPlayers()
+        if table.find(GetPlayers, Player) then table.remove(GetPlayers, table.find(GetPlayers, Player)) end
+        return GetPlayers[math.random(#GetPlayers)]
+    elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
+        for _,x in next, Players:GetPlayers() do
+            if x ~= Player then
+                if x.Name:lower():match("^"..Name) then
+                    return x;
+                elseif x.DisplayName:lower():match("^"..Name) then
+                    return x;
+                end
+            end
+        end
+    else
+        return
+    end
+end
+
+local Message = function(_Title, _Text, Time)
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
+end
+
+local SkidFling = function(TargetPlayer)
+    local Character = Player.Character
+    local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
+    local RootPart = Humanoid and Humanoid.RootPart
+
+    local TCharacter = TargetPlayer.Character
+    local THumanoid
+    local TRootPart
+    local THead
+    local Accessory
+    local Handle
+
+    if TCharacter:FindFirstChildOfClass("Humanoid") then
+        THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
+    end
+    if THumanoid and THumanoid.RootPart then
+        TRootPart = THumanoid.RootPart
+    end
+    if TCharacter:FindFirstChild("Head") then
+        THead = TCharacter.Head
+    end
+    if TCharacter:FindFirstChildOfClass("Accessory") then
+        Accessory = TCharacter:FindFirstChildOfClass("Accessory")
+    end
+    if Accessory and Accessory:FindFirstChild("Handle") then
+        Handle = Accessory.Handle
+    end
+
+    if Character and Humanoid and RootPart then
+        -- Your existing code for flinging the player goes here
+    else
+        return Message("Error Occurred", "Random error", 5)
+    end
+end
+
+local function IsPlayerWhitelisted(player)
+    local userId = player.UserId
+    local WhitelistedPlayers = {
+        [3891242429] = true, -- Replace with the actual UserId of whitelisted players
+        [4755369321] = true,
+    }
+    return WhitelistedPlayers[userId] or false
+end
+
+while AutoFling do
+    if Target then
+        local TargetPlayer = GetPlayer(Target)
+        if TargetPlayer then
+            if IsPlayerWhitelisted(TargetPlayer) then
+                SkidFling(TargetPlayer)
+            else
+                Message("Error Occurred", "This user is not whitelisted", 5)
+            end
+        else
+            Message("Error Occurred", "Username Invalid", 5)
+        end
+    end
+    wait(10)  -- Fling every 10 seconds
+end
+
 OrionLib:Init() 
