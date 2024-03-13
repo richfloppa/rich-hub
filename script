@@ -14,13 +14,34 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-  Name = "Fling others v2 (invisible)",
-  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/Fling-v1/main/script"))() loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+  Name = "Slap Battles Hub That Exist",
+  Callback = function()   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() 
     end    
 })
 
 Tab:AddButton({
-  Name = "Fly GUI V3 (Recommended for fling v2)",
+  Name = "Fly GUI V3",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Slap Battles OP Script",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Spam in chat (You'll need to rejoin to stop it)",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/spam%20in%20chat",true))();
+    end    
+})
+
+Tab:AddButton({
+  Name = "Find a small server",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))();
     end    
 })
