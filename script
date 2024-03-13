@@ -15,7 +15,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddButton({
   Name = "Fling others",
-  Callback = function()   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Efstrn/Acc/main/Ceviri.json")))()
+  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))();
     end    
 })
 
