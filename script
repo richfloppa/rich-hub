@@ -69,3 +69,21 @@ Tab2:AddButton({
   Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
     end    
 })
+
+Tab2:AddButton({
+  Name = "Ability GUI",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/ability-gui",true))();
+    end    
+})
+
+Tab2:AddButton({
+  Name = "Alchemist Brew",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))();
+    end    
+})
+
+Tab:AddButton({
+  Name = "Outfit Loader",
+  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/-NEW-Outfit-Loader-Breaker/main/Protected%20(4).lua'),true))()
+    end    
+})
