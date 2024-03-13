@@ -234,18 +234,15 @@ Tab:AddButton({
 
 Tab3:AddLabel("Kerr")
 
-Tab3:AddButton({
-  Name = "Destroy the GUI",
-  Callback = function()  OrionLib:Destroy()
-    end    
-})
+local Targets = {} -- Stores usernames to fling
+local AutoFling = false -- Toggle for auto flinging
 
 Tab:AddTextbox({
-    Name = "Target Username to fling",
+    Name = "Target Username",
     Default = "Enter username here",
     TextDisappear = true,
     Callback = function(Value)
-        Target = Value
+        Targets[1] = Value
     end	  
 })
 
@@ -259,7 +256,6 @@ Tab:AddToggle({
 
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
-local AutoFling = false
 
 local GetPlayer = function(Name)
     Name = Name:lower()
@@ -289,38 +285,8 @@ local Message = function(_Title, _Text, Time)
 end
 
 local SkidFling = function(TargetPlayer)
-    local Character = Player.Character
-    local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
-    local RootPart = Humanoid and Humanoid.RootPart
-
-    local TCharacter = TargetPlayer.Character
-    local THumanoid
-    local TRootPart
-    local THead
-    local Accessory
-    local Handle
-
-    if TCharacter:FindFirstChildOfClass("Humanoid") then
-        THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
-    end
-    if THumanoid and THumanoid.RootPart then
-        TRootPart = THumanoid.RootPart
-    end
-    if TCharacter:FindFirstChild("Head") then
-        THead = TCharacter.Head
-    end
-    if TCharacter:FindFirstChildOfClass("Accessory") then
-        Accessory = TCharacter:FindFirstChildOfClass("Accessory")
-    end
-    if Accessory and Accessory:FindFirstChild("Handle") then
-        Handle = Accessory.Handle
-    end
-
-    if Character and Humanoid and RootPart then
-        -- Your existing code for flinging the player goes here
-    else
-        return Message("Error Occurred", "Random error", 5)
-    end
+    -- Your flinging logic here
+    print("Flinging", TargetPlayer.Name)
 end
 
 local function IsPlayerWhitelisted(player)
@@ -332,20 +298,25 @@ local function IsPlayerWhitelisted(player)
     return WhitelistedPlayers[userId] or false
 end
 
-while AutoFling do
-    if Target then
-        local TargetPlayer = GetPlayer(Target)
-        if TargetPlayer then
-            if IsPlayerWhitelisted(TargetPlayer) then
-                SkidFling(TargetPlayer)
+while true do
+    if AutoFling then
+        for _, target in ipairs(Targets) do
+            local TargetPlayer = GetPlayer(target)
+            if TargetPlayer then
+                Message("User Selected", TargetPlayer.Name .. " is selected as target", 3)
+                if IsPlayerWhitelisted(TargetPlayer) then
+                    SkidFling(TargetPlayer)
+                else
+                    Message("Error Occurred", "This user is not whitelisted", 5)
+                end
             else
-                Message("Error Occurred", "This user is not whitelisted", 5)
+                Message("Error Occurred", target .. " not found in the server. Script will not work.", 5)
             end
-        else
-            Message("Error Occurred", "Username Invalid", 5)
         end
+        wait(10)  -- Fling every 10 seconds
+    else
+        wait(1) -- Check every second if auto flinging is enabled
     end
-    wait(10)  -- Fling every 10 seconds
 end
 
 OrionLib:Init() 
