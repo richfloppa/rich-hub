@@ -2,7 +2,4 @@ local A_1 = "___________________________________________________________________
 local A_2 = "All"
 local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
 
-while true do
-    wait(0.3)
-    Event:FireServer(A_1, A_2)
-end
+Event:FireServer(A_1, A_2)
