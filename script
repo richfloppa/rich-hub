@@ -15,7 +15,7 @@ local Tab2 = Window:MakeTab({
 
 local Tab3 = Window:MakeTab({
   Name = "Menu",
-  Icon = "rbxassetid://4370318685",
+  Icon = "rbxassetid://4335489011",
   PremiumOnly = false
 })
 
