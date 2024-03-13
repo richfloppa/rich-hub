@@ -1,0 +1,19 @@
+-- This script will stop the execution of the spamming script when executed
+
+local stopScriptName = "spam.lua"  -- Name of the spamming script
+
+local success, err = pcall(function()
+    local runners = game:GetService("RunService"):GetDescendants()
+    for _, runner in ipairs(runners) do
+        if runner:IsA("Script") and runner.Name == stopScriptName then
+            runner.Disabled = true
+            print("Spamming script stopped successfully.")
+            return
+        end
+    end
+    error("Spamming script not found.")
+end)
+
+if not success then
+    warn("Error stopping spamming script:", err)
+end
