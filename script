@@ -13,6 +13,13 @@ local Tab2 = Window:MakeTab({
   PremiumOnly = false
 })
 
+local Tab3 = Window:MakeTab({
+  Name = "Menu",
+  Icon = "rbxassetid://4370318685",
+  PremiumOnly = false
+})
+
+
 Tab:AddButton({
   Name = "Fling others",
   Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))();
@@ -182,6 +189,12 @@ Tab:AddButton({
 Tab:AddButton({
   Name = "OP Hitbox (Some games may not support this.)",
   Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+    end    
+})
+
+Tab3:AddButton({
+  Name = "Destroy the GUI",
+  Callback = function()  OrionLib:Destroy()
     end    
 })
 
