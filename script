@@ -237,6 +237,9 @@ Tab3:AddLabel("Kerr")
 local Targets = {} -- Stores usernames to fling
 local AutoFling = false -- Toggle for auto flinging
 
+local Targets = {} -- Stores usernames to fling
+local AutoFling = false -- Toggle for auto flinging
+
 Tab:AddTextbox({
     Name = "Target Username",
     Default = "Enter username here",
@@ -257,7 +260,7 @@ Tab:AddToggle({
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 
-local GetPlayer = function(Name)
+local function GetPlayer(Name)
     Name = Name:lower()
     if Name == "all" or Name == "others" then
         return "all"
@@ -280,13 +283,46 @@ local GetPlayer = function(Name)
     end
 end
 
-local Message = function(_Title, _Text, Time)
+local function Message(_Title, _Text, Time)
     game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
 end
 
-local SkidFling = function(TargetPlayer)
-    -- Your flinging logic here
-    print("Flinging", TargetPlayer.Name)
+local function SkidFling(TargetPlayer)
+    local Character = Player.Character
+    local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
+    local RootPart = Humanoid and Humanoid.RootPart
+
+    local TCharacter = TargetPlayer.Character
+    local THumanoid
+    local TRootPart
+    local THead
+    local Accessory
+    local Handle
+
+    if TCharacter:FindFirstChildOfClass("Humanoid") then
+        THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
+    end
+    if THumanoid and THumanoid.RootPart then
+        TRootPart = THumanoid.RootPart
+    end
+    if TCharacter:FindFirstChild("Head") then
+        THead = TCharacter.Head
+    end
+    if TCharacter:FindFirstChildOfClass("Accessory") then
+        Accessory = TCharacter:FindFirstChildOfClass("Accessory")
+    end
+    if Accessory and Accessory:FindFirstChild("Handle") then
+        Handle = Accessory.Handle
+    end
+
+    if Character and Humanoid and RootPart then
+        -- Insert flinging logic here
+        -- This part is integrated from the second script
+        -- You can replace this with your actual flinging logic
+        print("Flinging", TargetPlayer.Name)
+    else
+        Message("Error Occurred", "Random error", 5)
+    end
 end
 
 local function IsPlayerWhitelisted(player)
