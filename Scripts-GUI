@@ -30,15 +30,6 @@ Tab:AddButton({
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
 })
 
-Tab:AddTextbox({
-    Name = "Textbox of spam in chat",
-    Default = "Enter message here",
-    TextDisappear = true,
-    Callback = function(Value)
-        Message = Value
-    end	  
-})
-
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
