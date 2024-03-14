@@ -234,6 +234,12 @@ Tab:AddButton({
 
 Tab3:AddLabel("Kerr")
 
+Tab3:AddButton({
+  Name = "Destroy the GUI",
+  Callback = function()  OrionLib:Destroy()
+    end    
+})
+
 local Targets = {} -- Stores usernames to fling
 local AutoFling = false -- Toggle for auto flinging
 
@@ -355,11 +361,5 @@ while true do
         wait(1) -- Check every second if auto flinging is enabled
     end
 end
-
-Tab:AddButton({
-  Name = "Destroy the GUI",
-  Callback = function()  OrionLib:Destroy()
-    end    
-})
 
 OrionLib:Init() 
