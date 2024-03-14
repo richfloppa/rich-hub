@@ -13,6 +13,7 @@ local AllBool = true
 local GetPlayer = function(Name)
     Name = Name:lower()
     if Name == "all" or Name == "others" then
+        AllBool = false
         local Players = Players:GetPlayers()
         table.remove(Players, table.find(Players, Player))
         return Players
@@ -40,8 +41,7 @@ local GetPlayer = function(Name)
 end
 
 local Message = function(_Title, _Text, Time)
-    game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
-end
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text
  
 local SkidFling = function(TargetPlayer)
     local Character = Player.Character
