@@ -22,12 +22,12 @@ local GetPlayer = function(Name)
         return Players[math.random(#Players)]
     elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
         for _, x in next, Players:GetPlayers() do
-            if x ~= Player and WhitelistedPlayers[x.Name:lower()] == nil then
-                if x.Name:lower():match("^"..Name) then
+            if x ~= Player then
+                if (Name == x.Name:lower() or Name == x.DisplayName:lower()) and WhitelistedPlayers[x.Name:lower()] == nil then
                     if x.Character then -- Check if player is in the game
                         return x
                     end
-                elseif x.DisplayName:lower():match("^"..Name) then
+                elseif AllBool and WhitelistedPlayers[x.Name:lower()] then
                     if x.Character then -- Check if player is in the game
                         return x
                     end
