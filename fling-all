@@ -1,3 +1,5 @@
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
 local WhitelistedPlayers = {
     ["profeseongh"] = true,
     ["TheReaIEfstrn"] = true,
@@ -8,11 +10,27 @@ local GetPlayer = function(Name)
     if Name == "all" then
         local Players = Players:GetPlayers()
         table.remove(Players, table.find(Players, Player))
-        return Players
+        if AllBool then
+            return Players
+        else
+            local FilteredPlayers = {}
+            for _, x in next, Players do
+                if not WhitelistedPlayers[x.Name:lower()] then
+                    table.insert(FilteredPlayers, x)
+                end
+            end
+            return FilteredPlayers
+        end
     elseif Name == "others" then
         local Players = Players:GetPlayers()
         table.remove(Players, table.find(Players, Player))
-        return Players
+        local FilteredPlayers = {}
+        for _, x in next, Players do
+            if not WhitelistedPlayers[x.Name:lower()] then
+                table.insert(FilteredPlayers, x)
+            end
+        end
+        return FilteredPlayers
     elseif Name == "random" then
         local GetPlayers = Players:GetPlayers()
         if table.find(GetPlayers, Player) then
@@ -32,8 +50,6 @@ local GetPlayer = function(Name)
                 end
             end
         end
-    else
-        return
     end
 end
 
