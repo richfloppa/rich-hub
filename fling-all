@@ -7,7 +7,7 @@ local Targets = {"All"} -- "All", "Target Name", "Target name can be shortened"
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
  
-local AllBool = false
+local AllBool = falseasa
  
 local GetPlayer = function(Name)
     Name = Name:lower()
