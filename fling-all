@@ -3,35 +3,26 @@ local WhitelistedPlayers = {
     ["TheReaIEfstrn"] = true,
 }
 
-local Targets = {"All"} -- "All", "Target Name", "Target name can be shortened"
-
-local Players = game:GetService("Players")
-local Player = Players.LocalPlayer
-
-local AllBool = true
-
 local GetPlayer = function(Name)
     Name = Name:lower()
     if Name == "all" or Name == "others" then
-        AllBool = false
-        local Players = Players:GetPlayers()
-        table.remove(Players, table.find(Players, Player))
-        return Players
+        return
     elseif Name == "random" then
-        local Players = Players:GetPlayers()
-        table.remove(Players, table.find(Players, Player))
-        return Players[math.random(#Players)]
+        local GetPlayers = Players:GetPlayers()
+        if table.find(GetPlayers, Player) then
+            table.remove(GetPlayers, table.find(GetPlayers, Player))
+        end
+        return GetPlayers[math.random(#GetPlayers)]
     elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
         for _, x in next, Players:GetPlayers() do
-            if x ~= Player then
-                if (Name == x.Name:lower() or Name == x.DisplayName:lower()) and WhitelistedPlayers[x.Name:lower()] == nil then
-                    if x.Character then -- Check if player is in the game
-                        return x
-                    end
-                elseif AllBool and WhitelistedPlayers[x.Name:lower()] then
-                    if x.Character then -- Check if player is in the game
-                        return x
-                    end
+            if x ~= Player and WhitelistedPlayers[x.Name:lower()] then
+                return nil
+            end
+            if x ~= Player and not WhitelistedPlayers[x.Name:lower()] then
+                if x.Name:lower():match("^"..Name) then
+                    return x
+                elseif x.DisplayName:lower():match("^"..Name) then
+                    return x
                 end
             end
         end
