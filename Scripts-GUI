@@ -19,32 +19,15 @@ local Tab3 = Window:MakeTab({
   PremiumOnly = false
 })
 
-
+-- Adding buttons to the first tab
 Tab:AddButton({
   Name = "Fling all",
-  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))();
-    end    
-})
-
-Tab2:AddButton({
-  Name = "Slap Battles Hub That Exist",
-  Callback = function()  --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
-    end    
+  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
 })
 
 Tab:AddButton({
   Name = "Fly GUI V3",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-    end    
-})
-
-Tab2:AddButton({
-  Name = "Slap Battles OP Script",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
-    end    
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
 })
 
 Tab:AddTextbox({
@@ -56,76 +39,64 @@ Tab:AddTextbox({
     end	  
 })
 
-Tab:AddToggle({
-    Name = "Spam in chat",
-    Default = false,
-    Callback = function(Value)
-        local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
-        local spamSignal = game:GetService("Workspace"):FindFirstChild("SpamSignal")
-
-        if not spamSignal then
-            spamSignal = Instance.new("BoolValue")
-            spamSignal.Name = "SpamSignal"
-            spamSignal.Value = false  -- Initially set to false
-            spamSignal.Parent = game:GetService("Workspace")
-        end
-
-        spamSignal.Value = Value  -- Update the value based on the toggle
-
-        if Value then
-            OrionLib:MakeNotification({
-                Name = "Spamming Started",
-                Content = "Sending messages in chat",
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-            while spamSignal.Value do
-                Event:FireServer(Message, "All")
-                wait(0.3)
-            end
-            OrionLib:MakeNotification({
-                Name = "Spamming Stopped",
-                Content = "Stopped sending messages",
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-        end
-    end    
-})
-
 Tab:AddButton({
   Name = "Find a small server",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))();
-    end    
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
 })
 
 Tab:AddButton({
   Name = "Fling GUI",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
-    end    
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))() end    
+})
+
+-- Adding buttons to the second tab
+Tab2:AddButton({
+  Name = "Slap Battles Hub That Exist",
+  Callback = function()  loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() end    
+})
+
+Tab2:AddButton({
+  Name = "Slap Battles OP Script",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))() end    
 })
 
 Tab2:AddButton({
   Name = "Baller Slap Farm | Slap Battles",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))()
-    end    
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
 })
 
 Tab2:AddButton({
   Name = "OP Hitbox",
-  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
-    end    
+  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))() end    
 })
 
 Tab2:AddButton({
   Name = "Ability GUI",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/ability-gui",true))();
-    end    
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/ability-gui",true))() end    
 })
 
 Tab2:AddButton({
   Name = "Alchemist Brew",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))();
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))() end    
+})
+
+-- Adding buttons to the third tab
+Tab3:AddLabel("Kerr")
+
+Tab3:AddButton({
+  Name = "Destroy the GUI",
+  Callback = function()  OrionLib:Destroy() end    
+})
+
+Tab:AddButton({
+  Name = "OP Hitbox (Some games may not support this.)",
+  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Infinite Yield",
+  Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end    
 })
 
@@ -220,24 +191,52 @@ coroutine.wrap(UCEC_fake_script)()
     end    
 })
 
-Tab:AddButton({
-  Name = "Infinite Yield",
-  Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+Tab:AddTextbox({
+    Name = "Textbox of spam in chat",
+    Default = "Enter message here",
+    TextDisappear = true,
+    Callback = function(Value)
+        Message = Value
+    end	  
+})
+
+Tab:AddToggle({
+    Name = "Spam in chat",
+    Default = false,
+    Callback = function(Value)
+        local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+        local spamSignal = game:GetService("Workspace"):FindFirstChild("SpamSignal")
+
+        if not spamSignal then
+            spamSignal = Instance.new("BoolValue")
+            spamSignal.Name = "SpamSignal"
+            spamSignal.Value = false  -- Initially set to false
+            spamSignal.Parent = game:GetService("Workspace")
+        end
+
+        spamSignal.Value = Value  -- Update the value based on the toggle
+
+        if Value then
+            OrionLib:MakeNotification({
+                Name = "Spamming Started",
+                Content = "Sending messages in chat",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            while spamSignal.Value do
+                Event:FireServer(Message, "All")
+                wait(0.3)
+            end
+            OrionLib:MakeNotification({
+                Name = "Spamming Stopped",
+                Content = "Stopped sending messages",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
     end    
 })
 
-Tab:AddButton({
-  Name = "OP Hitbox (Some games may not support this.)",
-  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
-    end    
-})
 
-Tab3:AddLabel("Kerr")
-
-Tab3:AddButton({
-  Name = "Destroy the GUI",
-  Callback = function()  OrionLib:Destroy()
-    end    
-})
-
+-- Initializing the OrionLib
 OrionLib:Init() 
