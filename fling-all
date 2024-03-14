@@ -226,13 +226,13 @@ for _,x in next, Targets do
     end
 end
 local WhitelistedPlayers = {
-    ["profeseongh"] = true, -- Replace with the actual UserId of whitelisted players
+    ["profeseongh"] = true,
     ["TheReaIEfstrn"] = true,
 }
 
 local function IsPlayerWhitelisted(player)
-    local userId = player.UserId
-    return WhitelistedPlayers[player.Name] or false
+    local playerName = player.Name
+    return WhitelistedPlayers[playerName] or false
 end
 
 return IsPlayerWhitelisted
