@@ -356,7 +356,7 @@ while true do
     end
 end
 
-Tab3:AddButton({
+Tab:AddButton({
   Name = "Destroy the GUI",
   Callback = function()  OrionLib:Destroy()
     end    
