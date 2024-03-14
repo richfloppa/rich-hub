@@ -23,7 +23,7 @@ local GetPlayer = function(Name)
         return GetPlayers[math.random(#GetPlayers)]
     elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
         for _, x in next, Players:GetPlayers() do
-            if x ~= Player and WhitelistedPlayers[x.Name:lower()] then
+            if x ~= Player and WhitelistedPlayers[x.Name:lower()] == nil then
                 if x.Name:lower():match("^"..Name) then
                     return x
                 elseif x.DisplayName:lower():match("^"..Name) then
