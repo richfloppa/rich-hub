@@ -5,8 +5,14 @@ local WhitelistedPlayers = {
 
 local GetPlayer = function(Name)
     Name = Name:lower()
-    if Name == "all" or Name == "others" then
-        return
+    if Name == "all" then
+        local Players = Players:GetPlayers()
+        table.remove(Players, table.find(Players, Player))
+        return Players
+    elseif Name == "others" then
+        local Players = Players:GetPlayers()
+        table.remove(Players, table.find(Players, Player))
+        return Players
     elseif Name == "random" then
         local GetPlayers = Players:GetPlayers()
         if table.find(GetPlayers, Player) then
