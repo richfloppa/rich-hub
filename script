@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))() 
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
 local Tab = Window:MakeTab({
@@ -21,7 +21,7 @@ local Tab3 = Window:MakeTab({
 
 
 Tab:AddButton({
-  Name = "Fling others",
+  Name = "Fling all",
   Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))();
     end    
 })
