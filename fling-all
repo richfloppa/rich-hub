@@ -7,7 +7,7 @@ local Targets = {"All"} -- "All", "Target Name", "Target name can be shortened"
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
  
-local AllBool = false
+local AllBool = falseasa
  
 local GetPlayer = function(Name)
     Name = Name:lower()
@@ -226,8 +226,8 @@ for _,x in next, Targets do
     end
 end
 local WhitelistedPlayers = {
-    [123456789] = true, -- Replace with the actual UserId of whitelisted players
-    [987654321] = true,
+    [profeseongh] = true, -- Replace with the actual UserId of whitelisted players
+    [TheReaIEfstrn] = true,
 }
 
 local function IsPlayerWhitelisted(player)
