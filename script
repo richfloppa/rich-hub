@@ -54,7 +54,7 @@ local function ToggleNotification(enabled)
     OrionLib.Flags["toggle"].Value = enabled
 end
 
-Tab1:AddToggle({
+Tab:AddToggle({
     Name = "Notify me about server: Leaves & Joins",
     Default = true,
     Save = true,
