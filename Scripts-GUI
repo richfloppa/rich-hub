@@ -59,7 +59,7 @@ Tab:AddButton({
 -- Adding buttons to the second tab
 Tab2:AddButton({
   Name = "Slap Battles Hub That Exist",
-  Callback = function()  loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))() end    
+  Callback = function()  loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-that-exist-remake-noantirecord")))() end    
 })
 
 Tab2:AddButton({
