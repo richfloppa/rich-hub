@@ -19,8 +19,8 @@ local Tab3 = Window:MakeTab({
   PremiumOnly = false
 })
 
-local Tab3 = Window:MakeTab({
-  Name = "Scripts ",
+local Tab4 = Window:MakeTab({
+  Name = "Scripts for players",
   Icon = "rbxassetid://12773394473",
   PremiumOnly = false
 })
