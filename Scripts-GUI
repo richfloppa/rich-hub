@@ -1,1 +1,256 @@
-a
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
+local IntroIcon = "rbxassetid://16749647273"
+
+local Tab = Window:MakeTab({
+  Name = "Universal Scripts",
+  Icon = "rbxassetid://4370318685",
+  PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+  Name = "Slap Battles",
+  Icon = "rbxassetid://7733955740",
+  PremiumOnly = false
+})
+
+local Tab3 = Window:MakeTab({
+  Name = "GUI",
+  Icon = "rbxassetid://4335489011",
+  PremiumOnly = false
+})
+
+-- Adding buttons to the first tab
+Tab:AddButton({
+  Name = "Fling all",
+  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
+})
+
+Tab:AddButton({
+  Name = "FE yeet gui",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
+})
+
+Tab:AddButton({
+  Name = "Fly GUI V3",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
+})
+
+Tab:AddButton({
+  Name = "Find a small server",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
+})
+
+Tab:AddButton({
+  Name = "Rejoin the server",
+  Callback = function()  local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+
+
+ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p) end    
+})
+
+Tab:AddButton({
+  Name = "Fling GUI",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))() end    
+})
+
+-- Adding buttons to the second tab
+Tab2:AddButton({
+  Name = "Slap Battles Hub That Exist",
+  Callback = function()  loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-that-exist-remake-noantirecord")))() end    
+})
+
+Tab2:AddButton({
+  Name = "Slap Battles OP Script",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-remake"))() end    
+})
+
+Tab2:AddButton({
+  Name = "Baller Slap Farm | Slap Battles",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
+})
+
+Tab2:AddButton({
+  Name = "OP Hitbox",
+  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))() end    
+})
+
+Tab2:AddButton({
+  Name = "Ability GUI",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/ability-gui",true))() end    
+})
+
+Tab2:AddButton({
+  Name = "Alchemist Brew",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))() end    
+})
+
+-- Adding buttons to the third tab
+Tab3:AddLabel("Kerr")
+
+Tab3:AddButton({
+  Name = "Destroy the GUI",
+  Callback = function()  OrionLib:Destroy() end    
+})
+
+Tab:AddButton({
+  Name = "OP Hitbox (Some games may not support this.)",
+  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Infinite Yield",
+  Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Infinite Yield Delta Mobile",
+  Callback = function()  loadstring(game:HttpGet("https://gist.githubusercontent.com/lxnnydev/c533c374ca4c1dcef4e1e10e33fa4a0c/raw/03e74f184f801dad77d3ebe1e2f18c6ac87ca612/delta___IY.gistfile1.txt.lua",true))()
+    end    
+})
+
+Tab:AddButton({
+  Name = "Safe Spot",
+  Callback = function()  -- Safe spot for slap battles
+-- This script is for everyone so dont get credits
+
+local SafeSpotGui = Instance.new("ScreenGui")
+local Menu = Instance.new("Frame")
+local TP = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+
+wait(0.5)
+
+SafeSpotGui.Name = "SafeSpotGui"
+SafeSpotGui.Parent = game:GetService("CoreGui")
+SafeSpotGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Menu.Name = "Menu"
+Menu.Parent = SafeSpotGui
+Menu.Active = true
+Menu.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Menu.Position = UDim2.new(0.652409554, 0, 0.270731717, 0)
+Menu.Selectable = true
+Menu.Size = UDim2.new(0, 102, 0, 97)
+
+TP.Name = "TP"
+TP.Parent = Menu
+TP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TP.Position = UDim2.new(0.248297215, 0, 0.385386407, 0)
+TP.Size = UDim2.new(0, 50, 0, 50)
+TP.Font = Enum.Font.ArialBold
+TP.Text = "TP"
+TP.TextColor3 = Color3.fromRGB(255, 255, 255)
+TP.TextSize = 21.000
+TP.TextWrapped = true
+
+TextLabel.Parent = Menu
+TextLabel.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+TextLabel.BorderColor3 = Color3.fromRGB(75, 75, 75)
+TextLabel.Position = UDim2.new(-0.00366510125, 0, -0.00283600856, 0)
+TextLabel.Size = UDim2.new(0, 75, 0, 26)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "Safe Spot"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+Close.Name = "Close"
+Close.Parent = Menu
+Close.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+Close.Position = UDim2.new(0.738493085, 0, 0, 0)
+Close.Size = UDim2.new(0, 26, 0, 26)
+Close.Font = Enum.Font.Unknown
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+
+local function FFFAI_fake_script() -- Menu.Drag 
+	local script = Instance.new('LocalScript', Menu)
+
+	local frame = script.Parent.Parent.Menu
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(FFFAI_fake_script)()
+local function QFDYLLB_fake_script() -- TP.LocalScript 
+	local script = Instance.new('LocalScript', TP)
+
+	TP.MouseButton1Click:Connect(function()
+		local platform = Instance.new("Part")
+		platform.Anchored = true
+		platform.Size = Vector3.new(21, 7, 21)
+		platform.CFrame = CFrame.new(-2000, 100, -2000)
+		platform.BrickColor = BrickColor.new("Cyan")
+		platform.Parent = game:GetService("Workspace")
+		wait(0.5)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
+	end)
+end
+coroutine.wrap(QFDYLLB_fake_script)()
+local function UCEC_fake_script() -- Close.CloseScript 
+	local script = Instance.new('LocalScript', Close)
+
+	Close.MouseButton1Click:Connect(function()
+		SafeSpotGui:Destroy()
+	end)
+end
+coroutine.wrap(UCEC_fake_script)()
+    end    
+})
+
+Tab:AddTextbox({
+    Name = "Textbox of spam in chat",
+    Default = "Enter message here",
+    TextDisappear = true,
+    Callback = function(Value)
+        Message = Value
+    end	  
+})
+
+Tab:AddToggle({
+    Name = "Spam in chat",
+    Default = false,
+    Callback = function(Value)
+        local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+        local spamSignal = game:GetService("Workspace"):FindFirstChild("SpamSignal")
+
+        if not spamSignal then
+            spamSignal = Instance.new("BoolValue")
+            spamSignal.Name = "SpamSignal"
+            spamSignal.Value = false  -- Initially set to false
+            spamSignal.Parent = game:GetService("Workspace")
+        end
+
+        spamSignal.Value = Value  -- Update the value based on the toggle
+
+        if Value then
+            OrionLib:MakeNotification({
+                Name = "Spamming Started",
+                Content = "Sending messages in chat",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            while spamSignal.Value do
+                Event:FireServer(Message, "All")
+                wait(0.3)
+            end
+            OrionLib:MakeNotification({
+                Name = "Spamming Stopped",
+                Content = "Stopped sending messages",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
+    end    
+})
+
+
+-- Initializing the OrionLib
+OrionLib:Init() 
