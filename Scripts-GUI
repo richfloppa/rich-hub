@@ -41,7 +41,6 @@ Tab4:AddButton({
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
 })
 
-
 Tab:AddButton({
   Name = "FE yeet gui",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
