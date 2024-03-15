@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
-local IntroIcon = "rbxassetid://16749647273"
+IntroIcon = "rbxassetid://16749647273"
 
 local Tab = Window:MakeTab({
   Name = "Universal Scripts",
