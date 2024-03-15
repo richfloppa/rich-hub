@@ -108,6 +108,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+	Name = "Inf yield Delta",
+	Callback = function()
+      		loadstring(game:HttpGet("https://gist.githubusercontent.com/lxnnydev/c533c374ca4c1dcef4e1e10e33fa4a0c/raw/03e74f184f801dad77d3ebe1e2f18c6ac87ca612/delta___IY.gistfile1.txt.lua",true))()
+  	end    
+})
+
+Tab:AddButton({
   Name = "Safe Spot",
   Callback = function()  -- Safe spot for slap battles
 -- This script is for everyone so dont get credits
