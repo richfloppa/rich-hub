@@ -19,11 +19,28 @@ local Tab3 = Window:MakeTab({
   PremiumOnly = false
 })
 
+local Tab3 = Window:MakeTab({
+  Name = "Scripts based on players",
+  Icon = "rbxassetid://12773394473",
+  PremiumOnly = false
+})
+
 -- Adding buttons to the first tab
 Tab:AddButton({
   Name = "Fling all",
   Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
 })
+
+Tab4:AddButton({
+  Name = "Fling all",
+  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
+})
+
+Tab4:AddButton({
+  Name = "FE yeet gui",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
+})
+
 
 Tab:AddButton({
   Name = "FE yeet gui",
