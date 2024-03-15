@@ -146,7 +146,7 @@ TP.Position = UDim2.new(0.248297215, 0, 0.385386407, 0)
 TP.Size = UDim2.new(0, 50, 0, 50)
 TP.Font = Enum.Font.ArialBold
 TP.Text = "TP"
-TP.TextColor3 = Color3.fromRGB(255, 255, 255)
+TP.TextColor3 =Color3.fromRGB(255, 255, 255)
 TP.TextSize = 21.000
 TP.TextWrapped = true
 
@@ -251,6 +251,5 @@ Tab:AddToggle({
     end    
 })
 
-
 -- Initializing the OrionLib
-OrionLib:Init() 
+OrionLib:Init()
