@@ -238,4 +238,4 @@ Tab:AddToggle({
 })
 
 -- Initializing the OrionLib
-OrionLib:Init() 
+OrionLib:Init()
