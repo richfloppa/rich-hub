@@ -26,6 +26,11 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "FE yeet gui",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
+})
+
+Tab:AddButton({
   Name = "Fly GUI V3",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
 })
@@ -33,6 +38,17 @@ Tab:AddButton({
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
+})
+
+Tab:AddButton({
+  Name = "Rejoin the server",
+  Callback = function()  local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+
+
+ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p) end    
 })
 
 Tab:AddButton({
