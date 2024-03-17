@@ -6110,10 +6110,6 @@ AntiBrick:Set(game.Workspace.NoChanged.Value)
 end)
 
 game.Workspace.NoChanged.Changed:Connect(function()
-AntiRecord:Set(game.Workspace.NoChanged.Value)
-end)
-
-game.Workspace.NoChanged.Changed:Connect(function()
 AntiReda:Set(game.Workspace.NoChanged.Value)
 end)
 
