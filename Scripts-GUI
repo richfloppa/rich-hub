@@ -102,6 +102,51 @@ Tab4:AddButton({
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))() end    
 })
 
+Tab4:AddButton({
+  Name = "THE HUNT EVENT] Royale🌈High OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/92rRupF5/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Restaurant Tycoon 2 OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/iz037/Zeld-Hub/main/Script/Restaurant%20Tycoon%202.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Swordburst 3 ⚔️ OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/x3fall3nangel/FallAngelHub/main/Main.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Greenville OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/b44Cv2ob/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] 🔎 Treasure Hunt Simulator OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/MqkIjsFS/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Livetopia🥚 OP SCRIPT",
+  Callback = function()  local args = {
+    [1] = "Easter2024_Egg",
+    [2] = "Equip"
+}
+
+game:GetService("ReplicatedStorage").Remotes.EquipToolRF:InvokeServer(unpack(args)) end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Redcliff City 🏡RP OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/GzC2PpL0/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Warrior Cats: Ultimate Edition OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/B6T7FhLE/raw'),true))() end    
+})
+
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
