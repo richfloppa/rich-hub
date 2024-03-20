@@ -19,6 +19,12 @@ local Tab3 = Window:MakeTab({
   PremiumOnly = false
 })
 
+local Tab4 = Window:MakeTab({
+  Name = "HUNT SCRIPTS",
+  Icon = "rbxassetid://4335489011",
+  PremiumOnly = false
+})
+
 -- Adding buttons to the first tab
 Tab:AddButton({
   Name = "Fling all",
@@ -33,6 +39,11 @@ Tab:AddButton({
 Tab:AddButton({
   Name = "Fly GUI V3",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Weapon Fighting Simulator OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))() end    
 })
 
 Tab:AddButton({
