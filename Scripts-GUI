@@ -21,7 +21,7 @@ local Tab3 = Window:MakeTab({
 
 local Tab4 = Window:MakeTab({
   Name = "THE HUNT SCRIPTS",
-  Icon = "rbxassetid://7733955740",
+  Icon = "rbxassetid://",
   PremiumOnly = false
 })
 
