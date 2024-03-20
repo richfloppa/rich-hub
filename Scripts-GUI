@@ -41,6 +41,11 @@ Tab:AddButton({
 })
 
 Tab4:AddButton({
+  Name = "Go back to The Hunt game",
+  Callback = function()  game:GetService("TeleportService"):Teleport(16537295657) end    
+})
+
+Tab4:AddButton({
   Name = "[THE HUNT EVENT] Weapon Fighting Simulator OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))() end    
 })
