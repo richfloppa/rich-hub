@@ -47,94 +47,94 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Weapon Fighting Simulator OP SCRIPT",
+  Name = "(1)[THE HUNT EVENT] Weapon Fighting Simulator OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Deadly Decisions OP SCRIPT",
+  Name = "(2)[THE HUNT EVENT] Deadly Decisions OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/eQii5GZt/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Break In OP SCRIPT",
+  Name = "(3)[THE HUNT EVENT] Break In OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] STEEP STEPS OP SCRIPT",
+  Name = "(4)[THE HUNT EVENT] STEEP STEPS OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/fcGYCuGk/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] World // Zero ⚔️ OP SCRIPT",
+  Name = "(5)[THE HUNT EVENT] World // Zero ⚔️ OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/HeiKe2022/wz-beta/main/combine.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Undead Defense Tycoon OP SCRIPT",
+  Name = "(6)[THE HUNT EVENT] Undead Defense Tycoon OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Z5JWlsUK/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Catalog Avatar Creator OP SCRIPT",
+  Name = "(7)[THE HUNT EVENT] Catalog Avatar Creator OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/HUNTCatalog'))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] PLS DONATE 💸 OP SCRIPTT",
+  Name = "(8)[THE HUNT EVENT] PLS DONATE 💸 OP SCRIPTT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/9YWojkbM/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Toilet Tower Defense OP SCRIPT",
+  Name = "(9)[THE HUNT EVENT] Toilet Tower Defense OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Collect All Pets! OP SCRIPT",
+  Name = "(10)[THE HUNT EVENT] Collect All Pets! OP SCRIPT",
   Callback = function()  _G.Theme = "Light" 
 _G.V3rmillion = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Wild Horse Islands OP SCRIPT",
+  Name = "(11)[THE HUNT EVENT] Wild Horse Islands OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/u1EV3rSW/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Driving Empire 🏎️ Car Racing OP SCRIPT",
+  Name = "(12)[THE HUNT EVENT] Driving Empire 🏎️ Car Racing OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "THE HUNT EVENT] Royale🌈High OP SCRIPT",
+  Name = "(13)THE HUNT EVENT] Royale🌈High OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/92rRupF5/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Restaurant Tycoon 2 OP SCRIPT",
+  Name = "(14)[THE HUNT EVENT] Restaurant Tycoon 2 OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/iz037/Zeld-Hub/main/Script/Restaurant%20Tycoon%202.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Swordburst 3 ⚔️ OP SCRIPT",
+  Name = "(15)[THE HUNT EVENT] Swordburst 3 ⚔️ OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/x3fall3nangel/FallAngelHub/main/Main.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Greenville OP SCRIPT",
+  Name = "(16)[THE HUNT EVENT] Greenville OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/b44Cv2ob/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] 🔎 Treasure Hunt Simulator OP SCRIPT",
+  Name = "(17)[THE HUNT EVENT] 🔎 Treasure Hunt Simulator OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/MqkIjsFS/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Livetopia🥚 OP SCRIPT",
+  Name = "(18)[THE HUNT EVENT] Livetopia🥚 OP SCRIPT",
   Callback = function()  local args = {
     [1] = "Easter2024_Egg",
     [2] = "Equip"
@@ -144,82 +144,82 @@ game:GetService("ReplicatedStorage").Remotes.EquipToolRF:InvokeServer(unpack(arg
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Redcliff City 🏡RP OP SCRIPT",
+  Name = "(19)[THE HUNT EVENT] Redcliff City 🏡RP OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/GzC2PpL0/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Warrior Cats: Ultimate Edition OP SCRIPT",
+  Name = "(20)[THE HUNT EVENT] Warrior Cats: Ultimate Edition OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/B6T7FhLE/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Mega Hide and Seek OP SCRIPT",
+  Name = "(21)[THE HUNT EVENT] Mega Hide and Seek OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/gFES8bq0/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Murderers VS Sheriffs Duels OP SCRIPT",
+  Name = "(22)[THE HUNT EVENT] Murderers VS Sheriffs Duels OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Dress To Impress ✨🐰 OP SCRIPT",
+  Name = "(23)[THE HUNT EVENT] Dress To Impress ✨🐰 OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/pSYBbjnz/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Project Smash OP SCRIPT",
+  Name = "(24)[THE HUNT EVENT] Project Smash OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/a14nDm7X/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] DOORS 👁️ OP SCRIPT",
+  Name = "(25)[THE HUNT EVENT] DOORS 👁️ OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] 🔪Survive the Killer! OP SCRIPT",
+  Name = "(26)[THE HUNT EVENT] 🔪Survive the Killer! OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/LOyKaxWe/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] A Wolf Or Other OP SCRIPT",
+  Name = "(27)[THE HUNT EVENT] A Wolf Or Other OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/VZjK95cQ/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] The Strongest Battlegrounds OP SCRIPT",
+  Name = "(28)[THE HUNT EVENT] The Strongest Battlegrounds OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/pzmQATZR/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Arm Wrestle Simulator OP SCRIPT",
+  Name = "(29)[THE HUNT EVENT] Arm Wrestle Simulator OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Xwlh0PgF/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "THE HUNT EVENT] Dragon Adventures 🐉 OP SCRIPT",
+  Name = "(30)THE HUNT EVENT] Dragon Adventures 🐉 OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/8bdqghaC/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "THE HUNT EVENT] LifeTogether 🏠 RP OP SCRIPT",
+  Name = "(31)THE HUNT EVENT] LifeTogether 🏠 RP OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/VJ9E006W/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] War Tycoon OP SCRIPT",
+  Name = "(32)[THE HUNT EVENT] War Tycoon OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/xeBgd3YU/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Shindo Life OP SCRIPT",
+  Name = "(33)[THE HUNT EVENT] Shindo Life OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/IPgQi9Fa/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] 💪Muscle Legends OP SCRIPT",
+  Name = "(34)[THE HUNT EVENT] 💪Muscle Legends OP SCRIPT",
   Callback = function()  for i = 1, 20 do 
     local codes = {"EpicReward500", "MillionWarriors", "FrostGems10", "Musclestorm50", "SpaceGems50", "MegaLift50", "Speedy50", "SkyAgility50", "GalaxyCrystal50", "SuperMuscle100", "SuperPunch100", "Launch250"}
   
@@ -231,7 +231,7 @@ end end
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Pull a Sword OP SCRIPT",
+  Name = "(35)[THE HUNT EVENT] Pull a Sword OP SCRIPT",
   Callback = function()  while wait() do
     local args = {
         [1] = "Click",
@@ -243,18 +243,121 @@ end end
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Metro Life 🐰 OP SCRIPT",
+  Name = "(36)[THE HUNT EVENT] Metro Life 🐰 OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/UUdznPCa/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Strongman Simulator OP SCRIPT",
+  Name = "(37)[THE HUNT EVENT] Strongman Simulator OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Njm0OE4K/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Carry A Friend! OP SCRIPT",
+  Name = "(38)[THE HUNT EVENT] Carry A Friend! OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/E2efZ9N5/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(39)[THE HUNT EVENT] Tsunami Game OP SCRIPT",
+  Callback = function()  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1169.48987, 229.699951, -1078.7804, -0.0564090088, -2.50256971e-09, -0.998407722, -1.93398506e-08, 1, -1.41387924e-09, 0.998407722, 1.92293008e-08, -0.0564090088) end    
+})
+
+Tab4:AddButton({
+  Name = "(40)[THE HUNT EVENT] ⚡Ninja Legends OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "(41)[THE HUNT EVENT] Funky Friday OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Nadir3709/RandomScript/main/FunkyFridayMobile"))() end    
+})
+
+Tab4:AddButton({
+  Name = "(42)[THE HUNT EVENT] The Floor Is LAVA!🔥 OP SCRIPT",
+  Callback = function()  game:GetService("ReplicatedStorage").Remotes.AwardEvent2:FireServer() end    
+})
+
+Tab4:AddButton({
+  Name = "(43)[THE HUNT EVENT] Legends Of Speed ⚡ OP SCRIPT",
+  Callback = function()  while wait() do
+    local args = {
+        [1] = "collectOrb",
+        [2] = "Blue Orb",
+        [3] = "City"
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+end end    
+})
+
+Tab4:AddButton({
+  Name = "(44)[THE HUNT EVENT] War Machines OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Hn9WQOf6/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(45)[THE HUNT EVENT] Escape Running Head OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/3VuKcB5D/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(46)[THE HUNT EVENT] Car Dealership Tycoon OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/0QG73f9b/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(47)[THE HUNT EVENT] Obby But You’re On a Bike OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/siCxt7l3/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(48)[THE HUNT EVENT] The Mimic OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/qQjTL1b5/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(49)[THE HUNT EVENT] Mega Mansion Tycoon 🌴 OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/KEC8wyQA/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(50)[THE HUNT EVENT] Sonic Speed Simulator OP SCRIPT",
+  Callback = function()  local args = {
+    [1] = "AddEventPodiumProgress",
+    [2] = "CollectTimeStones",
+    [3] = 100
+}
+game:GetService("ReplicatedStorage").Knit.Services.MapStateService.RE.OnStateAction:FireServer(unpack(args)) end    
+})
+
+Tab4:AddButton({
+  Name = "(52)[THE HUNT EVENT] 🎂NEED MORE FRIENDS🎂 OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/O1TvLreD/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(53)[THE HUNT EVENT] BARRY'S PRISON RUN OBBY! OP SCRIPT",
+  Callback = function()  game:GetService("ReplicatedStorage").Events2024.AwardBadge:FireServer() end    
+})
+
+Tab4:AddButton({
+  Name = "(54)[THE HUNT EVENT] Natural Disaster Survival OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/jcvuGl7E/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(55)[THE HUNT EVENT] Club Roblox OP SCRIPT",
+  Callback = function()  game:GetService("ReplicatedStorage").DedicatedRemoteEvents.ExplodeDuck:FireServer() end    
+})
+
+Tab4:AddButton({
+  Name = "(56)[THE HUNT EVENT] Bike of Hell OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/tpTROuRR/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "(57)[THE HUNT EVENT] Brookhaven 🏡RP OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))() end    
 })
 
 Tab:AddButton({
