@@ -25,6 +25,12 @@ local Tab4 = Window:MakeTab({
   PremiumOnly = false
 })
 
+-- Adding buttons to the first tab
+Tab:AddButton({
+  Name = "Fling all",
+  Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
+})
+
 Tab:AddButton({
   Name = "FE yeet gui",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
@@ -76,26 +82,24 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Toilet Tower Defense OP SCRIPT (FIND EGG, NO KEY)",
+  Name = "[THE HUNT EVENT] Toilet Tower Defense OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Collect All Pets! OP SCRIPT (AUTO DISCOVER PETS, FARM, NO KEY)",
+  Name = "[THE HUNT EVENT] Collect All Pets! OP SCRIPT",
   Callback = function()  _G.Theme = "Light" 
 _G.V3rmillion = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Wild Horse Islands OP SCRIPT (EASY BADGE)
-",
+  Name = "[THE HUNT EVENT] Wild Horse Islands OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/u1EV3rSW/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "[THE HUNT EVENT] Driving Empire 🏎️ Car Racing OP SCRIPT (EASY BADGE)
-",
+  Name = "[THE HUNT EVENT] Driving Empire 🏎️ Car Racing OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))() end    
 })
 
