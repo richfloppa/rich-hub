@@ -299,32 +299,32 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-  Name = "(52)[THE HUNT EVENT] 🎂NEED MORE FRIENDS🎂 OP SCRIPT",
+  Name = "(51)[THE HUNT EVENT] 🎂NEED MORE FRIENDS🎂 OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/O1TvLreD/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "(53)[THE HUNT EVENT] BARRY'S PRISON RUN OBBY! OP SCRIPT",
+  Name = "(52)[THE HUNT EVENT] BARRY'S PRISON RUN OBBY! OP SCRIPT",
   Callback = function()  game:GetService("ReplicatedStorage").Events2024.AwardBadge:FireServer() end    
 })
 
 Tab4:AddButton({
-  Name = "(54)[THE HUNT EVENT] Natural Disaster Survival OP SCRIPT",
+  Name = "(53)[THE HUNT EVENT] Natural Disaster Survival OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/jcvuGl7E/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "(55)[THE HUNT EVENT] Club Roblox OP SCRIPT",
+  Name = "(54)[THE HUNT EVENT] Club Roblox OP SCRIPT",
   Callback = function()  game:GetService("ReplicatedStorage").DedicatedRemoteEvents.ExplodeDuck:FireServer() end    
 })
 
 Tab4:AddButton({
-  Name = "(56)[THE HUNT EVENT] Bike of Hell OP SCRIPT",
+  Name = "(55)[THE HUNT EVENT] Bike of Hell OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/tpTROuRR/raw'),true))() end    
 })
 
 Tab4:AddButton({
-  Name = "(57)[THE HUNT EVENT] Brookhaven 🏡RP OP SCRIPT",
+  Name = "(56)[THE HUNT EVENT] Brookhaven 🏡RP OP SCRIPT",
   Callback = function()  loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))() end    
 })
 
