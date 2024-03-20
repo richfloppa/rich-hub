@@ -51,6 +51,10 @@ Tab4:AddButton({
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/eQii5GZt/raw'),true))() end    
 })
 
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Break In OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))() end    
+})
 
 Tab:AddButton({
   Name = "Find a small server",
