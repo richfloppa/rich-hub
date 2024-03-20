@@ -21,7 +21,7 @@ local Tab3 = Window:MakeTab({
 
 local Tab3 = Window:MakeTab({
   Name = "The Hunt 🥚",
-  Icon = "http://www.roblox.com/asset/?id=7733673987",
+  Icon = "rbxassetid://4335489011",
   PremiumOnly = false
 })
 
@@ -135,12 +135,7 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "(18)[THE HUNT EVENT] Livetopia🥚 OP SCRIPT",
-  Callback = function()  local args = {
-    [1] = "Easter2024_Egg",
-    [2] = "Equip"
-}
-
-game:GetService("ReplicatedStorage").Remotes.EquipToolRF:InvokeServer(unpack(args)) end    
+  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/livetopia-event'),true))() end    
 })
 
 Tab4:AddButton({
@@ -220,26 +215,12 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "(34)[THE HUNT EVENT] 💪Muscle Legends OP SCRIPT",
-  Callback = function()  for i = 1, 20 do 
-    local codes = {"EpicReward500", "MillionWarriors", "FrostGems10", "Musclestorm50", "SpaceGems50", "MegaLift50", "Speedy50", "SkyAgility50", "GalaxyCrystal50", "SuperMuscle100", "SuperPunch100", "Launch250"}
-  
-    for _, code in ipairs(codes) do
- 
-    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("codeRemote"):InvokeServer(code)
-    end
-end end    
+  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/muscle%20legends%20event'),true))() end    
 })
 
 Tab4:AddButton({
   Name = "(35)[THE HUNT EVENT] Pull a Sword OP SCRIPT",
-  Callback = function()  while wait() do
-    local args = {
-        [1] = "Click",
-        [2] = true
-    }
-    
-    game:GetService("ReplicatedStorage"):WaitForChild("ClickEvent"):FireServer(unpack(args))
-end end    
+  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/pull%20a%20sword%20event'),true))() end    
 })
 
 Tab4:AddButton({
@@ -259,7 +240,7 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "(39)[THE HUNT EVENT] Tsunami Game OP SCRIPT",
-  Callback = function()  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1169.48987, 229.699951, -1078.7804, -0.0564090088, -2.50256971e-09, -0.998407722, -1.93398506e-08, 1, -1.41387924e-09, 0.998407722, 1.92293008e-08, -0.0564090088) end    
+  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/tsunami%20game%20event'),true))() end    
 })
 
 Tab4:AddButton({
@@ -279,15 +260,7 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "(43)[THE HUNT EVENT] Legends Of Speed ⚡ OP SCRIPT",
-  Callback = function()  while wait() do
-    local args = {
-        [1] = "collectOrb",
-        [2] = "Blue Orb",
-        [3] = "City"
-    }
-
-    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
-end end    
+  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/legends%20of%20speed%20event'),true))() end    
 })
 
 Tab4:AddButton({
@@ -322,12 +295,7 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "(50)[THE HUNT EVENT] Sonic Speed Simulator OP SCRIPT",
-  Callback = function()  local args = {
-    [1] = "AddEventPodiumProgress",
-    [2] = "CollectTimeStones",
-    [3] = 100
-}
-game:GetService("ReplicatedStorage").Knit.Services.MapStateService.RE.OnStateAction:FireServer(unpack(args)) end    
+  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/sonic%20speed%20simulator%20event'),true))() end    
 })
 
 Tab4:AddButton({
