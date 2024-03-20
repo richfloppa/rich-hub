@@ -153,6 +153,36 @@ Tab4:AddButton({
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/B6T7FhLE/raw'),true))() end    
 })
 
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Mega Hide and Seek OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/gFES8bq0/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Murderers VS Sheriffs Duels OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Dress To Impress ✨🐰 OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/pSYBbjnz/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Project Smash OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/a14nDm7X/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] DOORS 👁️ OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] 🔪Survive the Killer! OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))() end    
+})
+
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
