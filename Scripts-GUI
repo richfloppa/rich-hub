@@ -183,6 +183,80 @@ Tab4:AddButton({
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/LOyKaxWe/raw'),true))() end    
 })
 
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] A Wolf Or Other OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/VZjK95cQ/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] The Strongest Battlegrounds OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/pzmQATZR/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Arm Wrestle Simulator OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Xwlh0PgF/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "THE HUNT EVENT] Dragon Adventures 🐉 OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/8bdqghaC/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "THE HUNT EVENT] LifeTogether 🏠 RP OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/VJ9E006W/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] War Tycoon OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/xeBgd3YU/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Shindo Life OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/IPgQi9Fa/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] 💪Muscle Legends OP SCRIPT",
+  Callback = function()  for i = 1, 20 do 
+    local codes = {"EpicReward500", "MillionWarriors", "FrostGems10", "Musclestorm50", "SpaceGems50", "MegaLift50", "Speedy50", "SkyAgility50", "GalaxyCrystal50", "SuperMuscle100", "SuperPunch100", "Launch250"}
+  
+    for _, code in ipairs(codes) do
+ 
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("codeRemote"):InvokeServer(code)
+    end
+end end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Pull a Sword OP SCRIPT",
+  Callback = function()  while wait() do
+    local args = {
+        [1] = "Click",
+        [2] = true
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("ClickEvent"):FireServer(unpack(args))
+end end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Metro Life 🐰 OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/UUdznPCa/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Strongman Simulator OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Njm0OE4K/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Carry A Friend! OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/E2efZ9N5/raw'),true))() end    
+})
+
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
