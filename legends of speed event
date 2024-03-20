@@ -1,0 +1,9 @@
+while wait() do
+    local args = {
+        [1] = "collectOrb",
+        [2] = "Blue Orb",
+        [3] = "City"
+    }
+
+    game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+end
