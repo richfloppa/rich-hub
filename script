@@ -21,7 +21,7 @@ local Tab3 = Window:MakeTab({
 
 local Tab3 = Window:MakeTab({
   Name = "The Hunt 🥚",
-  Icon = "http://www.roblox.com/asset/?id=7733673987",
+  Icon = "rbxassetid://4335489011",
   PremiumOnly = false
 })
 
