@@ -1,3 +1,4 @@
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
@@ -19,7 +20,7 @@ local Tab3 = Window:MakeTab({
   PremiumOnly = false
 })
 
-local Tab3 = Window:MakeTab({
+local Tab4 = Window:MakeTab({
   Name = "The Hunt 🥚",
   Icon = "rbxassetid://4335489011",
   PremiumOnly = false
