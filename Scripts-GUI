@@ -56,6 +56,55 @@ Tab4:AddButton({
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))() end    
 })
 
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] STEEP STEPS OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/fcGYCuGk/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] World // Zero ⚔️ OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/HeiKe2022/wz-beta/main/combine.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Undead Defense Tycoon OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Z5JWlsUK/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Catalog Avatar Creator OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/HUNTCatalog'))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] PLS DONATE 💸 OP SCRIPTT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/9YWojkbM/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Toilet Tower Defense OP SCRIPT (FIND EGG, NO KEY)",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Collect All Pets! OP SCRIPT (AUTO DISCOVER PETS, FARM, NO KEY)",
+  Callback = function()  _G.Theme = "Light" 
+_G.V3rmillion = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Wild Horse Islands OP SCRIPT (EASY BADGE)
+",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/u1EV3rSW/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Driving Empire 🏎️ Car Racing OP SCRIPT (EASY BADGE)
+",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))() end    
+})
+
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
