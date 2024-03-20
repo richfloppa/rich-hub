@@ -19,8 +19,9 @@ local Tab3 = Window:MakeTab({
   PremiumOnly = false
 })
 
-local Tab4 = Window:MakeTab({
-  Name = "HUNT SCRIPTS 🥚",
+local Tab3 = Window:MakeTab({
+  Name = "The Hunt 🥚",
+  Icon = "http://www.roblox.com/asset/?id=7733673987",
   PremiumOnly = false
 })
 
