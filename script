@@ -3,7 +3,7 @@ local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, Intr
 
 local Tab = Window:MakeTab({
   Name = "Universal Scripts",
-  Icon = "rbxassetid://16749647273",
+  Icon = "rbxassetid://4370318685",
   PremiumOnly = false
 })
 
@@ -16,6 +16,12 @@ local Tab2 = Window:MakeTab({
 local Tab3 = Window:MakeTab({
   Name = "GUI",
   Icon = "rbxassetid://4335489011",
+  PremiumOnly = false
+})
+
+local Tab4 = Window:MakeTab({
+  Name = "THE HUNT SCRIPTS",
+  Icon = "rbxassetid://",
   PremiumOnly = false
 })
 
@@ -33,6 +39,68 @@ Tab:AddButton({
 Tab:AddButton({
   Name = "Fly GUI V3",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Weapon Fighting Simulator OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Deadly Decisions OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/eQii5GZt/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Break In OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] STEEP STEPS OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/fcGYCuGk/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] World // Zero ⚔️ OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/HeiKe2022/wz-beta/main/combine.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Undead Defense Tycoon OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Z5JWlsUK/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Catalog Avatar Creator OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/HUNTCatalog'))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] PLS DONATE 💸 OP SCRIPTT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/9YWojkbM/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Toilet Tower Defense OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Collect All Pets! OP SCRIPT",
+  Callback = function()  _G.Theme = "Light" 
+_G.V3rmillion = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Wild Horse Islands OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/u1EV3rSW/raw'),true))() end    
+})
+
+Tab4:AddButton({
+  Name = "[THE HUNT EVENT] Driving Empire 🏎️ Car Racing OP SCRIPT",
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))() end    
 })
 
 Tab:AddButton({
