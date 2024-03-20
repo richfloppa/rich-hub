@@ -88,7 +88,9 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "[THE HUNT EVENT] Collect All Pets! OP SCRIPT (AUTO DISCOVER PETS, FARM, NO KEY)",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))() end    
+  Callback = function()  _G.Theme = "Light" 
+_G.V3rmillion = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))() end    
 })
 
 Tab4:AddButton({
