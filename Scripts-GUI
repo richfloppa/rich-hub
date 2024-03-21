@@ -309,7 +309,7 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-  Name = "(53)Natural Disaster Survival",
+  Name = "(53) Natural Disaster Survival",
   Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/jcvuGl7E/raw'),true))() end    
 })
 
