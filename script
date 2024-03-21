@@ -1011,33 +1011,35 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-    Name = "(58) Astro Renaissance 🌌",
-    Callback = function()  
-        if game.PlaceId ~= 16700725713 then
+    Name = "Astro Renaissance 🌌", -- Removed the game ID from the button name
+    Callback = function()
+        local placeId = 16700725713
+        if game.PlaceId ~= placeId then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(16700725713)
+            game:GetService("TeleportService"):Teleport(placeId)
         else
-             loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/Astro%20Renaissance'),true))() end
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/Astro%20Renaissance'),true))()
         end
     end
 })
 
 Tab4:AddButton({
-    Name = "(59) Combat Warriors",
+    Name = "Combat Warriors",
     Callback = function()
-        if game.PlaceId ~= 12828227139 then
+        local placeId = 12828227139
+        if game.PlaceId ~= placeId then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(4282985734)
+            game:GetService("TeleportService"):Teleport(placeId)
         else
             loadstring(game:HttpGet("https://pastefy.app/BQEPkepo/raw", true))()
         end
@@ -1045,25 +1047,26 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-    Name = "(59) TP to Combat Warriors",
+    Name = "TP to Combat Warriors",
     Callback = function()
         game:GetService("TeleportService"):Teleport(4282985734)
     end
 })
 
 Tab4:AddButton({
-    Name = "(60) Drive World 🏎️",
-    Callback = function()  
-        if game.PlaceId ~= 10704789056 then
+    Name = "Drive World 🏎️",
+    Callback = function()
+        local placeId = 10704789056
+       if game.PlaceId ~= placeId then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(10704789056)
+            game:GetService("TeleportService"):Teleport(placeId)
         else
-             loadstring(game:HttpGet(('https://pastefy.app/JMVmDkIa/raw'),true))() end
+            loadstring(game:HttpGet(('https://pastefy.app/JMVmDkIa/raw'),true))()
         end
     end
 })
