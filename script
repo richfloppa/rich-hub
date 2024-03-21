@@ -325,7 +325,7 @@ Tab4:AddButton({
 
 Tab4:AddButton({
   Name = "(56)[THE HUNT EVENT] Brookhaven 🏡RP OP SCRIPT",
-  Callback = function()  loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))() end    
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/brookheaven"))() end    
 })
 
 Tab:AddButton({
