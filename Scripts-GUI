@@ -1000,6 +1000,23 @@ Tab4:AddButton({
     end
 })
 
+Tab4:AddButton({
+    Name = "(57)🔥 BIG Paintball 2!",
+    Callback = function()  
+        if game.PlaceId ~= 12828227139 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(12828227139)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/hAa87AEn/raw'),true))() end
+        end
+    end
+})
+
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
