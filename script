@@ -6,7 +6,7 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://7733673987",
   PremiumOnly = false
 })
-
+-- Adding a button to Tab
 Tab:AddButton({
   Name = "Brookhaven 🏡RP",
   Callback = function()  if game.PlaceId ~= 4924922222 then
