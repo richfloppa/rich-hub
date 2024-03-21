@@ -328,6 +328,81 @@ Tab4:AddButton({
   Callback = function()  loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))() end    
 })
 
+Tab4:AddButton({
+    Name = "(57)🔥 BIG Paintball 2!",
+    Callback = function()  
+        if game.PlaceId ~= 9865958871 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(9865958871)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/hAa87AEn/raw'),true))() end
+        end
+    end
+})
+
+Tab4:AddButton({
+    Name = "(58) Astro Renaissance 🌌",
+    Callback = function()  
+        if game.PlaceId ~= 16700725713 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(16700725713)
+        else
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/Astro%20Renaissance'),true))() end
+        end
+    end
+})
+
+Tab4:AddButton({
+    Name = "(59) Combat Warriors",
+    Callback = function()
+        if game.PlaceId ~= 12828227139 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(4282985734)
+        else
+            loadstring(game:HttpGet("https://pastefy.app/BQEPkepo/raw", true))()
+        end
+    end
+})
+
+Tab4:AddButton({
+    Name = "(59) TP to Combat Warriors",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(4282985734)
+    end
+})
+
+Tab4:AddButton({
+    Name = "(60) Drive World 🏎️",
+    Callback = function()  
+        if game.PlaceId ~= 10704789056 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(10704789056)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/JMVmDkIa/raw'),true))() end
+        end
+    end
+})
+
 Tab:AddButton({
   Name = "Find a small server",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
