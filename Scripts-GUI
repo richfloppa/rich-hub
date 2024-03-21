@@ -609,63 +609,208 @@ Tab4:AddButton({
     end
 })
 
-= "(34) 💪Muscle Legends",
-  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/muscle%20legends%20event'),true))() end    
+Tab4:AddButton({
+    Name = "(34) 💪Muscle Legends",
+    Callback = function()  
+        if game.PlaceId ~= 3623096087 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(3623096087)
+        else
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/muscle%20legends%20event'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(35) Pull a Sword",
-  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/pull%20a%20sword%20event'),true))() end    
+    Name = "(35) Pull a Sword",
+    Callback = function()  
+        if game.PlaceId ~= 13827198708 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(13827198708)
+        else
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/pull%20a%20sword%20event'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(36) Metro Life 🐰",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/UUdznPCa/raw'),true))() end    
+    Name = "(36) Metro Life 🐰",
+    Callback = function()  
+        if game.PlaceId ~= 12985361032 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(12985361032)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/UUdznPCa/raw'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(37) Strongman Simulator",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Njm0OE4K/raw'),true))() end    
+    Name = "(37) Strongman Simulator",
+    Callback = function()  
+        if game.PlaceId ~= 6766156863 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(6766156863)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/Njm0OE4K/raw'),true))() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(38) Carry A Friend!",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/E2efZ9N5/raw'),true))() end    
+    Name = "(38) Carry A Friend!",
+    Callback = function()  
+        if game.PlaceId ~= 14448662003 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(14448662003)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/E2efZ9N5/raw'),true))() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(39) Tsunami Game",
-  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/tsunami%20game%20event'),true))() end    
+    Name = "(39) Tsunami Game",
+    Callback = function()  
+        if game.PlaceId ~= 7993293100 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(7993293100)
+        else
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/tsunami%20game%20event'),true))() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(40) ⚡Ninja Legends",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))() end    
+    Name = "(40) ⚡Ninja Legends",
+    Callback = function()  
+        if game.PlaceId ~= 3956818381 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(3956818381)
+        else
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(41) Funky Friday",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/Nadir3709/RandomScript/main/FunkyFridayMobile"))() end    
+    Name = "(41) Funky Friday",
+    Callback = function()  
+        if game.PlaceId ~= 6447798030 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(6447798030)
+        else
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/Nadir3709/RandomScript/main/FunkyFridayMobile"))() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(42) The Floor Is LAVA!🔥",
-  Callback = function()  game:GetService("ReplicatedStorage").Remotes.AwardEvent2:FireServer() end    
+    Name = "(42) The Floor Is LAVA!🔥",
+    Callback = function()  
+        if game.PlaceId ~= 815405518 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(815405518)
+        else
+             game:GetService("ReplicatedStorage").Remotes.AwardEvent2:FireServer() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(43) Legends Of Speed ⚡",
-  Callback = function()  loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/legends%20of%20speed%20event'),true))() end    
+    Name = "(43) Legends Of Speed ⚡",
+    Callback = function()  
+        if game.PlaceId ~= 3101667897 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(3101667897)
+        else
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/legends%20of%20speed%20event'),true))() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(44) War Machines",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/Hn9WQOf6/raw'),true))() end    
+    Name = "(44) War Machines",
+    Callback = function()  
+        if game.PlaceId ~= 12828227139 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(12828227139)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/Hn9WQOf6/raw'),true))() end
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(45) Escape Running Head",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/3VuKcB5D/raw'),true))() end    
+    Name = "(45) Escape Running Head",
+    Callback = function()  
+        if game.PlaceId ~= 6205205961  then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(6205205961)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/3VuKcB5D/raw'),true))() end
+        end
+    end
 })
 
 Tab4:AddButton({
