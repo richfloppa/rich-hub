@@ -7,7 +7,6 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-
 Tab:AddButton({
   Name = "Brookhaven 🏡RP",
   Callback = function()  if game.PlaceId ~= 4924922222 then
