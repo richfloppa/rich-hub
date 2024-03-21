@@ -10,9 +10,9 @@ if OrionLib then
     })
 
    Tab:AddButton({
-    Name = "Brookhaven 🏡RP",
+    Name = "Weapon Fighting Simulator",
     Callback = function()  
-        if game.PlaceId ~= 4924922222 then
+        if game.PlaceId ~= 8554378337 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game",
                 Content = "Teleporting to the place...",
@@ -21,9 +21,15 @@ if OrionLib then
             })
             game:GetService("TeleportService"):Teleport(4924922222)
         else
-            loadstring(game:HttpGet(('https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302')))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))()
         end
     end
+})
+
+
+Tab4:AddButton({
+  Name = "(1) Weapon Fighting Simulator",
+  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))() end    
 })
 
     -- Initializing the OrionLib
