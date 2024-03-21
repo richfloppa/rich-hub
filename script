@@ -22,13 +22,7 @@ if OrionLib then
             })
             game:GetService("TeleportService"):Teleport(4924922222)
         else
-            local success, error = pcall(function()
-                loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))()
-            end)
-            if not success then
-                warn("Error while executing the remote script:", error)
-            end
-        end    
+                loadstring(game:HttpGet(('https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302')))()
       end
     })
 
