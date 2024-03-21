@@ -200,45 +200,141 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-  Name = "(10) Collect All Pets!",
-  Callback = function()  _G.Theme = "Light" 
+    Name = "(10) Collect All Pets!",
+    Callback = function()  
+        if game.PlaceId ~= 8884433153 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(8884433153)
+        else
+             _G.Theme = "Light" 
 _G.V3rmillion = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))() end    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(11) Wild Horse Islands",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/u1EV3rSW/raw'),true))() end    
+    Name = "(11) Wild Horse Islands",
+    Callback = function()  
+        if game.PlaceId ~= 6989310863 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(6989310863)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/u1EV3rSW/raw'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(12) Driving Empire 🏎️ Car Racing",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))() end    
+    Name = "(12) Driving Empire 🏎️ Car Racing",
+    Callback = function()  
+        if game.PlaceId ~= 3351674303 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(3351674303)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(13) Royale🌈High",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/92rRupF5/raw'),true))() end    
+    Name = "(13) Royale🌈High",
+    Callback = function()  
+        if game.PlaceId ~= 5589818394 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(5589818394)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/92rRupF5/raw'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(14) Restaurant Tycoon 2",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/iz037/Zeld-Hub/main/Script/Restaurant%20Tycoon%202.lua"))() end    
+    Name = "(14) Restaurant Tycoon 2",
+    Callback = function()  
+        if game.PlaceId ~= 3398014311 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(3398014311)
+        else
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/iz037/Zeld-Hub/main/Script/Restaurant%20Tycoon%202.lua"))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(15) Swordburst 3 ⚔️",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/x3fall3nangel/FallAngelHub/main/Main.lua"))() end    
+    Name = "(15) Swordburst 3 ⚔️",
+    Callback = function()  
+        if game.PlaceId ~= 14819490378 or game.PlaceId ~= 11523257493 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(14819490378)
+        else
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/x3fall3nangel/FallAngelHub/main/Main.lua"))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(16) Greenville",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/b44Cv2ob/raw'),true))() end    
+    Name = "(16) Greenville",
+    Callback = function()  
+        if game.PlaceId ~= 891852901 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(891852901)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/b44Cv2ob/raw'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
-  Name = "(17) 🔎 Treasure Hunt Simulator",
-  Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/MqkIjsFS/raw'),true))() end    
+    Name = "(17) 🔎 Treasure Hunt Simulator",
+    Callback = function()  
+        if game.PlaceId ~= 1345139196 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(1345139196)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/MqkIjsFS/raw'),true))()
+        end
+    end
 })
 
 Tab4:AddButton({
