@@ -831,12 +831,12 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-    Name = "(47) Obby But You’re On a Bike",
-    Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/siCxt7l3/raw'),true))() end
+    Name = "(47) Obby But You're On a Bike",
+    Callback = function()  loadstring(game:HttpGet("https://pastefy.app/siCxt7l3/raw", true))() end
 })
 
 Tab4:AddButton({
-    Name = "(47) TP to Obby But You’re On a Bike",
+    Name = "(47) TP to Obby But You're On a Bike",
     Callback = function()   game:GetService("TeleportService"):Teleport(12828227139) end
 })
 
@@ -1029,7 +1029,7 @@ Tab4:AddButton({
 
 Tab4:AddButton({
     Name = "(59) Combat Warriors",
-    Callback = function()  
+    Callback = function()
         if game.PlaceId ~= 12828227139 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
@@ -1039,7 +1039,7 @@ Tab4:AddButton({
             })
             game:GetService("TeleportService"):Teleport(4282985734)
         else
-             loadstring(game:HttpGet(('https://pastefy.app/BQEPkepo/raw'),true))() end
+            loadstring(game:HttpGet("https://pastefy.app/BQEPkepo/raw", true))()
         end
     end
 })
