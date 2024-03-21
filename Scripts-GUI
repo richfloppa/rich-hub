@@ -816,14 +816,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(46) Car Dealership Tycoon",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 1554960397 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(1554960397)
         else
              loadstring(game:HttpGet(('https://pastefy.app/0QG73f9b/raw'),true))() end
         end
@@ -832,25 +832,18 @@ Tab4:AddButton({
 
 Tab4:AddButton({
     Name = "(47) Obby But You’re On a Bike",
-    Callback = function()  
-        if game.PlaceId ~= 12828227139 then
-            OrionLib:MakeNotification({
-                Name = "You are not in the game!",
-                Content = "Teleporting to the place...",
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-            game:GetService("TeleportService"):Teleport(12828227139)
-        else
-             loadstring(game:HttpGet(('https://pastefy.app/siCxt7l3/raw'),true))() end
-        end
-    end
+    Callback = function()  loadstring(game:HttpGet(('https://pastefy.app/siCxt7l3/raw'),true))() end
+})
+
+Tab4:AddButton({
+    Name = "(47) TP to Obby But You’re On a Bike",
+    Callback = function()   game:GetService("TeleportService"):Teleport(12828227139) end
 })
 
 Tab4:AddButton({
     Name = "(48) The Mimic",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 6243699076 or game.PlaceId ~= 16750505007 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
@@ -867,14 +860,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(49) Mega Mansion Tycoon 🌴",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 8328351891 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(8328351891)
         else
              loadstring(game:HttpGet(('https://pastefy.app/KEC8wyQA/raw'),true))() end
         end
@@ -884,14 +877,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(50) Sonic Speed Simulator",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 9049840490 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(9049840490)
         else
              loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/sonic%20speed%20simulator%20event'),true))() end
         end
@@ -901,14 +894,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(51) 🎂NEED MORE FRIENDS🎂",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 16445368294 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(16445368294)
         else
              loadstring(game:HttpGet(('https://pastefy.app/O1TvLreD/raw'),true))() end
         end
@@ -918,14 +911,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(52) BARRY'S PRISON RUN OBBY!",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 8712817601 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(8712817601)
         else
              game:GetService("ReplicatedStorage").Events2024.AwardBadge:FireServer() end
         end
@@ -935,14 +928,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(53) Natural Disaster Survival",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 189707 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(189707)
         else
              loadstring(game:HttpGet(('https://pastefy.app/jcvuGl7E/raw'),true))() end
         end
@@ -952,14 +945,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(54) Club Roblox",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 16711937403 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(16711937403)
         else
              game:GetService("ReplicatedStorage").DedicatedRemoteEvents.ExplodeDuck:FireServer() end
         end
@@ -969,14 +962,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(55) Bike of Hell",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 14943334555 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(14943334555)
         else
              loadstring(game:HttpGet(('https://pastefy.app/tpTROuRR/raw'),true))() end
         end
@@ -986,14 +979,14 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(56) Brookhaven 🏡RP",
     Callback = function()  
-        if game.PlaceId ~= 12828227139 then
+        if game.PlaceId ~= 4924922222 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(4924922222)
         else
              loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))() end
         end
@@ -1003,6 +996,40 @@ Tab4:AddButton({
 Tab4:AddButton({
     Name = "(57)🔥 BIG Paintball 2!",
     Callback = function()  
+        if game.PlaceId ~= 9865958871 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(9865958871)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/hAa87AEn/raw'),true))() end
+        end
+    end
+})
+
+Tab4:AddButton({
+    Name = "(58) Astro Renaissance 🌌",
+    Callback = function()  
+        if game.PlaceId ~= 16700725713 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(16700725713)
+        else
+             loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/Astro%20Renaissance'),true))() end
+        end
+    end
+})
+
+Tab4:AddButton({
+    Name = "(59) Combat Warriors",
+    Callback = function()  
         if game.PlaceId ~= 12828227139 then
             OrionLib:MakeNotification({
                 Name = "You are not in the game!",
@@ -1010,9 +1037,33 @@ Tab4:AddButton({
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(12828227139)
+            game:GetService("TeleportService"):Teleport(4282985734)
         else
-             loadstring(game:HttpGet(('https://pastefy.app/hAa87AEn/raw'),true))() end
+             loadstring(game:HttpGet(('https://pastefy.app/BQEPkepo/raw'),true))() end
+        end
+    end
+})
+
+Tab4:AddButton({
+    Name = "(59) TP to Combat Warriors",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(4282985734)
+    end
+})
+
+Tab4:AddButton({
+    Name = "(60) Drive World 🏎️",
+    Callback = function()  
+        if game.PlaceId ~= 10704789056 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(10704789056)
+        else
+             loadstring(game:HttpGet(('https://pastefy.app/JMVmDkIa/raw'),true))() end
         end
     end
 })
