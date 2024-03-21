@@ -19,7 +19,7 @@ if OrionLib then
                 Image = "rbxassetid://4483345998",
                 Time = 5
             })
-            game:GetService("TeleportService"):Teleport(4924922222)
+            game:GetService("TeleportService"):Teleport(8554378337)
         else
             loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))()
         end
