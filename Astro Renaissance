@@ -1,0 +1,5 @@
+local args = {
+    [1] = "FinishMoonlight"
+}
+
+game:GetService("ReplicatedStorage").QuestAssets.MainEvent:FireServer(unpack(args))
