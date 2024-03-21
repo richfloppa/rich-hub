@@ -14,7 +14,7 @@ if OrionLib then
     Callback = function()  
         if game.PlaceId ~= 8554378337 then
             OrionLib:MakeNotification({
-                Name = "You are not in the game",
+                Name = "You are not in the game!",
                 Content = "Teleporting to the place...",
                 Image = "rbxassetid://4483345998",
                 Time = 5
