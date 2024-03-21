@@ -1,25 +1,39 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
-local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
-local Tab = Window:MakeTab({
-  Name = "The Hunt 🥚",
-  Icon = "rbxassetid://7733673987",
-  PremiumOnly = false
-})
--- Adding a button to Tab
-Tab:AddButton({
-  Name = "Brookhaven 🏡RP",
-  Callback = function()  if game.PlaceId ~= 4924922222 then
-    OrionLib:MakeNotification({
-        Name = "You are not in the game",
-        Content = "Teleporting to the place...",
-        Image = "rbxassetid://4483345998",
-        Time = 5
+if OrionLib then
+    local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
+
+    local Tab = Window:MakeTab({
+      Name = "The Hunt 🥚",
+      Icon = "rbxassetid://7733673987",
+      PremiumOnly = false
     })
-    game:GetService("TeleportService"):Teleport(4924922222)
-else
-loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))() end    
-})
 
--- Initializing the OrionLib
-OrionLib:Init()
+    -- Adding a button to Tab
+    Tab:AddButton({
+      Name = "Brookhaven 🏡RP",
+      Callback = function()  
+        if game.PlaceId ~= 4924922222 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(4924922222)
+        else
+            local success, error = pcall(function()
+                loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))()
+            end)
+            if not success then
+                warn("Error while executing the remote script:", error)
+            end
+        end    
+      end
+    })
+
+    -- Initializing the OrionLib
+    OrionLib:Init()
+else
+    warn("OrionLib failed to load.")
+end
