@@ -1,0 +1,3 @@
+_G.Theme = "Light" 
+_G.V3rmillion = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/CollectAllPets.lua"))()
