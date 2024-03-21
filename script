@@ -211,7 +211,7 @@ Tab4:AddButton({
             })
             game:GetService("TeleportService"):Teleport(8884433153)
         else
- loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Collect%20all%20pets")))()
+            loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Collect%20all%20pets")))()
         end
     end
 })
