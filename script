@@ -1295,7 +1295,7 @@ Tab:AddToggle({
 		if Value then
 			OrionLib:MakeNotification({
 				Name = "Spamming Started",
-				Content = "Sending messages in chat",
+				Content = "Sending messages in chat...",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
@@ -1305,7 +1305,7 @@ Tab:AddToggle({
 			end
 			OrionLib:MakeNotification({
 				Name = "Spamming Stopped",
-				Content = "Stopped sending messages",
+				Content = "Stopped sending messages.",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
