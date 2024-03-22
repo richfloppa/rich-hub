@@ -831,7 +831,7 @@ Tab4:AddButton({
 Tab4:AddButton({
 	Name = "(47) TP to Obby But You're On a Bike",
 	Callback = function()   
-		game:GetService("TeleportService"):Teleport(12828227139) 
+		game:GetService("TeleportService"):Teleport(14184086618) 
 	end
 })
 
