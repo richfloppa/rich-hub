@@ -10,7 +10,7 @@ antivoid.Touched:Connect(function(toucher)
 		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(27, -5, 10)
 		OrionLib:MakeNotification({
 			Name = "Anti Void Notification: ",
-			Content = "Are You Serious Right Neow Bro",
+			Content = "Anti Void Triggered",
 			Image = "rbxassetid://4483345998",
 			Time = 5
 		})
