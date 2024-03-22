@@ -1095,15 +1095,22 @@ Tab:AddButton({
 
 Tab2:AddToggle({
 	Name = "No Knockback",
-	Callback = function()  if game:GetService('Players').LocalPlayer.Character and game:GetService('Players').LocalPlayer.Character:FindFirstChild("FakePart Left Leg") then
+	Default = false,
+	Callback = function(Value)
+	nk = Value
+	end    
+})
+
+  if nk == true then
+    
+if game:GetService('Players').LocalPlayer.Character and game:GetService('Players').LocalPlayer.Character:FindFirstChild("FakePart Left Leg") then
    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
 elseif game:GetService('Players').LocalPlayer.Character and not game:GetService('Players').LocalPlayer.Character:FindFirstChild("FakePart Left Leg") then
       game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end
 end
-end) end    
-})
+end)
 
 
 -- Adding buttons to the second tab
