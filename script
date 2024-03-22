@@ -1,8 +1,3 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
-local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
-
-local nk = false
-local av = false
 local antivoid = Instance.new("Part")
 antivoid.Parent = game:GetService("Workspace")
 antivoid.Position = Vector3.new(-4.27, -58.17, 28.63)
@@ -21,103 +16,1305 @@ antivoid.Touched:Connect(function(toucher)
 		})
 	end
 end)
-local ka = false
-local nw = false
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
+
 local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
+	Name = "Universal Scripts",
+	Icon = "rbxassetid://4370318685",
 	PremiumOnly = false
 })
 
-Tab:AddToggle({
-	Name = "Kill Aura",
-	Default = false,
-	Callback = function(Value)
-		ka = Value
-	end    
+local Tab2 = Window:MakeTab({
+	Name = "Slap Battles",
+	Icon = "rbxassetid://7733955740",
+	PremiumOnly = false
 })
-local aa = false
-spawn(function()
-	while wait() do
-		if aa then 
-			local args = {
-				[1] = "AoeExplosion",
-				[2] = 0
-			}
-			game:GetService("ReplicatedStorage").rhythmevent:FireServer(unpack(args))
+
+local Tab3 = Window:MakeTab({
+	Name = "GUI",
+	Icon = "rbxassetid://4335489011",
+	PremiumOnly = false
+})
+
+local Tab4 = Window:MakeTab({
+	Name = "The Hunt 🥚 (UPD)",
+	Icon = "rbxassetid://7733673987",
+	PremiumOnly = false
+})
+
+-- Adding buttons to the first tab
+Tab:AddButton({
+	Name = "Fling all",
+	Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
+})
+
+Tab:AddButton({
+	Name = "FE yeet gui",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
+})
+
+Tab:AddButton({
+	Name = "Fly GUI V3",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
+})
+
+Tab4:AddButton({
+	Name = "Go back to The Hunt game",
+	Callback = function()  game:GetService("TeleportService"):Teleport(16537295657) end    
+})
+
+Tab4:AddButton({
+	Name = "(1) Weapon Fighting Simulator",
+	Callback = function()  
+		if game.PlaceId ~= 8554378337 then
+			OrionLib:MakeNotification("You are not in the game!", "Teleporting to the place...", "rbxassetid://4483345998", 5)
+			game:GetService("TeleportService"):Teleport(8554378337)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))()
 		end
 	end
-end)
-Tab:AddToggle({
-	Name = "Ability Aura",
-	Default = false,
-	Callback = function(Value)
-		aa = Value
-	end    
 })
-Tab:AddToggle({
-	Name = "Anti Void",
-	Default = false,
-	Callback = function(Value)
-		av = Value
-	end    
-})
-Tab:AddToggle({
-	Name = "No Pusher Wall",
-	Default = false,
-	Callback = function(Value)
-		nw = Value
-	end    
-})
-Tab:AddToggle({
-	Name = "No Knockback",
-	Default = false,
-	Callback = function(Value)
-		nk = Value
-	end    
-})
-Tab:AddToggle({
-	Name = "Server Crasher",
-	Default = false,
-	Callback = function(Value)
-		_G.crahs = Value
-	end    
-})
-_G.crahs = false
-game.RunService.RenderStepped:Connect(function()
-	if _G.crahs == true then
-		local args = {
-			[1] = "Charge"
-		}
 
-		game:GetService("ReplicatedStorage"):WaitForChild("RojoAbility"):FireServer(unpack(args))
-
-	end
-end)
-workspace.ChildAdded:Connect(function(v)
-	if v.Name == "redfx" or v.Name =="bluefx" or v.Name == "hollowpurplefx" then 
-		v:Destroy()
-	end
-end)
-
-game:GetService("RunService").RenderStepped:Connect(function()
-	if game:GetService("Workspace"):FindFirstChild("wall") and nw == true then
-		game:GetService("Workspace").wall.Transparency = .5
-		game:GetService("Workspace").wall.CanCollide = false
-	end
-end)
-
-game:GetService("RunService").RenderStepped:Connect(function()
-	if nk == true then
-
-		if game:GetService('Players').LocalPlayer.Character and game:GetService('Players').LocalPlayer.Character:FindFirstChild("FakePart Left Leg") then
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0)
-		elseif game:GetService('Players').LocalPlayer.Character and not game:GetService('Players').LocalPlayer.Character:FindFirstChild("FakePart Left Leg") then
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = false
+Tab4:AddButton({
+	Name = "(2) Deadly Decisions",
+	Callback = function()  
+		if game.PlaceId ~= 12434172731 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(12434172731)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/eQii5GZt/raw'),true))()
 		end
 	end
-end)
+})
+
+Tab4:AddButton({
+	Name = "(3) Break In",
+	Callback = function()  
+		if game.PlaceId ~= 3851622790 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(3851622790)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(4) STEEP STEP",
+	Callback = function()  
+		if game.PlaceId ~= 11606818992 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(11606818992)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/fcGYCuGk/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(5) World // Zero ⚔️ Dungeons & RPG Adventure",
+	Callback = function()  
+		if game.PlaceId ~= 2727067538 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(2727067538)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/HeiKe2022/wz-beta/main/combine.lua"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(6) Undead Defense Tycoon",
+	Callback = function()  
+		if game.PlaceId ~= 5670292785 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(5670292785)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/Z5JWlsUK/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(7) Catalog Avatar Creator",
+	Callback = function()  
+		if game.PlaceId ~= 16651105782 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(16651105782)
+		else
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/HUNTCatalog.lua'))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(8) PLS DONATE 💸",
+	Callback = function()  
+		if game.PlaceId ~= 8737602449 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(8737602449)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/9YWojkbM/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(9) Toilet Tower Defense",
+	Callback = function()  
+		if game.PlaceId ~= 13775256536 and game.PlaceId ~= 14082129854 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(13775256536)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(10) Collect All Pets!",
+	Callback = function()  
+		if game.PlaceId ~= 8884433153 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(8884433153)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Collect%20all%20pets.lua"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(11) Wild Horse Islands",
+	Callback = function()  
+		if game.PlaceId ~= 6989310863 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(6989310863)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/u1EV3rSW/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(12) Driving Empire 🏎️ Car Racing",
+	Callback = function()  
+		if game.PlaceId ~= 3351674303 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(3351674303)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/nqEDMxMJ/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(13) Royale🌈High",
+	Callback = function()  
+		if game.PlaceId ~= 5589818394 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(5589818394)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/92rRupF5/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(14) Restaurant Tycoon 2",
+	Callback = function()  
+		if game.PlaceId ~= 3398014311 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(3398014311)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/iz037/Zeld-Hub/main/Script/Restaurant%20Tycoon%202.lua"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(15) Swordburst 3 ⚔️",
+	Callback = function()  
+		if game.PlaceId ~= 14819490378 and game.PlaceId ~= 11523257493 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(14819490378)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/x3fall3nangel/FallAngelHub/main/Main.lua"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(16) Greenville",
+	Callback = function()  
+		if game.PlaceId ~= 891852901 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(891852901)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/b44Cv2ob/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(17) 🔎 Treasure Hunt Simulator ",
+	Callback = function()  
+		if game.PlaceId ~= 1345139196 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(1345139196)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/MqkIjsFS/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(18) Livetopia",
+	Callback = function()  
+		if game.PlaceId ~= 6737970321 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(6737970321)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/livetopia-event.lua'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(19) Redcliff City 🏡RP",
+	Callback = function()  
+		if game.PlaceId ~= 8369888266 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(8369888266)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/GzC2PpL0/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(20) Warrior Cats: Ultimate Edition",
+	Callback = function()  
+		if game.PlaceId ~= 15744007066 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(15744007066)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/B6T7FhLE/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(21) Mega Hide and Seek",
+	Callback = function()  
+		if game.PlaceId ~= 5708035517 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(5708035517)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/gFES8bq0/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(22) Murderers VS Sheriffs Duels",
+	Callback = function()  
+		if game.PlaceId ~= 12355337193 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(12355337193)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/murdersvssherrifsduels/main/rubyhub", true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(23) Dress To Impress ✨🐰",
+	Callback = function()  
+		if game.PlaceId ~= 15101393044 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(15101393044)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/pSYBbjnz/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(24) Project Smash",
+	Callback = function()  
+		if game.PlaceId ~= 15092647980 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(15092647980)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/a14nDm7X/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(25) DOORS 👁️",
+	Callback = function()  
+		if game.PlaceId ~= 6516141723 and game.PlaceId ~= 6839171747 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(6516141723)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(26) 🔪Survive the Killer!",
+	Callback = function()  
+		if game.PlaceId ~= 4580204640 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(4580204640)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/LOyKaxWe/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(27) A Wolf Or Other",
+	Callback = function()  
+		if game.PlaceId ~= 2432005634 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(2432005634)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/VZjK95cQ/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(28) The Strongest Battlegrounds",
+	Callback = function()  
+		if game.PlaceId ~= 10449761463 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(10449761463)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/pzmQATZR/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(29) Arm Wrestle Simulator",
+	Callback = function()  
+		if game.PlaceId ~= 13127800756 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(13127800756)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/Xwlh0PgF/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(30) Dragon Adventures 🐉",
+	Callback = function()  
+		if game.PlaceId ~= 3475397644 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(3475397644)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/8bdqghaC/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(31) LifeTogether 🏠 RP",
+	Callback = function()  
+		if game.PlaceId ~= 13967668166 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(13967668166)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/VJ9E006W/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(32) War Tycoon",
+	Callback = function()  
+		if game.PlaceId ~= 4639625707 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(4639625707)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/xeBgd3YU/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(33) Shindo Life",
+	Callback = function()  
+		if game.PlaceId ~= 4616652839 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(4616652839)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/IPgQi9Fa/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(34) 💪 Muscle Legends",
+	Callback = function()  
+		if game.PlaceId ~= 3623096087 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(3623096087)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/muscle%20legends%20event'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(35) Pull a Sword",
+	Callback = function()  
+		if game.PlaceId ~= 13827198708 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(13827198708)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/pull%20a%20sword%20event'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(36) Metro Life 🐰",
+	Callback = function()  
+		if game.PlaceId ~= 12985361032 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(12985361032)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/UUdznPCa/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(37) Strongman Simulator",
+	Callback = function()  
+		if game.PlaceId ~= 6766156863 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(6766156863)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/Njm0OE4K/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(38) Carry A Friend!",
+	Callback = function()  
+		if game.PlaceId ~= 14448662003 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(14448662003)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/E2efZ9N5/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(39) Tsunami Game",
+	Callback = function()  
+		if game.PlaceId ~= 7993293100 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(7993293100)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/tsunami%20game%20event'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(40) ⚡Ninja Legends",
+	Callback = function()  
+		if game.PlaceId ~= 3956818381 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(3956818381)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(41) Funky Friday",
+	Callback = function()  
+		if game.PlaceId ~= 6447798030 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(6447798030)
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Nadir3709/RandomScript/main/FunkyFridayMobile"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(42) The Floor Is LAVA!🔥",
+	Callback = function()  
+		if game.PlaceId ~= 815405518 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(815405518)
+		else
+			game:GetService("ReplicatedStorage").Remotes.AwardEvent2:FireServer()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(43) Legends Of Speed ⚡",
+	Callback = function()  
+		if game.PlaceId ~= 3101667897 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(3101667897)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/legends%20of%20speed%20event'),true))() end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(44) War Machines",
+	Callback = function()  
+		if game.PlaceId ~= 12828227139 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(12828227139)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/Hn9WQOf6/raw'),true))() end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(45) Escape Running Head",
+	Callback = function()  
+		if game.PlaceId ~= 6205205961 and game.PlaceId ~= 6364879587 and game.PlaceId ~= 6364881161 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(6205205961)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/3VuKcB5D/raw'),true))() 
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(46) Car Dealership Tycoon",
+	Callback = function()  
+		if game.PlaceId ~= 1554960397 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(1554960397)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/0QG73f9b/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(47) Obby But You're On a Bike",
+	Callback = function()  
+		loadstring(game:HttpGet("https://pastefy.app/siCxt7l3/raw", true))() 
+	end
+})
+
+Tab4:AddButton({
+	Name = "(47) TP to Obby But You're On a Bike",
+	Callback = function()   
+		game:GetService("TeleportService"):Teleport(12828227139) 
+	end
+})
+
+Tab4:AddButton({
+	Name = "(48) The Mimic",
+	Callback = function()  
+		if game.PlaceId ~= 6243699076 and game.PlaceId ~= 16750505007 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(12828227139)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/siCxt7l3/raw'),true))() 
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(49) Mega Mansion Tycoon 🌴",
+	Callback = function()  
+		if game.PlaceId ~= 8328351891 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(8328351891)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/KEC8wyQA/raw'), true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(50) Sonic Speed Simulator",
+	Callback = function()  
+		if game.PlaceId ~= 9049840490 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(9049840490)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/sonic%20speed%20simulator%20event'), true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(51) 🎂NEED MORE FRIENDS🎂",
+	Callback = function()  
+		if game.PlaceId ~= 16445368294 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(16445368294)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/O1TvLreD/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(52) BARRY'S PRISON RUN OBBY!",
+	Callback = function()  
+		if game.PlaceId ~= 8712817601 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(8712817601)
+		else
+			game:GetService("ReplicatedStorage").Events2024.AwardBadge:FireServer()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(53) Natural Disaster Survival",
+	Callback = function()  
+		if game.PlaceId ~= 189707 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(189707)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/jcvuGl7E/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(54) Club Roblox",
+	Callback = function()  
+		if game.PlaceId ~= 16711937403 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(16711937403)
+		else
+			game:GetService("ReplicatedStorage").DedicatedRemoteEvents.ExplodeDuck:FireServer()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(55) Bike of Hell",
+	Callback = function()  
+		if game.PlaceId ~= 14943334555 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(14943334555)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/tpTROuRR/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(56) Brookhaven 🏡RP",
+	Callback = function()  
+		if game.PlaceId ~= 4924922222 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(4924922222)
+		else
+			loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-Auto-Egg-Collection-11302"))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(57) 🔥 BIG Paintball 2!",
+	Callback = function()  
+		if game.PlaceId ~= 9865958871 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(9865958871)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/hAa87AEn/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(58) Astro Renaissance 🌌",
+	Callback = function()  
+		if game.PlaceId ~= 16700725713 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(16700725713)
+		else
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/Astro%20Renaissance'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(59) Combat Warriors",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastefy.app/BQEPkepo/raw", true))()
+	end
+})
+
+Tab4:AddButton({
+	Name = "(59) TP to Combat Warriors",
+	Callback = function()
+		game:GetService("TeleportService"):Teleport(4282985734)
+	end
+})
+
+Tab4:AddButton({
+	Name = "(60) Drive World 🏎️ Drifting & Racing",
+	Callback = function()  
+		if game.PlaceId ~= 10704789056 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(10704789056)
+		else
+			loadstring(game:HttpGet(('https://pastefy.app/JMVmDkIa/raw'),true))()
+		end
+	end
+})
+
+Tab4:AddButton({
+	Name = "(61) 🌳 Lumber Tycoon 2",
+	Callback = function()  
+		if game.PlaceId ~= 13822889 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(13822889)
+		else
+			loadstring(game:HttpGet"https://getexploits.com/cexecution/694139985821192192")
+			loadstring(game:HttpGet"https://raw.githubusercontent.com/darkxwin/darkxsourcethinkyoutousedarkx/main/darkx")()
+		end
+	end
+})
 
 
+Tab:AddButton({
+	Name = "Find a small server",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
+})
+
+Tab:AddButton({
+	Name = "Rejoin the server",
+	Callback = function()  local ts = game:GetService("TeleportService")
+
+		local p = game:GetService("Players").LocalPlayer
+
+
+
+		ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p) end    
+})
+
+Tab:AddButton({
+	Name = "Fling GUI",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))() end    
+})
+
+-- Adding buttons to the second tab
+Tab2:AddButton({
+	Name = "Slap Battles Hub That Exist",
+	Callback = function()  loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-that-exist-remake-noantirecord")))() end    
+})
+
+Tab2:AddButton({
+	Name = "Slap Battles OP Script",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-remake"))() end    
+})
+
+Tab2:AddButton({
+	Name = "Baller Slap Farm | Slap Battles",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
+})
+
+Tab3:AddToggle({
+                    Name = "Anti Void (Works in tournament)",
+                    Default = false,
+                    Callback = function(Value)
+game.Workspace.dedBarrier.CanCollide = Value
+game.Workspace.TAntiVoid.CanCollide = Value
+av = Value
+                    end    
+                })
+
+
+Tab2:AddButton({
+	Name = "OP Hitbox",
+	Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))() end    
+})
+
+Tab2:AddButton({
+	Name = "Ability GUI",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/ability-gui",true))() end    
+})
+
+Tab2:AddButton({
+	Name = "Alchemist Brew",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))() end    
+})
+
+-- Adding buttons to the third tab
+Tab3:AddLabel("Kerr")
+
+Tab3:AddButton({
+	Name = "Destroy the GUI",
+	Callback = function()  OrionLib:Destroy() end    
+})
+
+Tab:AddButton({
+	Name = "OP Hitbox (Some games may not support this.)",
+	Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield Delta Mobile",
+	Callback = function()  loadstring(game:HttpGet("https://gist.githubusercontent.com/lxnnydev/c533c374ca4c1dcef4e1e10e33fa4a0c/raw/03e74f184f801dad77d3ebe1e2f18c6ac87ca612/delta___IY.gistfile1.txt.lua",true))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Safe Spot",
+	Callback = function()  -- Safe spot for slap battles
+		-- This script is for everyone so dont get credits
+
+		local SafeSpotGui = Instance.new("ScreenGui")
+		local Menu = Instance.new("Frame")
+		local TP = Instance.new("TextButton")
+		local TextLabel = Instance.new("TextLabel")
+		local Close = Instance.new("TextButton")
+
+		wait(0.5)
+
+		SafeSpotGui.Name = "SafeSpotGui"
+		SafeSpotGui.Parent = game:GetService("CoreGui")
+		SafeSpotGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		Menu.Name = "Menu"
+		Menu.Parent = SafeSpotGui
+		Menu.Active = true
+		Menu.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+		Menu.Position = UDim2.new(0.652409554, 0, 0.270731717, 0)
+		Menu.Selectable = true
+		Menu.Size = UDim2.new(0, 102, 0, 97)
+
+		TP.Name = "TP"
+		TP.Parent = Menu
+		TP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		TP.Position = UDim2.new(0.248297215, 0, 0.385386407, 0)
+		TP.Size = UDim2.new(0, 50, 0, 50)
+		TP.Font = Enum.Font.ArialBold
+		TP.Text = "TP"
+		TP.TextColor3 =Color3.fromRGB(255, 255, 255)
+		TP.TextSize = 21.000
+		TP.TextWrapped = true
+
+		TextLabel.Parent = Menu
+		TextLabel.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+		TextLabel.BorderColor3 = Color3.fromRGB(75, 75, 75)
+		TextLabel.Position = UDim2.new(-0.00366510125, 0, -0.00283600856, 0)
+		TextLabel.Size = UDim2.new(0, 75, 0, 26)
+		TextLabel.Font = Enum.Font.ArialBold
+		TextLabel.Text = "Safe Spot"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextSize = 14.000
+
+		Close.Name = "Close"
+		Close.Parent = Menu
+		Close.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+		Close.Position = UDim2.new(0.738493085, 0, 0, 0)
+		Close.Size = UDim2.new(0, 26, 0, 26)
+		Close.Font = Enum.Font.Unknown
+		Close.Text = "X"
+		Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Close.TextSize = 14.000
+
+		local function FFFAI_fake_script() -- Menu.Drag 
+			local script = Instance.new('LocalScript', Menu)
+
+			local frame = script.Parent.Parent.Menu
+			frame.Draggable = true
+			frame.Active = true
+			frame.Selectable = true
+		end
+		coroutine.wrap(FFFAI_fake_script)()
+		local function QFDYLLB_fake_script() -- TP.LocalScript 
+			local script = Instance.new('LocalScript', TP)
+
+			TP.MouseButton1Click:Connect(function()
+				local platform = Instance.new("Part")
+				platform.Anchored = true
+				platform.Size = Vector3.new(21, 7, 21)
+				platform.CFrame = CFrame.new(-2000, 100, -2000)
+				platform.BrickColor = BrickColor.new("Cyan")
+				platform.Parent = game:GetService("Workspace")
+				wait(0.5)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
+			end)
+		end
+		coroutine.wrap(QFDYLLB_fake_script)()
+		local function UCEC_fake_script() -- Close.CloseScript 
+			local script = Instance.new('LocalScript', Close)
+
+			Close.MouseButton1Click:Connect(function()
+				SafeSpotGui:Destroy()
+			end)
+		end
+		coroutine.wrap(UCEC_fake_script)()
+	end    
+})
+
+Tab:AddTextbox({
+	Name = "Textbox of spam in chat",
+	Default = "Enter message here",
+	TextDisappear = true,
+	Callback = function(Value)
+		Message = Value
+	end	  
+})
+
+Tab:AddToggle({
+	Name = "Spam in chat",
+	Default = false,
+	Callback = function(Value)
+		local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+		local spamSignal = game:GetService("Workspace"):FindFirstChild("SpamSignal")
+
+		if not spamSignal then
+			spamSignal = Instance.new("BoolValue")
+			spamSignal.Name = "SpamSignal"
+			spamSignal.Value = false  -- Initially set to false
+			spamSignal.Parent = game:GetService("Workspace")
+		end
+
+		spamSignal.Value = Value  -- Update the value based on the toggle
+
+		if Value then
+			OrionLib:MakeNotification({
+				Name = "Spamming Started",
+				Content = "Sending messages in chat",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			while spamSignal.Value do
+				Event:FireServer(Message, "All")
+				wait(0.3)
+			end
+			OrionLib:MakeNotification({
+				Name = "Spamming Stopped",
+				Content = "Stopped sending messages",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+		end
+	end    
+})
+
+-- Initializing the OrionLib
 OrionLib:Init()
