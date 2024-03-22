@@ -829,7 +829,7 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-	Name = "(48) TP to Obby But You're On a Bike",
+	Name = "(47) TP to Obby But You're On a Bike",
 	Callback = function()   
 		game:GetService("TeleportService"):Teleport(12828227139) 
 	end
@@ -1054,7 +1054,7 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-	Name = "🌳 Lumber Tycoon 2",
+	Name = "(61) 🌳 Lumber Tycoon 2",
 	Callback = function()  
 		if game.PlaceId ~= 13822889 then
 			OrionLib:MakeNotification({
