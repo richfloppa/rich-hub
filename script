@@ -7,12 +7,6 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-local Tab2 = Window:MakeTab({
-  Name = "Slap Battles",
-  Icon = "rbxassetid://7733955740",
-  PremiumOnly = false
-})
-
 local Tab3 = Window:MakeTab({
   Name = "GUI",
   Icon = "rbxassetid://4335489011",
@@ -1085,37 +1079,6 @@ ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p) end
 Tab:AddButton({
   Name = "Fling GUI",
   Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))() end    
-})
-
--- Adding buttons to the second tab
-Tab2:AddButton({
-  Name = "Slap Battles Hub That Exist",
-  Callback = function()  loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-that-exist-remake-noantirecord")))() end    
-})
-
-Tab2:AddButton({
-  Name = "Slap Battles OP Script",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-remake"))() end    
-})
-
-Tab2:AddButton({
-  Name = "Baller Slap Farm | Slap Battles",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
-})
-
-Tab2:AddButton({
-  Name = "OP Hitbox",
-  Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))() end    
-})
-
-Tab2:AddButton({
-  Name = "Ability GUI",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/ability-gui",true))() end    
-})
-
-Tab2:AddButton({
-  Name = "Alchemist Brew",
-  Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))() end    
 })
 
 -- Adding buttons to the third tab
