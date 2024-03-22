@@ -1,5 +1,15 @@
+-- Orion's Mobile Friendly Library
+-- Code by Orion#2444 (https://discord.gg/QzQmBzB)
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/Orion%20Library.lua')))()
-local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
+
+local Window = OrionLib:MakeWindow({
+  Name = "Rich Hub",
+  HidePremium = false,
+  IntroText = "Rich Hub",
+  SaveConfig = true,
+  ConfigFolder = "Scripts"
+})
 
 local Tab3 = Window:MakeTab({
   Name = "GUI",
