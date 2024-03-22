@@ -1127,16 +1127,13 @@ Tab2:AddButton({
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
 })
 
-Tab3:AddToggle({
-                    Name = "Anti Void (Works in tournament)",
-                    Default = false,
-                    Callback = function(Value)
-game.Workspace.dedBarrier.CanCollide = Value
+Tab2:AddButton({
+	Name = "Anti Void (Works in tournament)",
+	Callback = function()  game.Workspace.dedBarrier.CanCollide = Value
 game.Workspace.TAntiVoid.CanCollide = Value
 av = Value
-                    end    
-                })
-
+                    end  
+})
 
 Tab2:AddButton({
 	Name = "OP Hitbox",
