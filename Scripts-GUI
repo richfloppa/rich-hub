@@ -505,17 +505,14 @@ Tab4:AddButton({
 Tab4:AddButton({
 	Name = "(24) Project Smash",
 	Callback = function()  
-		if game.PlaceId ~= 15092647980 then
-			OrionLib:MakeNotification({
-				Name = "You are not in the game!",
-				Content = "Teleporting to the place...",
-				Image = "rbxassetid://4483345998",
-				Time = 5
-			})
-			game:GetService("TeleportService"):Teleport(15092647980)
-		else
-			loadstring(game:HttpGet(('https://pastefy.app/a14nDm7X/raw'),true))()
-		end
+		loadstring(game:HttpGet(('https://pastefy.app/a14nDm7X/raw'),true))() 
+	end
+})
+
+Tab4:AddButton({
+	Name = "(24) TP to Project Smash",
+	Callback = function()   
+		game:GetService("TeleportService"):Teleport(15092647980) 
 	end
 })
 
