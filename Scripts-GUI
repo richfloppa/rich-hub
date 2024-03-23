@@ -180,19 +180,17 @@ Tab4:AddButton({
 Tab4:AddButton({
 	Name = "(9) Toilet Tower Defense",
 	Callback = function()  
-		if game.PlaceId ~= 13775256536 and game.PlaceId ~= 14082129854 then
-			OrionLib:MakeNotification({
-				Name = "You are not in the game!",
-				Content = "Teleporting to the place...",
-				Image = "rbxassetid://4483345998",
-				Time = 5
-			})
-			game:GetService("TeleportService"):Teleport(13775256536)
-		else
-			loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))()
-		end
+		loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))() 
 	end
 })
+
+Tab4:AddButton({
+	Name = "(9) TP to Toilet Tower Defense",
+	Callback = function()   
+		game:GetService("TeleportService"):Teleport(13775256536) 
+	end
+})
+
 
 Tab4:AddButton({
 	Name = "(10) Collect All Pets!",
