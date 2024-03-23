@@ -20,7 +20,7 @@ local Tab3 = Window:MakeTab({
 })
 
 local Tab4 = Window:MakeTab({
-	Name = "The Hunt 🥚 (UPD)",
+	Name = "The Hunt 🥚",
 	Icon = "rbxassetid://7733673987",
 	PremiumOnly = false
 })
