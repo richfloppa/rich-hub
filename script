@@ -10,8 +10,6 @@ SafeSpot.Parent = game:GetService("Workspace")
 
 wait(0.5)
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
-
 local Tab = Window:MakeTab({
 	Name = "Universal Scripts",
 	Icon = "rbxassetid://4370318685",
@@ -1205,7 +1203,7 @@ Tab2:AddDropdown({
 	Options = {"Safe spot", "Arena",  "Default Arena", "Lobby", "Tournament", "Moai Island", "Slapple Island", "Plate"},
 	Callback = function(Value)
 if Value == "Safe spot" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Spot.CFrame * CFrame.new(0,28,0)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
 elseif Value == "Arena" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Origo.CFrame * CFrame.new(0,-5,0)
 elseif Value == "Moai Island" then
