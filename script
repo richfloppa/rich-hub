@@ -1,15 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
-local SafeSpot = Instance.new("Part")
-SafeSpot.Anchored = true
-SafeSpot.Size = Vector3.new(21, 7, 21)
-SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
-SafeSpot.BrickColor = BrickColor.new("Cyan")
-SafeSpot.Parent = game:GetService("Workspace")
-
-wait(0.5)
-
 local Tab = Window:MakeTab({
 	Name = "Universal Scripts",
 	Icon = "rbxassetid://4370318685",
@@ -29,7 +20,7 @@ local Tab3 = Window:MakeTab({
 })
 
 local Tab4 = Window:MakeTab({
-	Name = "The Hunt 🥚 (UPD)",
+	Name = "The Hunt 🥚",
 	Icon = "rbxassetid://7733673987",
 	PremiumOnly = false
 })
@@ -96,7 +87,6 @@ task.wait()
             end
 	end    
 })
-
 
 -- Adding buttons to the first tab
 Tab:AddButton({
@@ -253,19 +243,17 @@ Tab4:AddButton({
 Tab4:AddButton({
 	Name = "(9) Toilet Tower Defense",
 	Callback = function()  
-		if game.PlaceId ~= 13775256536 and game.PlaceId ~= 14082129854 then
-			OrionLib:MakeNotification({
-				Name = "You are not in the game!",
-				Content = "Teleporting to the place...",
-				Image = "rbxassetid://4483345998",
-				Time = 5
-			})
-			game:GetService("TeleportService"):Teleport(13775256536)
-		else
-			loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))()
-		end
+		loadstring(game:HttpGet(('https://pastefy.app/o4eZvcu4/raw'),true))() 
 	end
 })
+
+Tab4:AddButton({
+	Name = "(9) TP to Toilet Tower Defense",
+	Callback = function()   
+		game:GetService("TeleportService"):Teleport(13775256536) 
+	end
+})
+
 
 Tab4:AddButton({
 	Name = "(10) Collect All Pets!",
@@ -1222,6 +1210,7 @@ end
 	end    
 })
 
+
 -- Adding buttons to the third tab
 Tab3:AddLabel("Kerr")
 
@@ -1367,7 +1356,7 @@ Tab:AddToggle({
 		if Value then
 			OrionLib:MakeNotification({
 				Name = "Spamming Started",
-				Content = "Sending messages in chat...",
+				Content = "Sending messages in chat",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
@@ -1377,7 +1366,7 @@ Tab:AddToggle({
 			end
 			OrionLib:MakeNotification({
 				Name = "Spamming Stopped",
-				Content = "Stopped sending messages.",
+				Content = "Stopped sending messages",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
