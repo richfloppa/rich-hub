@@ -166,7 +166,7 @@ Tab4:AddButton({
 Tab4:AddButton({
 	Name = "(4) STEEP STEP",
 	Callback = function()  
-		if game.PlaceId ~= 11606818992 then
+		if game.PlaceId ~= 11606818992 game.PlaceId ~= 15594656287 then
 			OrionLib:MakeNotification({
 				Name = "You are not in the game!",
 				Content = "Teleporting to the place...",
