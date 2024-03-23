@@ -914,7 +914,7 @@ Tab4:AddButton({
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
-			game:GetService("TeleportService"):Teleport(12828227139)
+			game:GetService("TeleportService"):Teleport(6243699076)
 		else
 			loadstring(game:HttpGet(('https://pastefy.app/siCxt7l3/raw'),true))() 
 		end
