@@ -1,15 +1,17 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
+
 local SafeSpot = Instance.new("Part")
-				SafeSpot.Anchored = true
-				SafeSpot.Size = Vector3.new(21, 7, 21)
-				SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
-				SafeSpot.BrickColor = BrickColor.new("Cyan")
-				SafeSpot.Parent = game:GetService("Workspace")
-				wait(0.5)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
-			end)
-		end
+SafeSpot.Anchored = true
+SafeSpot.Size = Vector3.new(21, 7, 21)
+SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
+SafeSpot.BrickColor = BrickColor.new("Cyan")
+SafeSpot.Parent = game:GetService("Workspace")
+
+wait(0.5)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
+
 local Tab = Window:MakeTab({
 	Name = "Universal Scripts",
 	Icon = "rbxassetid://4370318685",
