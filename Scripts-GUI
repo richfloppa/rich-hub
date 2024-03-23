@@ -1195,9 +1195,9 @@ Tab2:AddButton({
 Tab2:AddDropdown({
 	Name = "Teleport",
 	Default = "",
-	Options = {"Safe spot", "Arena",  "Default Arena", "Lobby", "Tournament", "Moai Island", "Slapple Island", "Plate"},
+	Options = {"Safe spot (Don't jump to void)", "Arena",  "Default Arena", "Lobby", "Tournament", "Moai Island", "Slapple Island", "Plate"},
 	Callback = function(Value)
-		if Value == "Safe spot" then
+		if Value == "Safe spot (Don't jump to void)" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
 		elseif Value == "Arena" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Origo.CFrame * CFrame.new(0,-5,0)
