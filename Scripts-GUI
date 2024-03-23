@@ -27,7 +27,7 @@ local Tab3 = Window:MakeTab({
 })
 
 local Tab4 = Window:MakeTab({
-	Name = "The Hunt 🥚",
+	Name = "The Hunt 🥚 (UPD)",
 	Icon = "rbxassetid://7733673987",
 	PremiumOnly = false
 })
@@ -49,7 +49,7 @@ Tab5:AddSlider({
 	ValueName = "WS",
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-Walkspeed = Value
+		Walkspeed = Value
 	end    
 })
 
@@ -57,13 +57,13 @@ Tab5:AddToggle({
 	Name = "Keep Walkspeed",
 	Default = false,
 	Callback = function(Value)
-KeepWalkspeed = Value
-            while KeepWalkspeed do
-                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= Walkspeed then
-                    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Walkspeed
-                end
-task.wait()
-            end
+		KeepWalkspeed = Value
+		while KeepWalkspeed do
+			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= Walkspeed then
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Walkspeed
+			end
+			task.wait()
+		end
 	end    
 })
 
@@ -77,7 +77,7 @@ Tab5:AddSlider({
 	ValueName = "JP",
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-Jumppower = Value
+		Jumppower = Value
 	end    
 })
 
@@ -85,13 +85,13 @@ Tab5:AddToggle({
 	Name = "Keep Jumppower",
 	Default = false,
 	Callback = function(Value)
-KeepJumppower = Value
-            while KeepJumppower do
-                if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= Jumppower then
-                    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jumppower
-                end
-task.wait()
-            end
+		KeepJumppower = Value
+		while KeepJumppower do
+			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= Jumppower then
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jumppower
+			end
+			task.wait()
+		end
 	end    
 })
 
@@ -1140,7 +1140,6 @@ Tab4:AddButton({
 	end
 })
 
-
 Tab:AddButton({
 	Name = "Find a small server",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
@@ -1191,6 +1190,31 @@ Tab2:AddButton({
 Tab2:AddButton({
 	Name = "Alchemist Brew",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))() end    
+})
+
+Tab2:AddDropdown({
+	Name = "Teleport",
+	Default = "",
+	Options = {"Safe spot", "Arena",  "Default Arena", "Lobby", "Tournament", "Moai Island", "Slapple Island", "Plate"},
+	Callback = function(Value)
+		if Value == "Safe spot" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
+		elseif Value == "Arena" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Origo.CFrame * CFrame.new(0,-5,0)
+		elseif Value == "Moai Island" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(215, -15.5, 0.5)
+		elseif Value == "Slapple Island" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Arena.island5.Union.CFrame * CFrame.new(0,3.25,0)
+		elseif Value == "Plate" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.Plate.CFrame * CFrame.new(0,2,0)
+		elseif Value == "Tournament" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Battlearena.Arena.CFrame * CFrame.new(0,10,0)
+		elseif Value == "Default Arena" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120,360,-3)
+		elseif Value == "Lobby" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-800,328,-2.5)
+		end
+	end    
 })
 
 -- Adding buttons to the third tab
@@ -1338,7 +1362,7 @@ Tab:AddToggle({
 		if Value then
 			OrionLib:MakeNotification({
 				Name = "Spamming Started",
-				Content = "Sending messages in chat",
+				Content = "Sending messages in chat...",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
@@ -1348,7 +1372,7 @@ Tab:AddToggle({
 			end
 			OrionLib:MakeNotification({
 				Name = "Spamming Stopped",
-				Content = "Stopped sending messages",
+				Content = "Stopped sending messages.",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
