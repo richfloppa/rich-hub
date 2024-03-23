@@ -916,7 +916,7 @@ Tab4:AddButton({
 			})
 			game:GetService("TeleportService"):Teleport(6243699076)
 		else
-			loadstring(game:HttpGet(('https://pastefy.app/siCxt7l3/raw'),true))() 
+			loadstring(game:HttpGet(('https://pastefy.app/qQjTL1b5/raw'),true))() 
 		end
 	end
 })
