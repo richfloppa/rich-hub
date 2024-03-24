@@ -7,6 +7,18 @@ wait(0.5)
 -- Checkpoint 3
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1147.26953125, 4885.083984375, -20.660789489746094)
 wait(0.5)
--- Checkpoint 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new()
+-- Checkpoint 4
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1887.4696044921875, 4827.60791015625, 17.321847915649414)
+wait(0.5)
+-- Checkpoint 5
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2382.079833984375, 4762.8720703125, 19.365243911743164)
+wait(0.5)
+-- Checkpoint 6
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2769.5849609375, 4747.2060546875, 13.30318546295166)
+wait(0.5)
+-- Checkpoint 7
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3089.059326171875, 4729.732421875, -10.311762809753418)
+wait(0.5)
+-- Checkpoint 8
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3522.2822265625, 4684.775390625, 33.21249771118164)
 wait(0.5)
