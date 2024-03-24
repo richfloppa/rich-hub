@@ -148,9 +148,9 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-	Name = "(3) Break In",
+	Name = "(3) Break In 2",
 	Callback = function()  
-		if game.PlaceId ~= 3851622790 then
+		if game.PlaceId ~= 14775231477 and game.PlaceId ~= 13864661000 and game.PlaceId ~= 3851622790 then
 			OrionLib:MakeNotification({
 				Name = "You are not in the game!",
 				Content = "Teleporting to the place...",
@@ -159,7 +159,7 @@ Tab4:AddButton({
 			})
 			game:GetService("TeleportService"):Teleport(3851622790)
 		else
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/BreakIn2.lua"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/break-in-2"))()
 		end
 	end
 })
