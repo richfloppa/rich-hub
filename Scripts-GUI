@@ -1007,14 +1007,14 @@ Tab4:AddButton({
 Tab4:AddButton({
 	Name = "(54) Club Roblox",
 	Callback = function()  
-		if game.PlaceId ~= 16711937403 then
+		if game.PlaceId ~= 16711937403 and game.PlaceId ~= 3457390032 then
 			OrionLib:MakeNotification({
 				Name = "You are not in the game!",
 				Content = "Teleporting to the place...",
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
-			game:GetService("TeleportService"):Teleport(16711937403)
+			game:GetService("TeleportService"):Teleport(3457390032)
 		else
 			game:GetService("ReplicatedStorage").DedicatedRemoteEvents.ExplodeDuck:FireServer()
 		end
