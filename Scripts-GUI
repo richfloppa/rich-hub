@@ -125,7 +125,7 @@ Tab4:AddButton({
 			OrionLib:MakeNotification("You are not in the game!", "Teleporting to the place...", "rbxassetid://4483345998", 5)
 			game:GetService("TeleportService"):Teleport(8554378337)
 		else
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/kederal/lopSecure/main/WFS.lua"))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/ToraScript/Script/main/WeaponFighting'))();
 		end
 	end
 })
