@@ -549,22 +549,16 @@ Tab4:AddButton({
 		end
 	end
 })
+Tab4:AddLabel("⚠️ THIS GUI DOESN'T WORK IN A WOLF OR OTHER ⚠️")
+
+Tab4:AddLabel("SO USE IT WITH COPYING THE SCRIPT")
 
 Tab4:AddButton({
-	Name = "(27) A Wolf Or Other",
-	Callback = function()  
-		if game.PlaceId ~= 2432005634 then
-			OrionLib:MakeNotification({
-				Name = "You are not in the game!",
-				Content = "Teleporting to the place...",
-				Image = "rbxassetid://4483345998",
-				Time = 5
-			})
-			game:GetService("TeleportService"):Teleport(2432005634)
-		else
-			loadstring(game:HttpGet(('https://pastefy.app/VZjK95cQ/raw'),true))()
-		end
-	end
+    Name = "(27) A Wolf Or Other (Copies to clipboard)",
+    Callback = function()  
+        local codeToCopy = 'loadstring(game:HttpGet(\'https://pastefy.app/VZjK95cQ/raw\',true))()'
+        setclipboard(codeToCopy)
+    end
 })
 
 Tab4:AddButton({
