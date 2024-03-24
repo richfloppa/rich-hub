@@ -1,6 +1,9 @@
+-- Credits To LeoDicap On The Old V3rmillion For Helping Me A Lot With The Script, He Wants To Keep His Discord Private.
+-- Place Check
+	-- Free Gamepasses (LOBBY)
 		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/OrionLibKeybind.lua')))()
 		local Window = OrionLib:MakeWindow({
-			Name = "Break in 2",
+			Name = "Breaking Blitz",
 			HidePremium = false,
 			SaveConfig = true,
 			ConfigFolder = "OrionTest",
@@ -29,6 +32,10 @@
 				firetouchinterest(v, game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, 0)
 			end
 		end
+	else
+		game:GetService("Players").LocalPlayer:Kick("Error! Game Not Supported!")
+	end
+else
     	-- Floating Part
 	local Part = Instance.new("Part")
 	Part.Size = Vector3.new(5, 1, 5)
