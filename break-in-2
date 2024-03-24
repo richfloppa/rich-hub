@@ -1,6 +1,6 @@
 		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/RScriptz/RobloxScripts/main/OrionLibKeybind.lua')))()
 		local Window = OrionLib:MakeWindow({
-			Name = "Breaking Blitz",
+			Name = "Break in 2",
 			HidePremium = false,
 			SaveConfig = true,
 			ConfigFolder = "OrionTest",
