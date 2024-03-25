@@ -434,7 +434,7 @@ Tab4:AddLabel("SO USE IT WITH COPYING THE SCRIPT")
 Tab4:AddButton({
     Name = "(20) Warrior Cats: Ultimate Edition (Copies to clipboard)",
     Callback = function()  
-        local codeToCopy = 'loadstring(game:HttpGet(('https://pastefy.app/B6T7FhLE/raw'),true))()'
+        local codeToCopy = 'loadstring(game:HttpGet(("https://pastefy.app/B6T7FhLE/raw"),true))()'
         setclipboard(codeToCopy)
     end
 })
