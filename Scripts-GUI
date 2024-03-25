@@ -427,21 +427,21 @@ Tab4:AddButton({
 	end
 })
 
+Tab4:AddLabel("⚠️ THIS GUI DOESN'T WORK IN WARRIOR CATS: ULTIMATE ⚠️")
+
+Tab4:AddLabel("SO USE IT WITH COPYING THE SCRIPT")
+
 Tab4:AddButton({
-	Name = "(20) Warrior Cats: Ultimate Edition",
-	Callback = function()  
-		if game.PlaceId ~= 15744007066 then
-			OrionLib:MakeNotification({
-				Name = "You are not in the game!",
-				Content = "Teleporting to the place...",
-				Image = "rbxassetid://4483345998",
-				Time = 5
-			})
-			game:GetService("TeleportService"):Teleport(15744007066)
-		else
-			loadstring(game:HttpGet(('https://pastefy.app/B6T7FhLE/raw'),true))()
-		end
-	end
+    Name = "(20) Warrior Cats: Ultimate Edition (Copies to clipboard)",
+    Callback = function()  
+        local codeToCopy = 'loadstring(game:HttpGet(('https://pastefy.app/B6T7FhLE/raw'),true))()'
+        setclipboard(codeToCopy)
+    end
+})
+
+Tab4:AddButton({
+	Name = "(20) TP to Warrior Cats: Ultimate Edition",
+	Callback = function() game:GetService("TeleportService"):Teleport(15744007066) end,
 })
 
 Tab4:AddButton({
@@ -552,6 +552,11 @@ Tab4:AddButton({
         local codeToCopy = 'loadstring(game:HttpGet(\'https://pastefy.app/VZjK95cQ/raw\',true))()'
         setclipboard(codeToCopy)
     end
+})
+
+Tab4:AddButton({
+	Name = "(27) TP to A Wolf Or Other",
+	Callback = function() game:GetService("TeleportService"):Teleport(2432005634) end,
 })
 
 Tab4:AddButton({
