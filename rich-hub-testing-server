@@ -1,4 +1,4 @@
-if game.PlaceId == 6403373529 then
+if game.PlaceId ~= 9020359053 then
     return Message("Slap Battles Testing Server", "Game is not supported.", 5)
 else:
 
