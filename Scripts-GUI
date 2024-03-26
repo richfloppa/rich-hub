@@ -1162,6 +1162,34 @@ Tab2:AddButton({
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-remake"))() end    
 })
 
+Tab4:AddButton({
+        Name = "View Testing Server (Good for glove leaking)",
+        Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/rich-hub-testing-server")))()
+    ]])
+end
+game:GetService("TeleportService"):Teleport(9020359053)
+                    end    
+                })
+
+Tab4:AddButton({
+        Name = "Fast Slapple Farm (Copies script, put in autoexec)",
+        Callback = function()
+setclipboard("loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()")
+                    end    
+                })
+
 Tab2:AddButton({
 	Name = "Baller Slap Farm | Slap Battles",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
