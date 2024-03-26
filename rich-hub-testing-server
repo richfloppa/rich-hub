@@ -1,4 +1,6 @@
-                local Window = OrionLib:MakeWindow({Name = "Rich Hub | Testing Server", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
+
+local Window = OrionLib:MakeWindow({Name = "Rich Hub | Testing Server", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 
                 local Tab = Window:MakeTab({
                     Name = "Home",
@@ -40,7 +42,7 @@ if teleportFunc then
         game:GetService("RunService").RenderStepped:Connect(function()
             game:GetService("GuiService"):ClearError()
         end)
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/rich-hub-testing-server")))()
     ]])
 end
 game:GetService("TeleportService"):Teleport(game.PlaceId)
