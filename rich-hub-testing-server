@@ -4,7 +4,7 @@ if game.PlaceId ~= 9020359053 then
     OrionLib:MakeNotification({
         Name = "Slap Battles Testing Server",
         Content = "Game is not supported.",
-        Image = "rbxassetid://4483345998",
+        Image = "rbxassetid://7733771563",
         Time = 5
     })
 
