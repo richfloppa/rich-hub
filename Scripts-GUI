@@ -596,7 +596,7 @@ Tab4:AddButton({
 Tab4:AddButton({
 	Name = "(30) Dragon Adventures 🐉",
 	Callback = function()  
-		if game.PlaceId ~= 3475397644 then
+		if game.PlaceId ~= 3475397644 and game.PlaceId ~= 3487210751 then
 			OrionLib:MakeNotification({
 				Name = "You are not in the game!",
 				Content = "Teleporting to the place...",
