@@ -1,5 +1,13 @@
 if game.PlaceId ~= 9020359053 then
-    return Message("Slap Battles Testing Server", "Game is not supported.", 5)
+local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
+
+OrionLib:MakeNotification({
+	Name = "Slap Battles Testing Server",
+	Content = "Game is not supported.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
 else:
 
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
