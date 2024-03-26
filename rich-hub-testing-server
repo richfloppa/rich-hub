@@ -1,6 +1,6 @@
 if game.PlaceId == 6403373529 then
     return Message("Slap Battles Testing Server", "Game is not supported.", 5)
-else
+else:
 
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
 
@@ -59,4 +59,3 @@ Tab:AddButton({
                       game:GetService("TeleportService"):Teleport(6403373529)
           end    
 })
-end
