@@ -1162,7 +1162,7 @@ Tab2:AddButton({
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-remake"))() end    
 })
 
-Tab4:AddButton({
+Tab2:AddButton({
         Name = "View Testing Server (Good for glove leaking)",
         Callback = function()
 local teleportFunc = queueonteleport or queue_on_teleport
@@ -1183,7 +1183,7 @@ game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
 
-Tab4:AddButton({
+Tab2:AddButton({
         Name = "View Slap Royale Testing Server",
         Callback = function()
 local teleportFunc = queueonteleport or queue_on_teleport
@@ -1204,7 +1204,7 @@ game:GetService("TeleportService"):Teleport(9412268818)
                     end    
                 })
 
-Tab4:AddButton({
+Tab2:AddButton({
         Name = "Fast Slapple Farm (Copies script, put in autoexec)",
         Callback = function()
 setclipboard("loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()")
