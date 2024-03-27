@@ -1,17 +1,8 @@
     local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
 
-    local Window = OrionLib:MakeWindow({
-        Name = "Rich Hub | Slap Battles Testing Server",
-        HidePremium = true,
-        IntroEnabled = false,
-        SaveConfig = false,
-        ConfigFolder = "OrionTest"
+    OrionLib:MakeNotification({
+        Name = "Slap Battles Testing Server",
+        Content = script,
+        Image = "rbxassetid://7733771563",
+        Time = 5
     })
-
-    local Tab = Window:MakeTab({
-        Name = "Home",
-        Icon = "http://www.roblox.com/asset/?id=4370345144",
-        PremiumOnly = false
-    })
-
-Tab:AddLabel
