@@ -756,7 +756,7 @@ Tab4:AddButton({
 				Content = "Teleporting to the place...",
 				Image = "rbxassetid://4483345998",
 				Time = 5
-			})
+			})r3
 			game:GetService("TeleportService"):Teleport(7993293100)
 		else
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/tsunami%20game%20event'),true))()
@@ -1132,20 +1132,20 @@ Tab4:AddButton({
 })
 
 Tab4:AddButton({
-	Name = "(62) Fruit Battlegrounds",
-	Callback = function()  
-		if game.PlaceId ~= 13822889 then
-			OrionLib:MakeNotification({
-				Name = "You are not in the game!",
-				Content = "Teleporting to the place...",
-				Image = "rbxassetid://4483345998",
-				Time = 5
-			})
-			game:GetService("TeleportService"):Teleport(13822889)
-		else
-			loadstring(game:HttpGet"https://raw.githubusercontent.com/noSkidlol/Roblox/main/LOADING_UI")
-
-	end
+    Name = "(62) Fruit Battlegrounds",
+    Callback = function()  
+        if game.PlaceId ~= 13822889 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(13822889)
+        else
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/noSkidlol/Roblox/main/LOADING_UI"))()
+        end
+    end
 })
 
 Tab4:AddButton({
@@ -1155,7 +1155,6 @@ Tab4:AddButton({
         setclipboard(key)
     end
 })
- 
 
 Tab:AddButton({
 	Name = "Find a small server",
