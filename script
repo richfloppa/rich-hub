@@ -32,6 +32,7 @@ local Tab5 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Icon = "rbxassetid://7733774602"
 
 Tab5:AddSlider({
 	Name = "Walkspeed",
