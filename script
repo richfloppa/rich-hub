@@ -1228,7 +1228,7 @@ Tab2:AddButton({
     Name = "Spawn Sentry",
     Callback = function()
         wait(4)
-        game.ReplicatedStorage.Sentry:FireServer()
+        game.ReplicatedStorage.RobBobExplosion:FireServer()
     end
 })
 
