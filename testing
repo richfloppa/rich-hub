@@ -1,8 +1,16 @@
     local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
 
+-- get a reference to the replicated storage service
+local replicatedStorage = game:GetService("ReplicatedStorage")
+
+-- find the "BrazilHit" script
+local brazilHitScript = replicatedStorage:FindFirstChild("BrazilHit")
+
+if brazilHitScript then
+
     OrionLib:MakeNotification({
-        Name = "Slap Battles Testing Server",
-        Content = script,
-        Image = "rbxassetid://7733771563",
+        Name = "Rich Hub",
+        Content = "Script found.",
+        Image = "rbxassetid://7733675275",
         Time = 5
     })
