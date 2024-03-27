@@ -4,7 +4,7 @@ local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, Intr
 
 local Tab = Window:MakeTab({
 	Name = "Universal Scripts",
-	Icon = "rbxassetid://4370318685",
+	Icon = "rbxassetid://7743869612",
 	PremiumOnly = false
 })
 
