@@ -756,7 +756,7 @@ Tab4:AddButton({
 				Content = "Teleporting to the place...",
 				Image = "rbxassetid://4483345998",
 				Time = 5
-			})r3
+			})
 			game:GetService("TeleportService"):Teleport(7993293100)
 		else
 			loadstring(game:HttpGet(('https://raw.githubusercontent.com/richfloppa/rich-hub/main/tsunami%20game%20event'),true))()
@@ -1131,65 +1131,6 @@ Tab4:AddButton({
 	end
 })
 
-Tab4:AddButton({
-    Name = "(62) Fruit Battlegrounds",
-    Callback = function()  
-        if game.PlaceId ~= 13822889 then
-            OrionLib:MakeNotification({
-                Name = "You are not in the game!",
-                Content = "Teleporting to the place...",
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-            game:GetService("TeleportService"):Teleport(13822889)
-        else
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/noSkidlol/Roblox/main/LOADING_UI"))()
-        end
-    end
-})
-
-Tab4:AddButton({
-    Name = "(62) Copy key for Fruit Battlegrounds",
-    Callback = function()  
-        local key = 'Key_Illlll1llll'
-        setclipboard(key)
-    end
-})
-
-Tab4:AddButton({
-    Name = "(63) Dungeon Quest",
-    Callback = function()  
-        if game.PlaceId ~= 13822889 then
-            OrionLib:MakeNotification({
-                Name = "You are not in the game!",
-                Content = "Teleporting to the place...",
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-            game:GetService("TeleportService"):Teleport(13822889)
-        else
-            loadstring(game:HttpGet("https://pastefy.app/vrj03Ign/raw"))()
-        end
-    end
-})
-
-Tab4:AddButton({
-    Name = "(64) Gunfight Arena",
-    Callback = function()  
-        if game.PlaceId ~= 13822889 then
-            OrionLib:MakeNotification({
-                Name = "You are not in the game!",
-                Content = "Teleporting to the place...",
-                Image = "rbxassetid://4483345998",
-                Time = 5
-            })
-            game:GetService("TeleportService"):Teleport(13822889)
-        else
-            loadstring(game:HttpGet("https://pastefy.app/5FHMVmv8/raw"))()
-        end
-    end
-})
-
 Tab:AddButton({
 	Name = "Find a small server",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
@@ -1242,6 +1183,45 @@ end
 game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
+
+local Section = Tab:NewSection("Abilities")
+
+Section:NewButton("Spawn the wall", "Don't spam, 6 seconds delay.", function()
+    wait(6)
+    game.ReplicatedStorage.PusherWall:FireServer()
+end)
+
+Section:NewButton("Woah Ability", "Don't spam.", function()
+    wait(5)
+    game.ReplicatedStorage.VineThud:FireServer()
+end) 
+
+Section:NewButton("Spawn bob", "Replica glove required.", function()
+    if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
+        OrionLib:MakeNotification({
+            Name = "Spawn bob error",
+            Content = "Please use Replica and enter arena.",
+            Image = "rbxassetid://7733955740",
+            Time = 5
+        })
+    else
+        game.ReplicatedStorage.bob:FireServer()
+    end
+end)
+
+Section:NewButton("Rocky ability", "Do not spam.", function()
+    wait(5)
+    game.ReplicatedStorage.RockyShoot:FireServer()
+end)
+
+Section:NewButton("Spawn Sentry", "Do not spam, only use after it despawns. 4 seconds delay.", function()
+    wait(4)
+    game.ReplicatedStorage.Sentry:FireServer()
+end)
+
+Section:NewButton("Spawn barrier no cooldown", ":trollface:", function()
+    game.ReplicatedStorage.Barrier:FireServer()
+end) 
 
 Tab2:AddButton({
         Name = "View Slap Royale Testing Server",
