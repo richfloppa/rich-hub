@@ -1156,6 +1156,40 @@ Tab4:AddButton({
     end
 })
 
+Tab4:AddButton({
+    Name = "(63) Dungeon Quest",
+    Callback = function()  
+        if game.PlaceId ~= 13822889 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(13822889)
+        else
+            loadstring(game:HttpGet("https://pastefy.app/vrj03Ign/raw"))()
+        end
+    end
+})
+
+Tab4:AddButton({
+    Name = "(64) Gunfight Arena",
+    Callback = function()  
+        if game.PlaceId ~= 13822889 then
+            OrionLib:MakeNotification({
+                Name = "You are not in the game!",
+                Content = "Teleporting to the place...",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            game:GetService("TeleportService"):Teleport(13822889)
+        else
+            loadstring(game:HttpGet("https://pastefy.app/5FHMVmv8/raw"))()
+        end
+    end
+})
+
 Tab:AddButton({
 	Name = "Find a small server",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
