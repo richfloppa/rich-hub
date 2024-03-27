@@ -1184,19 +1184,19 @@ game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
 
-local Section = Tab:NewSection("Abilities")
+local Section = Tab2:AddSection("Abilities")
 
-Section:NewButton("Spawn the wall", "Don't spam, 6 seconds delay.", function()
+Section:AddButton("Spawn the wall", "Don't spam, 6 seconds delay.", function()
     wait(6)
     game.ReplicatedStorage.PusherWall:FireServer()
 end)
 
-Section:NewButton("Woah Ability", "Don't spam.", function()
+Section:AddButton("Woah Ability", "Don't spam.", function()
     wait(5)
     game.ReplicatedStorage.VineThud:FireServer()
 end) 
 
-Section:NewButton("Spawn bob", "Replica glove required.", function()
+Section:AddButton("Spawn bob", "Replica glove required.", function()
     if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
         OrionLib:MakeNotification({
             Name = "Spawn bob error",
@@ -1209,7 +1209,7 @@ Section:NewButton("Spawn bob", "Replica glove required.", function()
     end
 end)
 
-Section:NewButton("Rocky ability", "Do not spam.", function()
+Section:AddButton("Rocky ability", "Do not spam.", function()
     wait(5)
     game.ReplicatedStorage.RockyShoot:FireServer()
 end)
@@ -1219,7 +1219,7 @@ Section:NewButton("Spawn Sentry", "Do not spam, only use after it despawns. 4 se
     game.ReplicatedStorage.Sentry:FireServer()
 end)
 
-Section:NewButton("Spawn barrier no cooldown", ":trollface:", function()
+Section:AddButton("Spawn barrier no cooldown", ":trollface:", function()
     game.ReplicatedStorage.Barrier:FireServer()
 end) 
 
