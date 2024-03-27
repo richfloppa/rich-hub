@@ -1131,6 +1131,32 @@ Tab4:AddButton({
 	end
 })
 
+Tab4:AddButton({
+	Name = "(62) Fruit Battlegrounds",
+	Callback = function()  
+		if game.PlaceId ~= 13822889 then
+			OrionLib:MakeNotification({
+				Name = "You are not in the game!",
+				Content = "Teleporting to the place...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			game:GetService("TeleportService"):Teleport(13822889)
+		else
+			loadstring(game:HttpGet"https://raw.githubusercontent.com/noSkidlol/Roblox/main/LOADING_UI")
+
+	end
+})
+
+Tab4:AddButton({
+    Name = "(62) Copy key for Fruit Battlegrounds",
+    Callback = function()  
+        local key = 'Key_Illlll1llll'
+        setclipboard(key)
+    end
+})
+ 
+
 Tab:AddButton({
 	Name = "Find a small server",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
