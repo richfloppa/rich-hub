@@ -1184,44 +1184,64 @@ game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
 
-local Section = Tab2:AddSection("Abilities")
+Tab2:AddButton({
+    Name = "Spawn the wall (Don't spam, 6 seconds delay)",
+    Callback = function()
+        wait(6)
+        game.ReplicatedStorage.PusherWall:FireServer() 
+    end    
+})
 
-Section:AddButton("Spawn the wall", "Don't spam, 6 seconds delay.", function()
-    wait(6)
-    game.ReplicatedStorage.PusherWall:FireServer()
-end)
-
-Section:AddButton("Woah Ability", "Don't spam.", function()
-    wait(5)
-    game.ReplicatedStorage.VineThud:FireServer()
-end) 
-
-Section:AddButton("Spawn bob", "Replica glove required.", function()
-    if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
-        OrionLib:MakeNotification({
-            Name = "Spawn bob error",
-            Content = "Please use Replica and enter arena.",
-            Image = "rbxassetid://7733955740",
-            Time = 5
-        })
-    else
-        game.ReplicatedStorage.bob:FireServer()
+Tab2:AddButton({
+    Name = "Woah ability (Don't spam.)",
+    Callback = function()
+        wait(5)
+        game.ReplicatedStorage.VineThud:FireServer()
     end
-end)
+})
 
-Section:AddButton("Rocky ability", "Do not spam.", function()
-    wait(5)
-    game.ReplicatedStorage.RockyShoot:FireServer()
-end)
+Tab2:AddButton({
+    Name = "Spawn bob",
+    Callback = function()
+        if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
+            OrionLib:MakeNotification({
+                Name = "Spawn bob: Error",
+                Content = "Please use Replica and enter arena.",
+                Image = "rbxassetid://7733955740",
+                Time = 5
+            })
+        else
+            game.ReplicatedStorage.bob:FireServer()
+        end
+    end
+})
 
-Section:NewButton("Spawn Sentry", "Do not spam, only use after it despawns. 4 seconds delay.", function()
-    wait(4)
-    game.ReplicatedStorage.Sentry:FireServer()
-end)
+Tab2:AddButton({
+    Name = "Rocky ability (Do not spam.)",
+    Callback = function()
+        wait(5)
+        game.ReplicatedStorage.RockyShoot:FireServer()
+    end
+})
 
-Section:AddButton("Spawn barrier no cooldown", ":trollface:", function()
-    game.ReplicatedStorage.Barrier:FireServer()
-end) 
+Tab2:AddButton({
+    Name = "Spawn Sentry",
+    Callback = function()
+        wait(4)
+        game.ReplicatedStorage.Sentry:FireServer()
+    end
+})
+
+Tab2:AddLabel("--Spawn Sentry--")
+Tab2:AddLabel("Do not spam, only use after it despawns. 4 seconds delay.")
+Tab2:AddLabel("-----------------")
+
+Tab2:AddButton({
+    Name = "Spawn barrier no cooldown",
+    Callback = function()
+        game.ReplicatedStorage.Barrier:FireServer()
+    end
+})
 
 Tab2:AddButton({
         Name = "View Slap Royale Testing Server",
