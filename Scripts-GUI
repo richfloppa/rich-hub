@@ -1,10 +1,12 @@
+game:GetService("GuiService"):ClearError() 
+
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
 
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
 local Tab = Window:MakeTab({
 	Name = "Universal Scripts",
-	Icon = "rbxassetid://4370318685",
+	Icon = "rbxassetid://7743869612",
 	PremiumOnly = false
 })
 
@@ -16,7 +18,7 @@ local Tab2 = Window:MakeTab({
 
 local Tab3 = Window:MakeTab({
 	Name = "GUI",
-	Icon = "rbxassetid://4335489011",
+	Icon = "rbxassetid://7743878358",
 	PremiumOnly = false
 })
 
@@ -31,7 +33,6 @@ local Tab5 = Window:MakeTab({
 	Icon = "rbxassetid://4335489011",
 	PremiumOnly = false
 })
-
 
 Tab5:AddSlider({
 	Name = "Walkspeed",
@@ -1427,5 +1428,30 @@ Tab:AddToggle({
 	end    
 })
 
--- Initializing the OrionLib
-OrionLib:Init()
+for i,v in pairs(gethui().Orion:GetDescendants()) do
+                    if v.ClassName == "Frame" and v.BackgroundTransparency < 0.3 then
+v.BackgroundTransparency = 0.2
+                    end
+                end
+gethui().Orion.Name = "OrionEdited"
+-----------------------------------------------------------
+
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("ScreenGui") == nil then
+local TOGGLE = {}
+TOGGLE["Ui"] = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+TOGGLE["DaIcon"] = Instance.new("ImageButton", TOGGLE["Ui"])
+TOGGLE["das"] = Instance.new("UICorner", TOGGLE["DaIcon"]);
+
+TOGGLE["Ui"].Name = "ToggleUi"
+TOGGLE["Ui"].ResetOnSpawn = false
+
+TOGGLE["DaIcon"].Size = UDim2.new(0,45,0,45)
+TOGGLE["DaIcon"].Position = UDim2.new(0,0,0,0)
+TOGGLE["DaIcon"].Draggable = true
+TOGGLE["DaIcon"].Image = "rbxassetid://7733774602"
+TOGGLE["DaIcon"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TOGGLE["DaIcon"].MouseButton1Click:Connect(function()
+    gethui().OrionEdited.Enabled = not gethui().OrionEdited.Enabled
+end)
+TOGGLE["das"]["CornerRadius"] = UDim.new(0.20000000298023224, 0)
+end
