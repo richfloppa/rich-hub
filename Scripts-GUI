@@ -1184,9 +1184,22 @@ game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
 
+Tab2:AddButton({
+	Name = "Infinite Invisibility (Use in lobby) (Glove still visible)",
+	Callback = function()
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil and game.Players.LocalPlayer.leaderstats.Slaps.Value >= 666 then
+OGlove = game.Players.LocalPlayer.leaderstats.Glove.Value
+fireclickdetector(workspace.Lobby.Ghost.ClickDetector)
+game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
+fireclickdetector(workspace.Lobby[OGlove].ClickDetector)
+else
+OrionLib:MakeNotification({Name = "Error",Content = "You need to be in lobby and have 666+ slaps.",Image = "rbxassetid://7733658504",Time = 5})
+end
+                    end    
+                })
 
 Tab2:AddButton({
-    Name = "Spawn bob",
+    Name = "Spawn bob (Experimental)",
     Callback = function()
         if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
             OrionLib:MakeNotification({
