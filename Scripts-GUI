@@ -2,17 +2,7 @@ game:GetService("GuiService"):ClearError()
 
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
 
-local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
-
-
-if workspace:FindFirstChild("SafeSpot") == nil then
-    local SafeSpot = Instance.new("Part")
-    SafeSpot.Anchored = true
-    SafeSpot.Size = Vector3.new(21, 7, 21)
-    SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
-    SafeSpot.BrickColor = BrickColor.new("Cyan")
-    SafeSpot.Parent = game:GetService("Workspace")
-end
+local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "GUI"})
 
 local Tab2 = Window:MakeTab({
 	Name = "Slap Battles",
@@ -37,6 +27,15 @@ local Tab5 = Window:MakeTab({
 	Icon = "rbxassetid://4335489011",
 	PremiumOnly = false
 })
+
+if workspace:FindFirstChild("SafeSpot") == nil then
+    local SafeSpot = Instance.new("Part")
+    SafeSpot.Anchored = true
+    SafeSpot.Size = Vector3.new(21, 7, 21)
+    SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
+    SafeSpot.BrickColor = BrickColor.new("Cyan")
+    SafeSpot.Parent = game:GetService("Workspace")
+end
 
 Tab5:AddSlider({
 	Name = "Walkspeed",
