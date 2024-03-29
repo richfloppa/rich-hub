@@ -14,14 +14,14 @@ VoidPart.Transparency = 1
 VoidPart.CanCollide = false
 end
 
-workspace:FindFirstChild("AntiVoid") == nil then
-local Anti = Instance.new("Part", workspace)
-Anti.Name = "AntiVoid"
-Anti.Position = Vector3.new(286, 71, -153)
-Anti.Size = Vector3.new(2000,1,2000)
-Anti.Anchored = true
-Anti.Transparency = 1
-Anti.CanCollide = false
+if workspace:FindFirstChild("AntiVoid") == nil then
+    local Anti = Instance.new("Part", workspace)
+    Anti.Name = "AntiVoid"
+    Anti.Position = Vector3.new(286, 71, -153)
+    Anti.Size = Vector3.new(2000, 1, 2000)
+    Anti.Anchored = true
+    Anti.Transparency = 1
+    Anti.CanCollide = false
 end
 
 game.Workspace.NoChanged.Changed:Connect(function()
@@ -36,29 +36,25 @@ VoidPart1.Anchored = true
 VoidPart1.Transparency = 1
 VoidPart1.CanCollide = false
 
-local TournamentAntiVoid = Instance.new("Part", VoidPart)
-TournamentAntiVoid.Name = "TAntiVoid"
-TournamentAntiVoid.Size = Vector3.new(2048, 15, 2048)
-TournamentAntiVoid.Position = Vector3.new(3450, 59.009, 68)
-TournamentAntiVoid.Anchored = true
-TournamentAntiVoid.Transparency = 1
-TournamentAntiVoid.CanCollide = false
+if condition then
+    local TournamentAntiVoid = Instance.new("Part", VoidPart)
+    TournamentAntiVoid.Name = "TAntiVoid"
+    TournamentAntiVoid.Size = Vector3.new(2048, 15, 2048)
+    TournamentAntiVoid.Position = Vector3.new(3450, 59.009, 68)
+    TournamentAntiVoid.Anchored = true
+    TournamentAntiVoid.Transparency = 1
+    TournamentAntiVoid.CanCollide = false
 end
 
 
-workspace:FindFirstChild("SafeSpot") == nil then
-local SafeSpot = Instance.new("Part")
-SafeSpot.Anchored = true
-SafeSpot.Size = Vector3.new(21, 7, 21)
-SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
-SafeSpot.BrickColor = BrickColor.new("Cyan")
-SafeSpot.Parent = game:GetService("Workspace")
-
-local Tab = Window:MakeTab({
-	Name = "Universal Scripts",
-	Icon = "rbxassetid://7743869612",
-	PremiumOnly = false
-})
+if workspace:FindFirstChild("SafeSpot") == nil then
+    local SafeSpot = Instance.new("Part")
+    SafeSpot.Anchored = true
+    SafeSpot.Size = Vector3.new(21, 7, 21)
+    SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
+    SafeSpot.BrickColor = BrickColor.new("Cyan")
+    SafeSpot.Parent = game:GetService("Workspace")
+end
 
 local Tab2 = Window:MakeTab({
 	Name = "Slap Battles",
