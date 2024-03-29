@@ -1276,6 +1276,7 @@ OrionLib:MakeNotification({Name = "Error",Content = "You need to be in lobby and
 end
                     end    
                 })
+
 AntiVoid = Tab2:AddToggle({
 	Name = "Anti Void",
 	Default = false,
