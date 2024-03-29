@@ -4,6 +4,12 @@ local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Gia
 
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
+local Tab = Window:MakeTab({
+	Name = "Universal Scripts",
+	Icon = "rbxassetid://7743869612",
+	PremiumOnly = false
+})
+
 local Tab2 = Window:MakeTab({
 	Name = "Slap Battles",
 	Icon = "rbxassetid://7733955740",
@@ -27,15 +33,6 @@ local Tab5 = Window:MakeTab({
 	Icon = "rbxassetid://4335489011",
 	PremiumOnly = false
 })
-
-if workspace:FindFirstChild("SafeSpot") == nil then
-    local SafeSpot = Instance.new("Part")
-    SafeSpot.Anchored = true
-    SafeSpot.Size = Vector3.new(21, 7, 21)
-    SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
-    SafeSpot.BrickColor = BrickColor.new("Cyan")
-    SafeSpot.Parent = game:GetService("Workspace")
-end
 
 Tab5:AddSlider({
 	Name = "Walkspeed",
@@ -1187,6 +1184,23 @@ game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
 
+
+Tab2:AddButton({
+    Name = "Spawn bob",
+    Callback = function()
+        if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
+            OrionLib:MakeNotification({
+                Name = "Spawn bob: Error",
+                Content = "Please use Replica and enter arena.",
+                Image = "rbxassetid://7733955740",
+                Time = 5
+            })
+        else
+            game.ReplicatedStorage.bob:FireServer()
+        end
+    end
+})
+
 Tab2:AddButton({
         Name = "View Slap Royale Testing Server",
         Callback = function()
@@ -1219,20 +1233,6 @@ Tab2:AddButton({
 	Name = "Baller Slap Farm | Slap Battles",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
 })
-
-Tab2:AddButton({
-	Name = "Infinite Invisibility (Use in lobby) (Glove still visible)",
-	Callback = function()
-if game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil and game.Players.LocalPlayer.leaderstats.Slaps.Value >= 666 then
-OGlove = game.Players.LocalPlayer.leaderstats.Glove.Value
-fireclickdetector(workspace.Lobby.Ghost.ClickDetector)
-game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
-fireclickdetector(workspace.Lobby[OGlove].ClickDetector)
-else
-OrionLib:MakeNotification({Name = "Error",Content = "You need to be in lobby and have 666+ slaps.",Image = "rbxassetid://7733658504",Time = 5})
-end
-                    end    
-                })
 
 Tab2:AddButton({
 	Name = "OP Hitbox",
