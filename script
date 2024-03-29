@@ -1184,21 +1184,6 @@ game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
 
-Tab2:AddButton({
-    Name = "Spawn the wall (Don't spam, 6 seconds delay)",
-    Callback = function()
-        wait(6)
-        game.ReplicatedStorage.PusherWall:FireServer() 
-    end    
-})
-
-Tab2:AddButton({
-    Name = "Woah ability (Don't spam.)",
-    Callback = function()
-        wait(5)
-        game.ReplicatedStorage.VineThud:FireServer()
-    end
-})
 
 Tab2:AddButton({
     Name = "Spawn bob",
@@ -1213,33 +1198,6 @@ Tab2:AddButton({
         else
             game.ReplicatedStorage.bob:FireServer()
         end
-    end
-})
-
-Tab2:AddButton({
-    Name = "Rocky ability (Do not spam.)",
-    Callback = function()
-        wait(5)
-        game.ReplicatedStorage.RockyShoot:FireServer()
-    end
-})
-
-Tab2:AddButton({
-    Name = "Spawn Sentry",
-    Callback = function()
-        wait(4)
-        game.ReplicatedStorage.RobBobExplosion:FireServer()
-    end
-})
-
-Tab2:AddLabel("--Spawn Sentry--")
-Tab2:AddLabel("Do not spam, only use after it despawns. 4 seconds delay.")
-Tab2:AddLabel("-----------------")
-
-Tab2:AddButton({
-    Name = "Spawn barrier no cooldown",
-    Callback = function()
-        game.ReplicatedStorage.Barrier:FireServer()
     end
 })
 
@@ -1298,12 +1256,14 @@ Tab2:AddDropdown({
 	Callback = function(Value)
 		if Value == "Safe spot" then
 			
-local SafeSpot = Instance.new("Part")
-SafeSpot.Anchored = true
-SafeSpot.Size = Vector3.new(21, 7, 21)
-SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
-SafeSpot.BrickColor = BrickColor.new("Cyan")
-SafeSpot.Parent = game:GetService("Workspace")
+if workspace:FindFirstChild("SafeSpot") == nil then
+    local SafeSpot = Instance.new("Part")
+    SafeSpot.Anchored = true
+    SafeSpot.Size = Vector3.new(21, 7, 21)
+    SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
+    SafeSpot.BrickColor = BrickColor.new("Cyan")
+    SafeSpot.Parent = game:GetService("Workspace")
+end
 wait(0.5)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
 		elseif Value == "Arena" then
