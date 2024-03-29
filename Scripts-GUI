@@ -4,6 +4,16 @@ local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Gia
 
 local Window = OrionLib:MakeWindow({Name = "Rich Hub", HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
+if workspace:FindFirstChild("VoidPart") == nil then
+local VoidPart = Instance.new("Part", workspace)
+VoidPart.Name = "VoidPart"
+VoidPart.Position = Vector3.new(-36, -3, 16)
+VoidPart.Size = Vector3.new(2000, 1, 2000)
+VoidPart.Anchored = true
+VoidPart.Transparency = 1
+VoidPart.CanCollide = false
+end
+
 workspace:FindFirstChild("AntiVoid") == nil then
 local Anti = Instance.new("Part", workspace)
 Anti.Name = "AntiVoid"
