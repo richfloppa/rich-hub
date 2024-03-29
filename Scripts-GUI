@@ -1288,8 +1288,21 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 1
 Tab3:AddLabel("Kerr")
 
 Tab3:AddButton({
-	Name = "Destroy the GUI",
-	Callback = function()  OrionLib:Destroy() end    
+    Name = "Destroy the GUI",
+    Callback = function()
+        OrionLib:Destroy() -- Destroy OrionLib first
+        local player = game.Players.LocalPlayer
+        local playerGui = player.PlayerGui
+
+        local screenGui = playerGui:FindFirstChild("ToggleUi")
+
+        if screenGui then
+            screenGui:Destroy()
+            print("Toggle UI destroyed.")
+        else
+            print("Toggle UI not found.")
+        end
+    end
 })
 
 Tab:AddButton({
