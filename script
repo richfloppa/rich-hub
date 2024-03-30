@@ -97,27 +97,6 @@ Tab:AddButton({
 	Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
 })
 
--- Fling Looped Version
-local flingLoopEnabled = false
-local flingScriptUrl = "https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all"
-
-local function flingLoop()
-    while flingLoopEnabled do
-        loadstring(game:HttpGet(flingScriptUrl, true))()
-        wait(10) -- Adjust the delay between each fling if needed
-    end
-end
-
-Tab:AddToggle({
-    Name = "Fling all (Looped)",
-    Callback = function()
-        flingLoopEnabled = not flingLoopEnabled
-        if flingLoopEnabled then
-            flingLoop()
-        end
-    end
-})
-
 Tab:AddButton({
 	Name = "FE yeet gui",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
