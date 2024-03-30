@@ -104,7 +104,9 @@ Tab:AddToggle({
         FlingValue = Value
         while FlingValue == true do 
             loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all", true))()
-            wait(10) end
+            wait(10) 
+        end
+    end
 })
 
 Tab:AddButton({
