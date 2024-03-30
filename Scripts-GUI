@@ -97,23 +97,24 @@ Tab:AddButton({
 	Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
 })
 
--- Fling Looped Version
-local flingLoopEnabled = false
-local flingScriptUrl = "https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all"
-
-local function flingLoop()
-    while flingLoopEnabled do
-        loadstring(game:HttpGet(flingScriptUrl, true))()
-        wait(10) -- Adjust the delay between each fling if needed
-    end
-end
-
 Tab:AddToggle({
-    Name = "Fling all (Looped)",
-    Callback = function()
-        flingLoopEnabled = not flingLoopEnabled
-        if flingLoopEnabled then
-            flingLoop()
+    Name = "Fling All (LOOPED)",
+    Default = false,
+    Callback = function(Value)
+        FlingValue = Value
+        if FlingValue == true then
+            local flingScriptUrl = "https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all"
+
+            local flingLoopEnabled = true  -- Added declaration and initialization of flingLoopEnabled variable
+
+            local function flingLoop()
+                while flingLoopEnabled do
+                    loadstring(game:HttpGet(flingScriptUrl, true))()
+                    wait(10) -- Adjust the delay between each fling if needed
+                end
+            end
+
+            flingLoop()  -- Added call to flingLoop function to start the loop
         end
     end
 })
