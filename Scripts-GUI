@@ -1198,6 +1198,27 @@ end
                     end    
                 })
 
+Tab3:AddToggle({
+    Name = "Anti Portal (ALL PORTALS)",
+    Default = false,
+    Callback = function(Value)
+        AntiPortal = Value
+        if AntiPortal == true then
+            workspace.Lobby.Teleport1.CanTouch = false
+            workspace.Lobby.Teleport2.CanTouch = false
+            workspace.Lobby.Teleport3.CanTouch = false
+            workspace.Lobby.Teleport4.CanTouch = false
+            workspace.Lobby.Teleport6.CanTouch = false
+        else
+            workspace.Lobby.Teleport1.CanTouch = true
+            workspace.Lobby.Teleport2.CanTouch = true
+            workspace.Lobby.Teleport3.CanTouch = true
+            workspace.Lobby.Teleport4.CanTouch = true
+            workspace.Lobby.Teleport6.CanTouch = true
+        end
+    end
+})
+
 Tab2:AddButton({
     Name = "Spawn bob (Experimental)",
     Callback = function()
