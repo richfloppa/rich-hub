@@ -102,18 +102,10 @@ Tab:AddToggle({
     Default = false,
     Callback = function(Value)
         FlingValue = Value
-        if FlingValue == true then
-            local FlingLoopEnabled = FlingValue
-            local function flingLoop()
-                while FlingLoopEnabled do
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all", true))()
+        While FlingValue == true do loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all", true))()
                     wait(10) -- Adjust the delay between each fling if needed
                 end
             end
-
-            flingLoop()  -- Added call to flingLoop function to start the loop
-        end
-    end
 })
 
 Tab:AddButton({
