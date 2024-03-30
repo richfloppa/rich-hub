@@ -97,6 +97,27 @@ Tab:AddButton({
 	Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
 })
 
+-- Fling Looped Version
+local flingLoopEnabled = false
+local flingScriptUrl = "https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all"
+
+local function flingLoop()
+    while flingLoopEnabled do
+        loadstring(game:HttpGet(flingScriptUrl, true))()
+        wait(10) -- Adjust the delay between each fling if needed
+    end
+end
+
+Tab:AddToggle({
+    Name = "Fling all (Looped)",
+    Callback = function()
+        flingLoopEnabled = not flingLoopEnabled
+        if flingLoopEnabled then
+            flingLoop()
+        end
+    end
+})
+
 Tab:AddButton({
 	Name = "FE yeet gui",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
@@ -1184,9 +1205,43 @@ game:GetService("TeleportService"):Teleport(9020359053)
                     end    
                 })
 
+Tab2:AddButton({
+	Name = "Infinite Invisibility (Use in lobby) (Glove still visible)",
+	Callback = function()
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil and game.Players.LocalPlayer.leaderstats.Slaps.Value >= 666 then
+OGlove = game.Players.LocalPlayer.leaderstats.Glove.Value
+fireclickdetector(workspace.Lobby.Ghost.ClickDetector)
+game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
+fireclickdetector(workspace.Lobby[OGlove].ClickDetector)
+else
+OrionLib:MakeNotification({Name = "Error",Content = "You need to be in lobby and have 666+ slaps.",Image = "rbxassetid://7733658504",Time = 5})
+end
+                    end    
+                })
+
+Tab2:AddToggle({
+    Name = "Anti Portal (ALL PORTALS)",
+    Default = false,
+    Callback = function(Value)
+        AntiPortal = Value
+        if AntiPortal == true then
+            workspace.Lobby.Teleport1.CanTouch = false
+            workspace.Lobby.Teleport2.CanTouch = false
+            workspace.Lobby.Teleport3.CanTouch = false
+            workspace.Lobby.Teleport4.CanTouch = false
+            workspace.Lobby.Teleport6.CanTouch = false
+        else
+            workspace.Lobby.Teleport1.CanTouch = true
+            workspace.Lobby.Teleport2.CanTouch = true
+            workspace.Lobby.Teleport3.CanTouch = true
+            workspace.Lobby.Teleport4.CanTouch = true
+            workspace.Lobby.Teleport6.CanTouch = true
+        end
+    end
+})
 
 Tab2:AddButton({
-    Name = "Spawn bob",
+    Name = "Spawn bob (Experimental)",
     Callback = function()
         if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
             OrionLib:MakeNotification({
@@ -1288,8 +1343,21 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 1
 Tab3:AddLabel("Kerr")
 
 Tab3:AddButton({
-	Name = "Destroy the GUI",
-	Callback = function()  OrionLib:Destroy() end    
+    Name = "Destroy the GUI",
+    Callback = function()
+        OrionLib:Destroy() -- Destroy OrionLib first
+        local player = game.Players.LocalPlayer
+        local playerGui = player.PlayerGui
+
+        local screenGui = playerGui:FindFirstChild("ToggleUi")
+
+        if screenGui then
+            screenGui:Destroy()
+            print("Toggle UI destroyed.")
+        else
+            print("Toggle UI not found.")
+        end
+    end
 })
 
 Tab:AddButton({
