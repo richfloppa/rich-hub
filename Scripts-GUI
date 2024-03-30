@@ -106,7 +106,7 @@ Tab:AddToggle({
             local FlingLoopEnabled = FlingValue
             local function flingLoop()
                 while FlingLoopEnabled do
-                    loadstring(game:HttpGet(flingScriptUrl, true))()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all", true))()
                     wait(10) -- Adjust the delay between each fling if needed
                 end
             end
