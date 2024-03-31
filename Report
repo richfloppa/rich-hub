@@ -1,0 +1,31 @@
+local HttpService = game:GetService("HttpService")
+local webhookUrl = "https://discord.com/api/webhooks/1223891977351856150/_hd6Lhi2GPxM2yDhQ_EwbzfMuKkNUvFH_qoQC907xO-4zokx8rvvHE5VGSwKJJp4VLz1"
+
+local function sendToDiscord(embed)
+	local payload = HttpService:JSONEncode({embeds = {embed}})
+
+	local success, errorMessage = pcall(function()
+		HttpService:PostAsync(webhookUrl, payload, Enum.HttpContentType.ApplicationJson)
+	end)
+
+	if not success then
+		warn("Failed to send message to Discord:", errorMessage)
+	end
+end
+
+local function onButtonClicked()
+	local playerName = script.Parent.Parent.PlayerTextBox.Text
+	local reason = script.Parent.Parent.ReasonTextBox.Text
+
+	local embed = {
+		title = "Ban Report",
+		fields = {
+			{ name = "Player name", value = playerName },
+			{ name = "Reason", value = reason }
+		}
+	}
+
+	sendToDiscord(embed)
+end
+
+script.Parent.MouseButton1Click:Connect(onButtonClicked)
