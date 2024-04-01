@@ -2,7 +2,7 @@ game:GetService("GuiService"):ClearError()
 
 local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
 
-local Window = OrionLib:MakeWindow({Name = ("Rich Hub".." | ".. identifyexecutor()), HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
+local Window = OrionLib:MakeWindow({Name = ("Rich Hub | identifyexecutor()), HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
 
 local Tab = Window:MakeTab({
 	Name = "Universal Scripts",
