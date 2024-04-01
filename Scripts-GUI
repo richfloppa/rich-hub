@@ -125,12 +125,6 @@ Tab:AddButton({
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
 })
 
-Tab4:AddButton({
-	Name = "Go back to The Hunt game",
-	Callback = function()  game:GetService("TeleportService"):Teleport(16537295657) end    
-})
-
-
 
 Tab:AddButton({
 	Name = "Find a small server",
