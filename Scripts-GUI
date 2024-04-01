@@ -192,8 +192,8 @@ Tab:AddToggle({
     Callback = function(Value)
         FlingValue = Value
         while FlingValue == true do 
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all", true))()
-            wait(10) 
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/infinite-invisibility", true))()
+            wait(0.1) 
         end
     end
 })
