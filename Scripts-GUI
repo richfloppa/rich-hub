@@ -186,7 +186,7 @@ end
                     end    
                 })
 
-Tab:AddToggle({
+Tab2:AddToggle({
     Name = "Infinite Invisibility (LOOPED)",
     Default = false,
     Callback = function(Value)
