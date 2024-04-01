@@ -267,6 +267,11 @@ Tab2:AddButton({
 })
 
 Tab2:AddButton({
+	Name = "Ability GUI (More Gloves)",
+	Callback = function()  loadstring(game:HttpGet("https://pastefy.app/dzKnPjmo/raw",true))() end    
+})
+
+Tab2:AddButton({
 	Name = "Alchemist Brew",
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))() end    
 })
