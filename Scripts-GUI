@@ -90,6 +90,19 @@ Tab:AddButton({
 	Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
 })
 
+Tab:AddSlider({
+	Name = "Fling Loop Duration",
+	Min = 2,
+	Max = 60,
+	Default = 50,
+	Color = Color3.fromRGB(255, 0, 0),
+	Increment = 1,
+	ValueName = "FD",
+	Callback = function(Value)
+		FlingDuration = Value
+	end    
+})
+
 Tab:AddToggle({
     Name = "Fling All (LOOPED)",
     Default = false,
@@ -97,7 +110,7 @@ Tab:AddToggle({
         FlingValue = Value
         while FlingValue == true do 
             loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all", true))()
-            wait(10) 
+            wait(FlingDuration) 
         end
     end
 })
