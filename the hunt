@@ -6,6 +6,11 @@ local Tab4 = Window:MakeTab({
 
 
 Tab4:AddButton({
+	Name = "Go back to The Hunt game",
+	Callback = function()  game:GetService("TeleportService"):Teleport(16537295657) end    
+})
+
+Tab4:AddButton({
 	Name = "(1) Weapon Fighting Simulator",
 	Callback = function()  
 		if game.PlaceId ~= 8554378337 then
