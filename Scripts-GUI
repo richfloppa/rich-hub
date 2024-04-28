@@ -125,6 +125,11 @@ Tab:AddButton({
 	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
 })
 
+Tab:AddButton({
+	Name = "Keyboard GUI",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))() end    
+})
+
 
 Tab:AddButton({
 	Name = "Find a small server",
