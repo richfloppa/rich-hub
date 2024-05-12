@@ -232,22 +232,6 @@ Tab2:AddToggle({
 })
 
 Tab2:AddButton({
-    Name = "Spawn bob (Experimental)",
-    Callback = function()
-        if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Replica" then
-            OrionLib:MakeNotification({
-                Name = "Spawn bob: Error",
-                Content = "Please use Replica and enter arena.",
-                Image = "rbxassetid://7733955740",
-                Time = 5
-            })
-        else
-            game.ReplicatedStorage.bob:FireServer()
-        end
-    end
-})
-
-Tab2:AddButton({
         Name = "View Slap Royale Testing Server",
         Callback = function()
 local teleportFunc = queueonteleport or queue_on_teleport
@@ -359,6 +343,12 @@ Tab3:AddButton({
 Tab:AddButton({
 	Name = "OP Hitbox (Some games may not support this.)",
 	Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "DEX V2",
+	Callback = function()  loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Dex-V2-10310"))()
 	end    
 })
 
