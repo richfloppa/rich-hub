@@ -536,7 +536,7 @@ TOGGLE["DaIcon"].Draggable = true
 TOGGLE["DaIcon"].Image = "rbxassetid://7733774602"
 TOGGLE["DaIcon"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TOGGLE["DaIcon"].MouseButton1Click:Connect(function()
-    gethui().OrionEdited.Enabled = not gethui().OrionEdited.Enabled
+    gethui().Orion.Name.Enabled = not gethui().Orion.Name.Enabled
 end)
 TOGGLE["das"]["CornerRadius"] = UDim.new(0.20000000298023224, 0)
 end
