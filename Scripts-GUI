@@ -325,18 +325,10 @@ Tab3:AddLabel("Kerr")
 Tab3:AddButton({
     Name = "Destroy the GUI",
     Callback = function()
-        OrionLib:Destroy() -- Destroy OrionLib first
+        OrionLib:Destroy()
         local player = game.Players.LocalPlayer
         local playerGui = player.PlayerGui
-
-        local screenGui = playerGui:FindFirstChild("ToggleUi")
-
-        if screenGui then
-            screenGui:Destroy()
-            print("Toggle UI destroyed.")
-        else
-            print("Toggle UI not found.")
-        end
+        playerGui:Destroy()
     end
 })
 
@@ -519,24 +511,3 @@ v.BackgroundTransparency = 0.2
                     end
                 end
 gethui().Orion.Name = randomString(10)
------------------------------------------------------------
-
-if game.Players.LocalPlayer.PlayerGui:FindFirstChild("ScreenGui") == nil then
-local TOGGLE = {}
-TOGGLE["Ui"] = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
-TOGGLE["DaIcon"] = Instance.new("ImageButton", TOGGLE["Ui"])
-TOGGLE["das"] = Instance.new("UICorner", TOGGLE["DaIcon"]);
-
-TOGGLE["Ui"].Name = "ToggleUi"
-TOGGLE["Ui"].ResetOnSpawn = false
-
-TOGGLE["DaIcon"].Size = UDim2.new(0,45,0,45)
-TOGGLE["DaIcon"].Position = UDim2.new(0,0,0,0)
-TOGGLE["DaIcon"].Draggable = true
-TOGGLE["DaIcon"].Image = "rbxassetid://7733774602"
-TOGGLE["DaIcon"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TOGGLE["DaIcon"].MouseButton1Click:Connect(function()
-    gethui().Orion.Name.Enabled = not gethui().Orion.Name.Enabled
-end)
-TOGGLE["das"]["CornerRadius"] = UDim.new(0.20000000298023224, 0)
-end
