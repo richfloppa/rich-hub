@@ -1,0 +1,513 @@
+game:GetService("GuiService"):ClearError() 
+
+local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/Giangplay/Script/main/Orion_Library_PE_V2.lua")))()
+
+local Window = OrionLib:MakeWindow({Name = ("Rich Hub".." | ".. identifyexecutor()), HidePremium = false, IntroText = "Rich Hub", SaveConfig = true, ConfigFolder = "Scripts"})
+
+local Tab = Window:MakeTab({
+	Name = "Universal Scripts",
+	Icon = "rbxassetid://7743869612",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Slap Battles",
+	Icon = "rbxassetid://7733955740",
+	PremiumOnly = false
+})
+
+local Tab3 = Window:MakeTab({
+	Name = "GUI",
+	Icon = "rbxassetid://7743878358",
+	PremiumOnly = false
+})
+
+local Tab5 = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4335489011",
+	PremiumOnly = false
+})
+
+Tab5:AddSlider({
+	Name = "Walkspeed",
+	Min = 20,
+	Max = 1000,
+	Default = 20,
+	Color = Color3.fromRGB(140, 185, 255),
+	Increment = 1,
+	ValueName = "WS",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+		Walkspeed = Value
+	end    
+})
+
+Tab5:AddToggle({
+	Name = "Keep Walkspeed",
+	Default = false,
+	Callback = function(Value)
+		KeepWalkspeed = Value
+		while KeepWalkspeed do
+			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= Walkspeed then
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Walkspeed
+			end
+			task.wait()
+		end
+	end    
+})
+
+Tab5:AddSlider({
+	Name = "Jumppower",
+	Min = 50,
+	Max = 1000,
+	Default = 50,
+	Color = Color3.fromRGB(255, 185, 140),
+	Increment = 1,
+	ValueName = "JP",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+		Jumppower = Value
+	end    
+})
+
+Tab5:AddToggle({
+	Name = "Keep Jumppower",
+	Default = false,
+	Callback = function(Value)
+		KeepJumppower = Value
+		while KeepJumppower do
+			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") ~= nil and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed ~= Jumppower then
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jumppower
+			end
+			task.wait()
+		end
+	end    
+})
+
+-- Adding buttons to the first tab
+Tab:AddButton({
+	Name = "Fling all",
+	Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
+})
+
+Tab:AddSlider({
+	Name = "Fling Loop Duration",
+	Min = 2,
+	Max = 60,
+	Default = 50,
+	Color = Color3.fromRGB(255, 0, 0),
+	Increment = 1,
+	ValueName = "FD",
+	Callback = function(Value)
+		FlingDuration = Value
+	end    
+})
+
+Tab:AddToggle({
+    Name = "Fling All (LOOPED)",
+    Default = false,
+    Callback = function(Value)
+        FlingValue = Value
+        while FlingValue == true do 
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all", true))()
+            wait(FlingDuration) 
+        end
+    end
+})
+
+Tab:AddButton({
+	Name = "FE yeet gui",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/yeet-gui"))() end    
+})
+
+Tab:AddButton({
+	Name = "Fly GUI V3",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() end    
+})
+
+Tab:AddButton({
+	Name = "Keyboard GUI",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))() end    
+})
+
+
+Tab:AddButton({
+	Name = "Find a small server",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/Hop-small-server",true))() end    
+})
+
+Tab:AddButton({
+	Name = "Rejoin the server",
+	Callback = function()  local ts = game:GetService("TeleportService")
+
+		local p = game:GetService("Players").LocalPlayer
+
+
+
+		ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p) end    
+})
+
+Tab:AddButton({
+	Name = "Fling GUI",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))() end    
+})
+
+-- Adding buttons to the second tab
+Tab2:AddButton({
+	Name = "Slap Battles Hub That Exist",
+	Callback = function()  loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-that-exist-remake-noantirecord")))() end    
+})
+
+Tab2:AddButton({
+	Name = "Slap Battles OP Script",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-remake"))() end    
+})
+
+Tab2:AddButton({
+        Name = "View Testing Server (Good for glove leaking)",
+        Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/rich-hub-testing-server")))()
+    ]])
+end
+game:GetService("TeleportService"):Teleport(9020359053)
+                    end    
+                })
+
+Tab2:AddButton({
+	Name = "Infinite Invisibility (Use in lobby) (Glove still visible)",
+	Callback = function()
+if game.Players.LocalPlayer.Character:FindFirstChild("entered") == nil and game.Players.LocalPlayer.leaderstats.Slaps.Value >= 666 then
+OGlove = game.Players.LocalPlayer.leaderstats.Glove.Value
+fireclickdetector(workspace.Lobby.Ghost.ClickDetector)
+game.ReplicatedStorage.Ghostinvisibilityactivated:FireServer()
+fireclickdetector(workspace.Lobby[OGlove].ClickDetector)
+else
+OrionLib:MakeNotification({Name = "Error",Content = "You need to be in lobby and have 666+ slaps.",Image = "rbxassetid://7733658504",Time = 5})
+end
+                    end    
+                })
+
+Tab2:AddToggle({
+    Name = "Infinite Invisibility (LOOPED)",
+    Default = false,
+    Callback = function(Value)
+        FlingValue = Value
+        while FlingValue == true do 
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/infinite-invisibility", true))()
+            wait(0.1) 
+        end
+    end
+})
+
+Tab2:AddToggle({
+    Name = "Anti Portal (ALL PORTALS)",
+    Default = false,
+    Callback = function(Value)
+        AntiPortal = Value
+        if AntiPortal == true then
+            workspace.Lobby.Teleport1.CanTouch = false
+            workspace.Lobby.Teleport2.CanTouch = false
+            workspace.Lobby.Teleport3.CanTouch = false
+            workspace.Lobby.Teleport4.CanTouch = false
+            workspace.Lobby.Teleport6.CanTouch = false
+        else
+            workspace.Lobby.Teleport1.CanTouch = true
+            workspace.Lobby.Teleport2.CanTouch = true
+            workspace.Lobby.Teleport3.CanTouch = true
+            workspace.Lobby.Teleport4.CanTouch = true
+            workspace.Lobby.Teleport6.CanTouch = true
+        end
+    end
+})
+
+Tab2:AddButton({
+        Name = "View Slap Royale Testing Server",
+        Callback = function()
+local teleportFunc = queueonteleport or queue_on_teleport
+if teleportFunc then
+    teleportFunc([[
+        if not game:IsLoaded() then
+            game.Loaded:Wait()
+        end
+        repeat wait() until game.Players.LocalPlayer
+        game:GetService("RunService").RenderStepped:Connect(function()
+            game:GetService("GuiService"):ClearError()
+game.CoreGui:WaitForChild("RobloxLoadingGUI"):Destroy()
+        end)
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/richfloppa/rich-hub/main/rich-hub-testing-server")))()
+    ]])
+end
+game:GetService("TeleportService"):Teleport(9412268818)
+                    end    
+                })
+
+Tab2:AddButton({
+        Name = "Fast Slapple Farm (Copies script, put in autoexec)",
+        Callback = function()
+setclipboard("loadstring(game:HttpGet('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Farm'))()")
+                    end    
+                })
+
+Tab2:AddButton({
+	Name = "Baller Slap Farm | Slap Battles",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))() end    
+})
+
+Tab2:AddButton({
+	Name = "OP Hitbox",
+	Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))() end    
+})
+
+Tab2:AddButton({
+	Name = "Ability GUI",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/ability-gui",true))() end    
+})
+
+Tab2:AddButton({
+	Name = "Ability GUI (More Gloves)",
+	Callback = function()  loadstring(game:HttpGet("https://pastefy.app/dzKnPjmo/raw",true))() end    
+})
+
+Tab2:AddButton({
+	Name = "Alchemist Brew",
+	Callback = function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/alchemist-glove",true))() end    
+})
+
+Tab2:AddDropdown({
+	Name = "Teleport",
+	Default = "",
+	Options = {"Safe spot", "Arena",  "Default Arena", "Lobby", "Tournament", "Moai Island", "Slapple Island", "Plate"},
+	Callback = function(Value)
+		if Value == "Safe spot" then
+			
+if workspace:FindFirstChild("SafeSpot") == nil then
+    local SafeSpot = Instance.new("Part")
+    SafeSpot.Anchored = true
+    SafeSpot.Size = Vector3.new(21, 7, 21)
+    SafeSpot.CFrame = CFrame.new(-2000, 100, -2000)
+    SafeSpot.BrickColor = BrickColor.new("Cyan")
+    SafeSpot.Parent = game:GetService("Workspace")
+end
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
+		elseif Value == "Arena" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Origo.CFrame * CFrame.new(0,-5,0)
+		elseif Value == "Moai Island" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(215, -15.5, 0.5)
+		elseif Value == "Slapple Island" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Arena.island5.Union.CFrame * CFrame.new(0,3.25,0)
+		elseif Value == "Plate" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.Plate.CFrame * CFrame.new(0,2,0)
+		elseif Value == "Tournament" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Battlearena.Arena.CFrame * CFrame.new(0,10,0)
+		elseif Value == "Default Arena" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120,360,-3)
+		elseif Value == "Lobby" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-800,328,-2.5)
+		end
+	end    
+})
+
+-- Adding buttons to the third tab
+Tab3:AddLabel("Kerr")
+
+Tab3:AddButton({
+    Name = "Destroy the GUI",
+    Callback = function()
+        OrionLib:Destroy()
+        local player = game.Players.LocalPlayer
+        local playerGui = player.PlayerGui
+        playerGui:Destroy()
+    end
+})
+
+Tab:AddButton({
+	Name = "OP Hitbox (Some games may not support this.)",
+	Callback = function()  loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "DEX V2",
+	Callback = function()  loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Dex-V2-10310"))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield Delta Mobile",
+	Callback = function()  loadstring(game:HttpGet("https://gist.githubusercontent.com/lxnnydev/c533c374ca4c1dcef4e1e10e33fa4a0c/raw/03e74f184f801dad77d3ebe1e2f18c6ac87ca612/delta___IY.gistfile1.txt.lua",true))()
+	end    
+})
+
+Tab:AddButton({
+	Name = "Safe Spot",
+	Callback = function()  -- Safe spot for slap battles
+		-- This script is for everyone so dont get credits
+
+		local SafeSpotGui = Instance.new("ScreenGui")
+		local Menu = Instance.new("Frame")
+		local TP = Instance.new("TextButton")
+		local TextLabel = Instance.new("TextLabel")
+		local Close = Instance.new("TextButton")
+
+		wait(0.5)
+
+		SafeSpotGui.Name = "SafeSpotGui"
+		SafeSpotGui.Parent = game:GetService("CoreGui")
+		SafeSpotGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		Menu.Name = "Menu"
+		Menu.Parent = SafeSpotGui
+		Menu.Active = true
+		Menu.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+		Menu.Position = UDim2.new(0.652409554, 0, 0.270731717, 0)
+		Menu.Selectable = true
+		Menu.Size = UDim2.new(0, 102, 0, 97)
+
+		TP.Name = "TP"
+		TP.Parent = Menu
+		TP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+		TP.Position = UDim2.new(0.248297215, 0, 0.385386407, 0)
+		TP.Size = UDim2.new(0, 50, 0, 50)
+		TP.Font = Enum.Font.ArialBold
+		TP.Text = "TP"
+		TP.TextColor3 =Color3.fromRGB(255, 255, 255)
+		TP.TextSize = 21.000
+		TP.TextWrapped = true
+
+		TextLabel.Parent = Menu
+		TextLabel.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+		TextLabel.BorderColor3 = Color3.fromRGB(75, 75, 75)
+		TextLabel.Position = UDim2.new(-0.00366510125, 0, -0.00283600856, 0)
+		TextLabel.Size = UDim2.new(0, 75, 0, 26)
+		TextLabel.Font = Enum.Font.ArialBold
+		TextLabel.Text = "Safe Spot"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextSize = 14.000
+
+		Close.Name = "Close"
+		Close.Parent = Menu
+		Close.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+		Close.Position = UDim2.new(0.738493085, 0, 0, 0)
+		Close.Size = UDim2.new(0, 26, 0, 26)
+		Close.Font = Enum.Font.Unknown
+		Close.Text = "X"
+		Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Close.TextSize = 14.000
+
+		local function FFFAI_fake_script() -- Menu.Drag 
+			local script = Instance.new('LocalScript', Menu)
+
+			local frame = script.Parent.Parent.Menu
+			frame.Draggable = true
+			frame.Active = true
+			frame.Selectable = true
+		end
+		coroutine.wrap(FFFAI_fake_script)()
+		local function QFDYLLB_fake_script() -- TP.LocalScript 
+			local script = Instance.new('LocalScript', TP)
+
+			TP.MouseButton1Click:Connect(function()
+				local platform = Instance.new("Part")
+				platform.Anchored = true
+				platform.Size = Vector3.new(21, 7, 21)
+				platform.CFrame = CFrame.new(-2000, 100, -2000)
+				platform.BrickColor = BrickColor.new("Cyan")
+				platform.Parent = game:GetService("Workspace")
+				wait(0.5)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2000, 109, -2000)
+			end)
+		end
+		coroutine.wrap(QFDYLLB_fake_script)()
+		local function UCEC_fake_script() -- Close.CloseScript 
+			local script = Instance.new('LocalScript', Close)
+
+			Close.MouseButton1Click:Connect(function()
+				SafeSpotGui:Destroy()
+			end)
+		end
+		coroutine.wrap(UCEC_fake_script)()
+	end    
+})
+
+Tab:AddTextbox({
+	Name = "Textbox of spam in chat",
+	Default = "Enter message here",
+	TextDisappear = true,
+	Callback = function(Value)
+		Message = Value
+	end	  
+})
+
+Tab:AddToggle({
+	Name = "Spam in chat",
+	Default = false,
+	Callback = function(Value)
+		local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+		local spamSignal = game:GetService("Workspace"):FindFirstChild("SpamSignal")
+
+		if not spamSignal then
+			spamSignal = Instance.new("BoolValue")
+			spamSignal.Name = "SpamSignal"
+			spamSignal.Value = false  -- Initially set to false
+			spamSignal.Parent = game:GetService("Workspace")
+		end
+
+		spamSignal.Value = Value  -- Update the value based on the toggle
+
+		if Value then
+			OrionLib:MakeNotification({
+				Name = "Spamming Started",
+				Content = "Sending messages in chat...",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			while spamSignal.Value do
+				Event:FireServer(Message, "All")
+				wait(0.3)
+			end
+			OrionLib:MakeNotification({
+				Name = "Spamming Stopped",
+				Content = "Stopped sending messages.",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+		end
+	end    
+})
+
+local function randomString(length)
+    local chars = {}
+    for i = 1, length do
+        local ascii = math.random(48, 122)
+        while ascii > 57 and ascii < 65 or ascii > 90 and ascii < 97 do
+            ascii = math.random(48, 122)
+        end
+        table.insert(chars, string.char(ascii))
+    end
+    return table.concat(chars)
+end
+
+for i,v in pairs(gethui().Orion:GetDescendants()) do
+                    if v.ClassName == "Frame" and v.BackgroundTransparency < 0.3 then
+v.BackgroundTransparency = 0.2
+                    end
+                end
+gethui().Orion.Name = randomString(10)
