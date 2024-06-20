@@ -1,34 +1,59 @@
-local flyspeed = 50
-local fly = true
-if fly == false then
-if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("VelocityHandler") and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("GyroHandler") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(0,0,0)
-game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.MaxTorque = Vector3.new(0,0,0)
-game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
-end
+local Active = true
+
+function Fly()
+    wait()
+    Plr = game.Players.LocalPlayer
+    local Char = Plr.Character
+    local Human = Char:FindFirstChildOfClass("Humanoid")
+    local Torso = Char:FindFirstChild("HumanoidRootPart")
+    
+    local Force = Instance.new("BodyVelocity")
+    local Spin = Instance.new("BodyGyro")
+    Spin.P = 10000
+    Spin.MaxTorque = Vector3.new(Spin.P,Spin.P,Spin.P)*100
+    Spin.CFrame = Torso.CFrame
+
+    Force.Velocity = Vector3.new(0,0,0)
+    Force.P = 1000
+    Force.MaxForce = Vector3.new(Force.P,Force.P,Force.P)*100
+
+    Force.Parent = Torso
+    Spin.Parent = Torso
+
+    Human.PlatformStand = true
+    Human.AutoRotate = false
+    Human:ChangeState(Enum.HumanoidStateType.Freefall)
+    
+    while Active do
+        wait()
+        local Push = Vector3.new(0, 0, 0)
+        local FV = Camera.CFrame:VectorToWorldSpace(Vector3.new(0, 0, -1))
+        local SV = Camera.CFrame:VectorToWorldSpace(Vector3.new(-1, 0, 0))
+
+        local CoFrame = Camera.CFrame
+        local CV = CFrame.new(Vector3.new(0,0,0),CoFrame.LookVector*Vector3.new(1,0,1)):VectorToObjectSpace(Human.MoveDirection)
+
+        Push = Push + ((FV * (60*Speed) * -CV.z) or Push)
+        Push = Push + ((SV * (40*Speed) * -CV.x) or Push)
+
+        Spin.CFrame = CFrame.new(Vector3.new(0, 0, 0), FV)
+
+        Force.Velocity = Force.Velocity:Lerp(Push, 0.2)
+        
+        if not Human.PlatformStand then
+            Human.PlatformStand = true
+        end
+        
+        if Human.AutoRotate then
+            Human.AutoRotate = false
+        end
+    end
+
+    Spin:Destroy()
+    Force:Destroy()
+
+    Human.PlatformStand = false
+    Human.AutoRotate = true
 end
 
-while fly do
-if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("VelocityHandler") and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("GyroHandler") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(9e9,9e9,9e9)
-game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.MaxTorque = Vector3.new(9e9,9e9,9e9)
-game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
-game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.CFrame = Workspace.CurrentCamera.CoordinateFrame
-game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = Vector3.new()
-if require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().X > 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + game.Workspace.CurrentCamera.CFrame.RightVector * (require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().X * flyspeed)
-end
-if require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().X < 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + game.Workspace.CurrentCamera.CFrame.RightVector * (require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().X * flyspeed)
-end
-if require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().Z > 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - game.Workspace.CurrentCamera.CFrame.LookVector * (require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().Z * flyspeed)
-end
-if require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().Z < 0 then
-game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - game.Workspace.CurrentCamera.CFrame.LookVector * (require(game.Players.LocalPlayer.PlayerScripts:WaitForChild("PlayerModule"):WaitForChild("ControlModule")):GetMoveVector().Z * flyspeed)
-end
-end
-task.wait()
-end
-	end    
-})
+Fly()
