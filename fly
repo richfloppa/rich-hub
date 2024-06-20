@@ -1,5 +1,5 @@
-_G.SetSpeedFly = 50
-_G.StartFly = true
+local _G.SetSpeedFly = 50
+local _G.StartFly = true
 if _G.StartFly == false then
 if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("VelocityHandler") and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("GyroHandler") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(0,0,0)
