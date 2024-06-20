@@ -5,7 +5,7 @@ local speaker = game:GetService("Players").LocalPlayer
 local chr = game.Players.LocalPlayer.Character
 local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 
-local nowe = true
+local nowe = false
 
 local function fly()
     if nowe then
