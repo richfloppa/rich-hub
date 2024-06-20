@@ -1,4 +1,5 @@
 local Active = true
+local Camera = workspace.CurrentCamera
 
 function Fly()
     wait()
