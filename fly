@@ -1,36 +1,32 @@
-local Players = game:GetService("Players")
-local speaker = Players.LocalPlayer
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local humanoid = char:WaitForChild("Humanoid")
+local flying = false
+local speed = 29
+local bodyGyro
+local bodyVelocity
 
-local function setHumanoidStates(humanoid)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Running, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics, true)
-    humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming, true)
+local function startFlying()
+    flying = true
+    humanoid.PlatformStand = true
 
-    humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
-end
+    bodyGyro = Instance.new("BodyGyro")
+    bodyGyro.P = 9e4
+    bodyGyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+    bodyGyro.cframe = char.PrimaryPart.CFrame
+    bodyGyro.Parent = char.PrimaryPart
 
-if speaker then
-    local character = speaker.Character or speaker.CharacterAdded:Wait()
-    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    bodyVelocity = Instance.new("BodyVelocity")
+    bodyVelocity.velocity = Vector3.new(0, 0.1, 0)
+    bodyVelocity.maxForce = Vector3.new(9e9, 9e9, 9e9)
+    bodyVelocity.Parent = char.PrimaryPart
 
-    if humanoid then
-        setHumanoidStates(humanoid)
-    else
-        character.ChildAdded:Connect(function(child)
-            if child:IsA("Humanoid") then
-                setHumanoidStates(child)
-            end
-        end)
+    while flying do
+        local moveDirection = humanoid.MoveDirection
+        bodyVelocity.velocity = (workspace.CurrentCamera.CFrame.lookVector * moveDirection.Z + workspace.CurrentCamera.CFrame.RightVector * moveDirection.X) * speed
+        bodyGyro.cframe = workspace.CurrentCamera.CFrame
+        game:GetService("RunService").RenderStepped:Wait()
     end
 end
+
+startFlying()
