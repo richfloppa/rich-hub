@@ -1,8 +1,7 @@
-local speaker = game:GetService("Players").LocalPlayer
+local Players = game:GetService("Players")
+local speaker = Players.LocalPlayer
 
-if speaker and speaker.Character and speaker.Character:FindFirstChild("Humanoid") then
-    local humanoid = speaker.Character.Humanoid
-
+local function setHumanoidStates(humanoid)
     humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing, true)
     humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown, true)
     humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying, true)
@@ -19,4 +18,19 @@ if speaker and speaker.Character and speaker.Character:FindFirstChild("Humanoid"
     humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming, true)
 
     humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
+end
+
+if speaker then
+    local character = speaker.Character or speaker.CharacterAdded:Wait()
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+    if humanoid then
+        setHumanoidStates(humanoid)
+    else
+        character.ChildAdded:Connect(function(child)
+            if child:IsA("Humanoid") then
+                setHumanoidStates(child)
+            end
+        end)
+    end
 end
