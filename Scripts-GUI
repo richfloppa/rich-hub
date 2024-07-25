@@ -164,6 +164,11 @@ Tab2:AddButton({
 })
 
 Tab2:AddButton({
+	Name = "Slap Royale Voxul Hub (Click to copy)",
+	Callback = function()  setclipboard("loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/hub-remake"))()") end    
+})
+
+Tab2:AddButton({
         Name = "View Testing Server (Good for glove leaking)",
         Callback = function()
 local teleportFunc = queueonteleport or queue_on_teleport
