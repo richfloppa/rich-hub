@@ -78,114 +78,75 @@ local gui = Instance.new("ScreenGui")
 gui.Name = "TheGuide"
 gui.Parent = game.CoreGui
 
-local MainUi = Instance.new("Frame", gui)
-MainUi.Size = UDim2.new(0.25, 50, 0.6, 0)
-MainUi.Position = UDim2.new(0.1, 0, 0.2, 0)
-MainUi.BackgroundColor3 = Color3.new(1, 1, 1)
-MainUi.Active = true
-MainUi.Draggable = true
-local Title = Instance.new("TextLabel", MainUi)
-Title.Size = UDim2.new(1, 0, 0.1, 0)
-Title.BackgroundColor3 = Color3.new(1, 1 , 1)
-Title.Text = "The Guide Boss// By Omoscripts//"
-Title.TextColor3 = Color3.new(0, 0, 0)
-Title.TextSize = 10
+local MainUi = Instance.new("Frame")
+MainUi.Size = UDim2.new(1, 0, 9.532, 0)
+MainUi.Position = UDim2.new(-0, 0, 0.989, 0)
+MainUi.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+local ToggleUi = Instance.new("Frame", gui)
+local UiCorner = Instance.new("UICorner", ToggleUi)
+local UiCorner2 = Instance.new("UICorner", MainUi)
+ToggleUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToggleUi.Size = UDim2.new(0.303, 0, 0.068, 0)
+ToggleUi.Position = UDim2.new(0.1, 0, 0.13, 0)
+ToggleUi.Draggable = true
+ToggleUi.Active = true
+MainUi.Parent = ToggleUi
+local close = Instance.new("TextButton", ToggleUi)
+close.Position = UDim2.new(0.875, 0, 0, 0)
+close.Size = UDim2.new(0.123, 0, 0.994, 0)
+close.Text = "X"
+close.TextScaled = true
+close.BackgroundTransparency = 1
+local collapse = Instance.new("TextButton", ToggleUi)
+collapse.Position = UDim2.new(0.752, 0, 0, 0)
+collapse.Size = UDim2.new(0.123, 0, 0.994, 0)
+collapse.Text = "-"
+collapse.TextScaled = true
+collapse.BackgroundTransparency = 1
+local Title = Instance.new("TextLabel", ToggleUi)
+Title.Font = Enum.Font.FredokaOne
+Title.FontFace.Style = Enum.FontStyle.Normal
+Title.TextColor3 = Color3.fromRGB(255, 217, 0)
+Title.TextScaled = true
+Title.Position = UDim2.new(0.05, 0, 0.994, 0)
+Title.Size = UDim2.new(0.672, 0, -0.894, 0)
+Title.TextStrokeTransparency = 0
+Title.BackgroundTransparency = 1
+Title.Text = "Rich Hub Guide Boss"
 
-local TPTo = Instance.new("TextButton", MainUi)
-TPTo.Size = UDim2.new(0.9, 0, 0.1, 0)
-TPTo.Position = UDim2.new(0.05, 0, 0.12, 0)
-TPTo.BackgroundColor3 = Color3.new(1, 1, 1)
-TPTo.Text = "Teleport To Boss (Switch Level)"
-TPTo.BackgroundTransparency = 0 
-TPTo.TextColor3 = Color3.new(0, 0, 0)
-
-local SAFE = Instance.new("TextButton", MainUi)
-SAFE.Size = UDim2.new(0.9, 0, 0.1, 0)
-SAFE.Position = UDim2.new(0.05, 0, 0.25, 0)
-SAFE.BackgroundColor3 = Color3.new(1, 1, 1)
-SAFE.Text = "Teleport To SafeZone"
-SAFE.BackgroundTransparency = 0 
-SAFE.TextColor3 = Color3.new(0, 0, 0)
-
-local HITMINI = Instance.new("TextButton", MainUi)
-HITMINI.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITMINI.Position = UDim2.new(0.05, 0, 0.38, 0)
-HITMINI.BackgroundColor3 = Color3.new(1, 1, 1)
-HITMINI.Text = "Auto Slap Minions "
-HITMINI.BackgroundTransparency = 0 
-HITMINI.TextColor3 = Color3.new(0, 0, 0)
-
-local HITGOLEM = Instance.new("TextButton", MainUi)
-HITGOLEM.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITGOLEM.Position = UDim2.new(0.05, 0, 0.50, 0)
-HITGOLEM.BackgroundColor3 = Color3.new(1, 1, 1)
-HITGOLEM.Text = "Auto Slap Golem "
-HITGOLEM.BackgroundTransparency = 0 
-HITGOLEM.TextColor3 = Color3.new(0, 0, 0)
-
-local HITGUIDE = Instance.new("TextButton", MainUi)
-HITGUIDE.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITGUIDE.Position = UDim2.new(0.05, 0, 0.62, 0)
-HITGUIDE.BackgroundColor3 = Color3.new(1, 1, 1)
-HITGUIDE.Text = "Auto Slap Guide"
-HITGUIDE.BackgroundTransparency = 0 
-HITGUIDE.TextColor3 = Color3.new(0, 0, 0)
-
-local HITROCKET = Instance.new("TextButton", MainUi)
-HITROCKET.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITROCKET.Position = UDim2.new(0.05, 0, 0.74, 0)
-HITROCKET.BackgroundColor3 = Color3.new(1, 1, 1)
-HITROCKET.Text = "Auto Rocket "
-HITROCKET.BackgroundTransparency = 0 
-HITROCKET.TextColor3 = Color3.new(0, 0, 0)
-
-local SPARE = Instance.new("TextButton", MainUi)
-SPARE.Size = UDim2.new(0.45, 0, 0.1, 0)
-SPARE.Position = UDim2.new(0.05, 0, 0.86, 0)
-SPARE.BackgroundColor3 = Color3.new(1, 1, 1)
-SPARE.TextScaled = true
-SPARE.Text = "Spare Guide (Relude)"
-SPARE.BackgroundTransparency = 0 
-SPARE.TextColor3 = Color3.new(0, 0, 0)
-
-local UNSPARE = Instance.new("TextButton", MainUi)
-UNSPARE.Size = UDim2.new(0.45, 0, 0.1, 0)
-UNSPARE.Position = UDim2.new(0.5, 0, 0.86, 0)
-UNSPARE.BackgroundColor3 = Color3.new(1, 1, 1)
-UNSPARE.TextScaled = true
-UNSPARE.Text = "No-Spare Guide (Hunter)"
-UNSPARE.BackgroundTransparency = 0 
-UNSPARE.TextColor3 = Color3.new(0, 0, 0)
-
-local ExtraFrame = Instance.new("Frame", MainUi)
-ExtraFrame.Size = UDim2.new(0.8, 0, 0.85, 0)
-ExtraFrame.Position = UDim2.new(1.05, 0, 0.12, 0)
-ExtraFrame.BackgroundColor3 = Color3.new(1, 1, 1)
-ExtraFrame.BackgroundTransparency = 0 
-ExtraFrame.Visible = false
-
-local InstantKill = Instance.new("TextButton", ExtraFrame)
+local InstantKill = Instance.new("TextButton", MainUi)
+local UiCorner3 = Instance.new("UICorner", InstantKill)
 InstantKill.Size = UDim2.new(0.9, 0, 0.1, 0)
-InstantKill.Position = UDim2.new(0.05, 0, 0.05, 0)
+InstantKill.Position = UDim2.new(0.046, 0, 0.751, 0)
 InstantKill.BackgroundColor3 = Color3.new(1, 1, 1)
 InstantKill.TextScaled = true
 InstantKill.Text = "InstantKill Guide (Phase 2)"
+InstantKill.TextColor3 = Color3.new(0, 0, 0)
+InstantKill.TextSize = 8
+InstantKill.Font = Enum.Font.Arimo
+InstantKill.TextScaled = true
 InstantKill.TextColor3 = Color3.new(0, 0, 0)
 
 InstantKill.MouseButton1Down:Connect(function()
 	for i, v in pairs(workspace:GetChildren()) do
 		if v.Name == "GuideNPC" then
+			local GuideNPC = v
 			local hum = GuideNPC:FindFirstChild("Humanoid")
 			if hum then hum.Health = 0 end
 		end
 	end
 end)
-local Collect = Instance.new("TextButton", ExtraFrame)
+local Collect = Instance.new("TextButton", MainUi)
+local UiCorner3 = Instance.new("UICorner", Collect)
 Collect.Size = UDim2.new(0.9, 0, 0.1, 0)
-Collect.Position = UDim2.new(0.05, 0, 0.18, 0)
+Collect.Position = UDim2.new(0.046, 0, 0.878, 0)
 Collect.BackgroundColor3 = Color3.new(1, 1, 1)
 Collect.TextScaled = true
 Collect.Text = "Collect Health+Regeneration (Don't use if you want Avatar)"
+Collect.TextColor3 = Color3.new(0, 0, 0)
+Collect.TextSize = 8
+Collect.Font = Enum.Font.Arimo
+Collect.TextScaled = true
 Collect.TextColor3 = Color3.new(0, 0, 0)
 Collect.MouseButton1Down:Connect(function()
 	OgPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -197,115 +158,93 @@ Collect.MouseButton1Down:Connect(function()
 
 end)
 
-local Extra = Instance.new("TextButton", MainUi)
-Extra.Size = UDim2.new(0.05, 0, 0.2, 0)
-Extra.Position = UDim2.new(1.05, 0, 0.12, 0)
-Extra.BackgroundColor3 = Color3.new(1, 1, 1)
-Extra.TextScaled = true
-Extra.Text = ">"
-Extra.BackgroundTransparency = 0.5
-Extra.TextColor3 = Color3.new(0, 0, 0)
-Extra.MouseButton1Down:Connect(function()
-	if Extra.Text == ">" then
-		Extra.Text = "<"
-		Extra.Position = UDim2.new(1.9, 0, 0.12, 0)
-		ExtraFrame.Visible = true
-	else
-		Extra.Text = ">"
-		Extra.Position = UDim2.new(1.05, 0, 0.12, 0)
-		ExtraFrame.Visible = false
-	end
-end)
-
 local TPTo = Instance.new("TextButton", MainUi)
+local UiCorner3 = Instance.new("UICorner", TPTo)
 TPTo.Size = UDim2.new(0.9, 0, 0.1, 0)
-TPTo.Position = UDim2.new(0.05, 0, 0.12, 0)
-TPTo.BackgroundColor3 = Color3.new(1, 1, 1)
-TPTo.BorderColor3 = Color3.new(0, 0, 0)
+TPTo.Position = UDim2.new(0.046, 0, 0.01, 0)
+TPTo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPTo.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TPTo.BorderSizePixel = 1
 TPTo.Text = "Teleport To Boss (Switch Level)"
-TPTo.BackgroundTransparency = 0 
+TPTo.TextSize = 8
+TPTo.Font = Enum.Font.Arimo
+TPTo.TextScaled = true
 TPTo.TextColor3 = Color3.new(0, 0, 0)
 
 local SAFE = Instance.new("TextButton", MainUi)
+local UiCorner4 = Instance.new("UICorner", SAFE)
 SAFE.Size = UDim2.new(0.9, 0, 0.1, 0)
-SAFE.Position = UDim2.new(0.05, 0, 0.25, 0)
+SAFE.Position = UDim2.new(0.05, 0, 0.135, 0)
 SAFE.BackgroundColor3 = Color3.new(1, 1, 1)
 SAFE.BorderColor3 = Color3.new(0, 0, 0)
 SAFE.BorderSizePixel = 1
 SAFE.Text = "Teleport To SafeZone"
 SAFE.BackgroundTransparency = 0 
 SAFE.TextColor3 = Color3.new(0, 0, 0)
+SAFE.TextSize = 8
+SAFE.Font = Enum.Font.Arimo
+SAFE.TextScaled = true
+SAFE.TextColor3 = Color3.new(0, 0, 0)	
 
 local HITMINI = Instance.new("TextButton", MainUi)
+local UiCorner5 = Instance.new("UICorner", HITMINI)
 HITMINI.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITMINI.Position = UDim2.new(0.05, 0, 0.38, 0)
+HITMINI.Position = UDim2.new(0.05, 0, 0.258, 0)
 HITMINI.BackgroundColor3 = Color3.new(1, 1, 1)
 HITMINI.BorderColor3 = Color3.new(0, 0, 0)
 HITMINI.BorderSizePixel = 1
 HITMINI.Text = "Auto Slap Minions "
 HITMINI.BackgroundTransparency = 0 
 HITMINI.TextColor3 = Color3.new(0, 0, 0)
+HITMINI.TextSize = 8
+HITMINI.Font = Enum.Font.Arimo
+HITMINI.TextScaled = true
+HITMINI.TextColor3 = Color3.new(0, 0, 0)	
 
 local HITGOLEM = Instance.new("TextButton", MainUi)
+local UiCorner6 = Instance.new("UICorner", HITGOLEM)
 HITGOLEM.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITGOLEM.Position = UDim2.new(0.05, 0, 0.50, 0)
+HITGOLEM.Position = UDim2.new(0.05, 0, 0.383, 0)
 HITGOLEM.BackgroundColor3 = Color3.new(1, 1, 1)
 HITGOLEM.BorderColor3 = Color3.new(0, 0, 0)
 HITGOLEM.BorderSizePixel = 1
-HITGOLEM.Text = "Auto Slam Golem "
+HITGOLEM.Text = "Auto Slap Golem "
 HITGOLEM.BackgroundTransparency = 0 
 HITGOLEM.TextColor3 = Color3.new(0, 0, 0)
+HITGOLEM.TextSize = 8
+HITGOLEM.Font = Enum.Font.Arimo
+HITGOLEM.TextScaled = true
+HITGOLEM.TextColor3 = Color3.new(0, 0, 0)	
 
 local HITGUIDE = Instance.new("TextButton", MainUi)
+local UiCorner7 = Instance.new("UICorner", HITGUIDE)
 HITGUIDE.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITGUIDE.Position = UDim2.new(0.05, 0, 0.62, 0)
+HITGUIDE.Position = UDim2.new(0.05, 0, 0.502, 0)
 HITGUIDE.BackgroundColor3 = Color3.new(1, 1, 1)
 HITGUIDE.BorderColor3 = Color3.new(0, 0, 0)
 HITGUIDE.BorderSizePixel = 1
 HITGUIDE.Text = "Auto Slap Guide "
 HITGUIDE.BackgroundTransparency = 0 
 HITGUIDE.TextColor3 = Color3.new(0, 0, 0)
+HITGUIDE.TextSize = 8
+HITGUIDE.Font = Enum.Font.Arimo
+HITGUIDE.TextScaled = true
+HITGUIDE.TextColor3 = Color3.new(0, 0, 0)	
 
 local HITROCKET = Instance.new("TextButton", MainUi)
+local UiCorner8 = Instance.new("UICorner", HITROCKET)
 HITROCKET.Size = UDim2.new(0.9, 0, 0.1, 0)
-HITROCKET.Position = UDim2.new(0.05, 0, 0.74, 0)
+HITROCKET.Position = UDim2.new(0.05, 0, 0.624, 0)
 HITROCKET.BackgroundColor3 = Color3.new(1, 1, 1)
 HITROCKET.BorderColor3 = Color3.new(0, 0, 0)
 HITROCKET.BorderSizePixel = 1
 HITROCKET.Text = "Auto Rocket "
 HITROCKET.BackgroundTransparency = 0 
 HITROCKET.TextColor3 = Color3.new(0, 0, 0)
-
-local SPARE = Instance.new("TextButton", MainUi)
-SPARE.Size = UDim2.new(0.45, 0, 0.1, 0)
-SPARE.Position = UDim2.new(0.05, 0, 0.86, 0)
-SPARE.BackgroundColor3 = Color3.new(1, 1, 1)
-SPARE.BorderColor3 = Color3.new(0, 0, 0)
-SPARE.BorderSizePixel = 1
-SPARE.TextScaled = true
-SPARE.Text = "Spare Guide (Relude)"
-SPARE.BackgroundTransparency = 0 
-SPARE.TextColor3 = Color3.new(0, 0, 0)
-
-local UNSPARE = Instance.new("TextButton", MainUi)
-UNSPARE.Size = UDim2.new(0.45, 0, 0.1, 0)
-UNSPARE.Position = UDim2.new(0.5, 0, 0.86, 0)
-UNSPARE.BackgroundColor3 = Color3.new(1, 1, 1)
-UNSPARE.BorderColor3 = Color3.new(0, 0, 0)
-UNSPARE.BorderSizePixel = 1
-UNSPARE.TextScaled = true
-UNSPARE.Text = "No-Spare Guide (Hunter)"
-UNSPARE.BackgroundTransparency = 0 
-UNSPARE.TextColor3 = Color3.new(0, 0, 0)
-
-UNSPARE.MouseButton1Down:Connect(function()
-	game:GetService("ReplicatedStorage").Remotes.Data.AnswerInCutscene:FireServer("Eliminate")
-end)
-
-SPARE.MouseButton1Down:Connect(function()
-	game:GetService("ReplicatedStorage").Remotes.Data.AnswerInCutscene:FireServer("Spare")
-end)
+HITROCKET.TextSize = 8
+HITROCKET.Font = Enum.Font.Arimo
+HITROCKET.TextScaled = true
+HITROCKET.TextColor3 = Color3.new(0, 0, 0)	
 
 SAFE.MouseButton1Down:Connect(function()
 	local SF = Instance.new("Part", workspace)
@@ -353,6 +292,18 @@ HITGUIDE.MouseButton1Down:Connect(function()
 	else
 		HITGUIDE.BackgroundColor3 = Color3.new(1, 1, 1)
 		AutoGuide(false)
+	end
+end)
+close.MouseButton1Click:Connect(function()
+	gui:Destroy()
+end)
+collapse.MouseButton1Click:Connect(function()
+	if collapse.Text == "-" then
+		MainUi.Visible = false
+		collapse.Text = "+"
+	elseif collapse.Text == "+" then
+		MainUi.Visible = true
+		collapse.Text = "-"
 	end
 end)
 HITROCKET.MouseButton1Down:Connect(function()
