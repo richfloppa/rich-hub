@@ -28,6 +28,12 @@ local Tab5 = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Tab6 = Window:MakeTab({
+	Name = "Antis (New)",
+	Icon = "rbxassetid://7733955740",
+	PremiumOnly = false
+}) 
+
 Tab5:AddSlider({
 	Name = "Walkspeed",
 	Min = 20,
@@ -84,7 +90,6 @@ Tab5:AddToggle({
 	end    
 })
 
--- Adding buttons to the first tab
 Tab:AddButton({
 	Name = "Fling all",
 	Callback = function()   loadstring(game:HttpGet("https://raw.githubusercontent.com/richfloppa/rich-hub/main/fling-all",true))() end    
@@ -489,6 +494,32 @@ Tab:AddToggle({
 				Image = "rbxassetid://4483345998",
 				Time = 5
 			})
+		end
+	end    
+})
+
+Tab6:AddToggle({
+	Name = "Anti Sbeve",
+	Default = false,
+	Callback = function(Value)
+		Sbeve = Value
+		if Sbeve then
+			while Sbeve do
+				local ds = game:GetDescendants()
+				for i, child in pairs(ds) do
+					if child.Name == "stevebody" then
+						child.CanTouch = false
+					end
+				end
+				task.wait()
+			end
+		else
+			local ds = game:GetDescendants()
+			for i, child in pairs(ds) do
+				if child.Name == "stevebody" then
+					child.CanTouch = true
+				end
+			end
 		end
 	end    
 })
