@@ -504,7 +504,7 @@ Tab6:AddToggle({
 	Callback = function(Value)
 		Sbeve = Value
 		if Sbeve then
-			while task.wait(0.1) do
+			while wait(0.1) do
 				local ds = game.Workspace:GetDescendants()
 				for i, child in pairs(ds) do
 					if child.Name == "stevebody" then
