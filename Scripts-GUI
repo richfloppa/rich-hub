@@ -514,8 +514,7 @@ Tab6:AddToggle({
 				task.wait()
 			end
 		else
-			local ds = game
-Workspace:GetDescendants()
+			local ds = game.Workspace:GetDescendants()
 			for i, child in pairs(ds) do
 				if child.Name == "stevebody" then
 					child.CanTouch = true
