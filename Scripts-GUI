@@ -503,23 +503,29 @@ Tab6:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		Sbeve = Value
-		if Sbeve then
-			while wait(0.1) do
-				local ds = game.Workspace:GetDescendants()
-				for i, child in pairs(ds) do
-					if child.Name == "stevebody" then
-						child.CanTouch = false
+		while wait(0) do
+			if Sbeve then
+				for i, player in pairs(game.Players:GetPlayers()) do
+					if player.Character then
+						if player.Character:FindFirstChild("stevebody") then
+							pcall(function()
+								player.Character:FindFirstChild("stevebody").CanTouch = false
+							end)
+						end
 					end
 				end
-				task.wait()
-			end
-		else
-			local ds = game.Workspace:GetDescendants()
-			for i, child in pairs(ds) do
-				if child.Name == "stevebody" then
-					child.CanTouch = true
+			else
+				for i, player in pairs(game.Players:GetPlayers()) do
+					if player.Character then
+						if player.Character:FindFirstChild("stevebody") then
+							pcall(function()
+								player.Character:FindFirstChild("stevebody").CanTouch = true
+							end)
+						end
+					end
 				end
 			end
+			task.wait()
 		end
 	end    
 })
