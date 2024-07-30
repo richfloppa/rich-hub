@@ -212,14 +212,15 @@ local function IsPlayerWhitelisted(player)
     return WhitelistedPlayers[userId] or false
 end 
 
-local Players = game:GetService("Players")
-
-for _, player in pairs(Players:GetPlayers()) do
+for _, player in pairs(game.Players:GetPlayers()) do
     if player ~= game.Players.LocalPlayer then
         if IsPlayerWhitelisted(player) then
-            Message("Couldn't fling", player.Name .. " is whitelisted and was not flung.", 5)
+            Message("Couldn't fling", player.Name .. " was not flung.", 5)
         else
-            SkidFling(player)
+            local character = player.Character
+            if character and character:FindFirstChild("HumanoidRootPart") then
+                SkidFling(player)
+            end
         end
     end
 end
