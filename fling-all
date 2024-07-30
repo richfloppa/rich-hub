@@ -215,9 +215,11 @@ end
 local Players = game:GetService("Players")
 
 for _, player in pairs(Players:GetPlayers()) do
-    if IsPlayerWhitelisted(player) then 
-        Message("Couldn't fling", player.Name.. " is not flinged.", 5)
-    else
-        SkidFling(player)
+    if player ~= game.Players.LocalPlayer then
+        if IsPlayerWhitelisted(player) then
+            Message("Couldn't fling", player.Name .. " is whitelisted and was not flung.", 5)
+        else
+            SkidFling(player)
+        end
     end
 end
